@@ -12,25 +12,25 @@ export const disciplines = [
     title: "Bodybuilding & Sala Pesi",
     description:
       "Attrezzature professionali Panatta, pesi liberi e percorsi dedicati a forza, ipertrofia, ricomposizione corporea e preparazione atletica.",
-    image: "/images/sala-fitness-panoramica.jpg",
+    image: "/images/sala-fitness-panoramica.svg",
     href: "#training",
   },
   {
     title: "HYROX",
     description: "Corsi dedicati, coaching tecnico, simulazioni gara e preparazione specifica per ogni livello.",
-    image: "/images/hyrox-area.jpg",
+    image: "/images/hyrox-area.svg",
     href: "#hyrox",
   },
   {
     title: "Combat Sports",
     description: "Muay Thai, Boxe e Kickboxing in un vero ring, per principianti, agonisti e bambini.",
-    image: "/images/combat-ring.jpg",
+    image: "/images/combat-ring.svg",
     href: "#combat-sport",
   },
   {
     title: "Wellness",
     description: "Pilates, Yoga, Riequilibrio Posturale e area fisioterapia con fisioterapista specializzato.",
-    image: "/images/area-panatta.jpg",
+    image: "/images/area-panatta.svg",
     href: "#wellness",
   },
 ];
@@ -39,25 +39,25 @@ export const wellnessServices = [
   {
     title: "Pilates",
     description: "Un lavoro preciso su controllo, respirazione e forza profonda per migliorare postura, stabilità e consapevolezza del movimento.",
-    image: "/images/sala-fitness-panoramica.jpg",
+    image: "/images/sala-fitness-panoramica.svg",
     icon: "✦",
   },
   {
     title: "Yoga",
     description: "Pratiche guidate per mobilità, equilibrio e presenza: un tempo protetto in cui il respiro diventa parte dell’allenamento.",
-    image: "/images/area-panatta.jpg",
+    image: "/images/area-panatta.svg",
     icon: "◐",
   },
   {
     title: "Riequilibrio Posturale",
     description: "Valutazione attenta e lavoro mirato su tensioni, allineamento e qualità del gesto, per rendere il corpo più libero ed efficiente.",
-    image: "/images/area-panatta.jpg",
+    image: "/images/area-panatta.svg",
     icon: "⌁",
   },
   {
     title: "Area Fisioterapia con fisioterapista specializzato",
     description: "Uno spazio riservato a recupero, prevenzione e continuità del benessere, con supporto specialistico e percorsi personalizzati.",
-    image: "/images/sala-fitness-panoramica.jpg",
+    image: "/images/sala-fitness-panoramica.svg",
     icon: "+",
   },
 ];
