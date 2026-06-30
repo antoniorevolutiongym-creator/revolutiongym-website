@@ -9,17 +9,17 @@ const whatsappBookingUrl =
   "https://wa.me/393382332258?text=Ciao%2C%20vorrei%20prenotare%20una%20visita%20alla%20Revolution%20Gym.";
 
 const photography = {
-  heroRing: "/images/hero-ring.jpg",
-  heroGym: "/images/hero-gym.jpg",
-  bodybuilding01: "/images/bodybuilding-01.jpg",
-  bodybuilding02: "/images/bodybuilding-02.jpg",
-  bodybuilding03: "/images/bodybuilding-03.jpg",
-  hyrox01: "/images/hyrox-01.jpg",
-  hyrox02: "/images/hyrox-02.jpg",
-  combat01: "/images/combat-01.jpg",
-  combat02: "/images/combat-02.jpg",
-  wellness01: "/images/wellness-01.jpg",
-  coachAntonio: "/images/coach-antonio.jpg",
+  heroRing: "/images/cb5db689-77a9-4312-98cd-debff4f99b26.jpeg",
+  heroGym: "/images/15d5ba0f-2122-4561-8526-70e77d636329.jpeg",
+  bodybuilding01: "/images/2e996e2b-b11a-4144-a677-79799b226b16.jpeg",
+  bodybuilding02: "/images/15d5ba0f-2122-4561-8526-70e77d636329.jpeg",
+  bodybuilding03: "/images/68754fd6-ac1f-4327-9b0b-a8dc89163045.jpeg",
+  hyrox01: "/images/IMG_4865.jpeg",
+  hyrox02: "/images/IMG_4860.jpeg",
+  combat01: "/images/IMG_4869.jpeg",
+  combat02: "/images/IMG_4880.jpeg",
+  wellness01: "/images/c1a6078e-3cf2-4a5f-b751-9a87e76ea4c8.jpeg",
+  coachAntonio: "/images/c1c474a2-1739-4688-aebf-a30e8eda8d03.jpeg",
 };
 
 const hyroxMedia = [
