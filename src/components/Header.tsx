@@ -8,6 +8,7 @@ const whatsappBookingUrl =
 const navItems = [
   { label: "Home", href: "#home" },
   { label: "Chi siamo", href: "#chi-siamo" },
+  { label: "Metodo", href: "#metodo" },
   { label: "Discipline", href: "#discipline" },
   { label: "Wellness", href: "#wellness" },
   { label: "App", href: "#app" },
