@@ -1,7 +1,7 @@
 export const services = [
   "Valutazione iniziale e programma su misura",
-  "Functional Training per forza, mobilità e condizionamento",
-  "Preparazione HYROX Official Training Club",
+  "Bodybuilding & Sala Pesi per forza, ipertrofia e ricomposizione corporea",
+  "Preparazione HYROX",
   "Personal training riservato su appuntamento",
   "Small group training a numero controllato",
   "Mobilità, recupero e riequilibrio posturale",
@@ -9,39 +9,28 @@ export const services = [
 
 export const disciplines = [
   {
-    title: "HYROX Official Training Club",
-    description: "Sessioni strutturate per costruire forza resistente, ritmo gara e lucidità nelle transizioni, con progressioni adatte al tuo livello.",
-    image: "/images/hyrox-area.jpg",
+    title: "Bodybuilding & Sala Pesi",
+    description:
+      "Attrezzature professionali Panatta, pesi liberi e percorsi dedicati a forza, ipertrofia, ricomposizione corporea e preparazione atletica.",
+    image: "/images/sala-fitness-panoramica.jpg",
     href: "#training",
   },
   {
-    title: "Muay Thai",
-    description: "Tecnica di striking, clinch, timing e condizionamento in un percorso rigoroso, intenso e seguito da coach specializzati.",
+    title: "HYROX",
+    description: "Corsi dedicati, coaching tecnico, simulazioni gara e preparazione specifica per ogni livello.",
+    image: "/images/hyrox-area.jpg",
+    href: "#hyrox",
+  },
+  {
+    title: "Combat Sports",
+    description: "Muay Thai, Boxe e Kickboxing in un vero ring, per principianti, agonisti e bambini.",
     image: "/images/combat-ring.jpg",
     href: "#combat-sport",
   },
   {
-    title: "Boxing",
-    description: "Footwork, guardia, precisione e gestione della distanza per trasformare disciplina e controllo in qualità atletica reale.",
-    image: "/images/ring-logo.jpg",
-    href: "#combat-sport",
-  },
-  {
-    title: "Functional Training",
-    description: "Allenamenti dinamici e misurabili per sviluppare forza, mobilità, resistenza e capacità di muoversi meglio ogni giorno.",
-    image: "/images/sala-fitness-panoramica.jpg",
-    href: "#training",
-  },
-  {
-    title: "Pilates e Yoga",
-    description: "Respirazione, stabilità, controllo e fluidità per dare al corpo una base più forte e alla mente uno spazio di presenza.",
+    title: "Wellness",
+    description: "Pilates, Yoga, Riequilibrio Posturale e area fisioterapia con fisioterapista specializzato.",
     image: "/images/area-panatta.jpg",
-    href: "#wellness",
-  },
-  {
-    title: "Postura e Fisioterapia",
-    description: "Riequilibrio posturale, prevenzione e recupero in un’area dedicata, con fisioterapista specializzato e attenzione individuale.",
-    image: "/images/sala-fitness-panoramica.jpg",
     href: "#wellness",
   },
 ];
@@ -81,13 +70,13 @@ export const differentiators = [
 ];
 
 export const aboutHighlights = [
+  "Bodybuilding & Sala Pesi",
+  "HYROX",
+  "Combat Sports",
   "Wellness",
-  "Training",
-  "Combat Sport",
-  "HYROX Official Training Club",
   "Muay Thai",
-  "Boxing",
-  "Functional Training",
+  "Boxe",
+  "Kickboxing",
   "Pilates",
   "Yoga",
   "Riequilibrio Posturale",
