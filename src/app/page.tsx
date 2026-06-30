@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { CSSProperties } from "react";
 import { Header } from "@/components/Header";
 import { Section } from "@/components/Section";
@@ -361,7 +362,13 @@ export default function Home() {
 
       <footer className="border-t border-white/10 bg-black px-6 py-10 text-sm text-zinc-500 lg:px-8">
         <div className="mx-auto flex max-w-7xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <p className="font-display text-xl font-black uppercase tracking-[0.24em] text-white">Revolution<span className="text-revolution-red">.</span></p>
+          <Image
+            src="/revolution-gym-logo.svg"
+            alt="Revolution Gym"
+            width={240}
+            height={84}
+            className="h-auto w-44 object-contain sm:w-56"
+          />
           <p>© 2026 Revolution Gym Bacoli. Wellness • Training • Combat Sport.</p>
         </div>
       </footer>

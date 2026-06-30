@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const navItems = [
@@ -33,14 +34,16 @@ export function Header() {
       }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-6 lg:px-8" aria-label="Navigazione principale">
-        <a href="#home" className="group flex items-center gap-3" aria-label="Revolution Gym home">
-          <span className="relative grid size-12 place-items-center overflow-hidden rounded-full border border-revolution-red/80 bg-black/40 shadow-glow transition duration-500 group-hover:scale-105 group-hover:border-white">
-            <span className="absolute inset-1 rounded-full border border-white/15" />
-            <span className="font-display text-2xl font-black italic leading-none tracking-[-0.08em] text-white">RG</span>
-          </span>
-          <span className="font-display text-base font-black uppercase leading-none tracking-[0.24em] text-white sm:text-lg">
-            Revolution<br />
-            <span className="text-revolution-red">Gym</span>
+        <a href="#home" className="group flex items-center" aria-label="Revolution Gym home">
+          <span className="relative grid size-14 place-items-center overflow-hidden rounded-full border border-revolution-red/70 bg-black/70 p-1.5 shadow-glow transition duration-500 group-hover:scale-105 group-hover:border-white/80">
+            <Image
+              src="/revolution-gym-mark.svg"
+              alt=""
+              width={56}
+              height={56}
+              className="h-full w-full object-contain"
+              priority
+            />
           </span>
         </a>
 
