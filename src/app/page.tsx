@@ -8,21 +8,49 @@ const whatsappBookingUrl =
   "https://wa.me/393382332258?text=Ciao%2C%20vorrei%20prenotare%20una%20visita%20alla%20Revolution%20Gym.";
 
 const heroVisual = {
-  image: "/images/hero-combat-ring.jpg",
+  image: "/images/hero-combat-ring.svg",
   video: "",
 };
 
 const hyroxMedia = [
-  { label: "Energia race-day", title: "Energia race-day", image: "/images/hyrox-area.jpg", className: "md:col-span-2" },
-  { label: "Classi HYROX", title: "Classi HYROX", image: "/images/sala-fitness-panoramica.jpg", className: "" },
-  { label: "Preparazione in azione", title: "Preparazione in azione", image: "/images/area-panatta.jpg", className: "md:col-span-3" },
+  { label: "Energia race-day", title: "Energia race-day", image: "/images/hyrox-area.svg", className: "md:col-span-2" },
+  { label: "Classi HYROX", title: "Classi HYROX", image: "/images/sala-fitness-panoramica.svg", className: "" },
+  { label: "Preparazione in azione", title: "Preparazione in azione", image: "/images/area-panatta.svg", className: "md:col-span-3" },
+];
+
+
+const mainPillars = [
+  {
+    title: "Bodybuilding & Sala Pesi",
+    description: "Una sala pesi completa e curata per costruire forza, ipertrofia e controllo del corpo con un metodo progressivo.",
+    benefits: ["Attrezzature professionali", "Programmi su misura", "Progressione tecnica"],
+    image: "/images/sala-fitness-panoramica.svg",
+  },
+  {
+    title: "HYROX",
+    description: "Preparazione dedicata per corsa, stazioni e transizioni, con coaching tecnico e intensità calibrata sul tuo livello.",
+    benefits: ["Sessioni specifiche", "Simulazioni gara", "Condizionamento completo"],
+    image: "/images/hyrox-area.svg",
+  },
+  {
+    title: "Combat Sports",
+    description: "Muay Thai, Boxe e Kickboxing in un ambiente energico, tecnico e controllato, dal primo approccio al lavoro avanzato.",
+    benefits: ["Tecnica sul ring", "Classi guidate", "Disciplina e sicurezza"],
+    image: "/images/combat-ring.svg",
+  },
+  {
+    title: "Wellness",
+    description: "Pilates, Yoga, postura e fisioterapia completano l’allenamento con attenzione a mobilità, recupero e benessere quotidiano.",
+    benefits: ["Mobilità e postura", "Recupero attivo", "Supporto specializzato"],
+    image: "/images/area-panatta.svg",
+  },
 ];
 
 const galleryItems = [
-  { title: "Bodybuilding & Sala Pesi", eyebrow: "Training floor", image: "/images/sala-fitness-panoramica.jpg", className: "lg:col-span-5" },
-  { title: "HYROX", eyebrow: "Official Training Club", image: "/images/hyrox-area.jpg", className: "lg:col-span-7" },
-  { title: "Combat", eyebrow: "Muay Thai & Boxing", image: "/images/combat-ring.jpg", className: "lg:col-span-7" },
-  { title: "Ring", eyebrow: "Night session", image: "/images/hero-combat-ring.jpg", className: "lg:col-span-5" },
+  { title: "Bodybuilding & Sala Pesi", eyebrow: "Training floor", image: "/images/sala-fitness-panoramica.svg", className: "lg:col-span-5" },
+  { title: "HYROX", eyebrow: "Official Training Club", image: "/images/hyrox-area.svg", className: "lg:col-span-7" },
+  { title: "Combat", eyebrow: "Muay Thai & Boxing", image: "/images/combat-ring.svg", className: "lg:col-span-7" },
+  { title: "Ring", eyebrow: "Night session", image: "/images/hero-combat-ring.svg", className: "lg:col-span-5" },
 ];
 
 export default function Home() {
@@ -76,6 +104,63 @@ export default function Home() {
             <span className="block h-5 w-px animate-scroll-indicator bg-revolution-red" />
           </span>
         </a>
+      </section>
+
+      <section id="pilastri" className="relative isolate overflow-hidden bg-[#050505] py-24 text-white sm:py-32" aria-labelledby="pilastri-title">
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_12%_10%,rgba(215,38,38,0.28),transparent_28rem),radial-gradient(circle_at_88%_45%,rgba(255,255,255,0.08),transparent_20rem),linear-gradient(180deg,#050505_0%,#111111_48%,#050505_100%)]" />
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(120deg,rgba(255,255,255,0.08)_0_1px,transparent_1px_100%)] bg-[length:104px_104px] opacity-10" />
+        <div className="absolute left-1/2 top-0 -z-10 h-px w-[min(82rem,90vw)] -translate-x-1/2 bg-gradient-to-r from-transparent via-revolution-red to-transparent" />
+
+        <div className="mx-auto max-w-[92rem] px-6 lg:px-8">
+          <div className="scroll-reveal max-w-5xl">
+            <p className="text-sm font-black uppercase tracking-[0.45em] text-revolution-red">I quattro pilastri</p>
+            <h2 id="pilastri-title" className="mt-5 font-display text-5xl font-black uppercase leading-[0.9] tracking-[-0.05em] text-white sm:text-6xl lg:text-8xl">
+              Scegli il tuo percorso Revolution
+            </h2>
+            <p className="mt-7 max-w-3xl text-lg leading-8 text-zinc-300 sm:text-xl">
+              Quattro aree principali, una sola identità: allenamento serio, ambiente premium e supporto reale per costruire continuità.
+            </p>
+          </div>
+
+          <div className="mt-16 grid gap-7 lg:grid-cols-2">
+            {mainPillars.map((pillar, index) => (
+              <article
+                key={pillar.title}
+                className="scroll-reveal group grid overflow-hidden rounded-[2.75rem] border border-white/10 bg-white/[0.035] shadow-2xl shadow-black/55 backdrop-blur-sm transition duration-700 hover:-translate-y-2 hover:border-revolution-red/70 hover:shadow-glow xl:grid-cols-[0.95fr_1.05fr]"
+                style={{ "--reveal-delay": `${index * 100}ms` } as CSSProperties}
+              >
+                <div className="relative min-h-80 overflow-hidden xl:min-h-full">
+                  <div className="absolute inset-0 scale-105 bg-cover bg-center grayscale transition duration-700 group-hover:scale-110 group-hover:grayscale-0" style={{ backgroundImage: `url(${pillar.image})` }} />
+                  <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/35 to-black/88 xl:bg-gradient-to-r" />
+                  <div className="absolute left-6 top-6 rounded-full border border-white/15 bg-black/50 px-4 py-2 text-[0.65rem] font-black uppercase tracking-[0.28em] text-white/75 backdrop-blur-md">
+                    Pilastro 0{index + 1}
+                  </div>
+                </div>
+
+                <div className="flex min-h-[30rem] flex-col justify-between p-7 sm:p-9 lg:p-10">
+                  <div>
+                    <div className="h-px w-20 bg-gradient-to-r from-revolution-red to-transparent transition-all duration-700 group-hover:w-40" />
+                    <h3 className="mt-7 font-display text-4xl font-black uppercase leading-none tracking-[-0.04em] text-white sm:text-5xl">
+                      {pillar.title}
+                    </h3>
+                    <p className="mt-6 text-base leading-8 text-zinc-300 sm:text-lg">{pillar.description}</p>
+                    <div className="mt-8 grid gap-3">
+                      {pillar.benefits.map((benefit) => (
+                        <p key={benefit} className="rounded-full border border-white/10 bg-black/40 px-5 py-3 text-sm font-black uppercase tracking-[0.18em] text-white transition duration-500 group-hover:border-revolution-red/45">
+                          <span className="text-revolution-red">✓</span> {benefit}
+                        </p>
+                      ))}
+                    </div>
+                  </div>
+
+                  <a href={whatsappBookingUrl} target="_blank" rel="noopener noreferrer" className="mt-9 inline-flex w-fit items-center gap-3 rounded-full bg-revolution-red px-6 py-4 text-xs font-black uppercase tracking-[0.24em] text-white shadow-glow transition duration-500 hover:-translate-y-1 hover:bg-white hover:text-black">
+                    Prenota su WhatsApp <span aria-hidden="true">→</span>
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
       </section>
 
 
