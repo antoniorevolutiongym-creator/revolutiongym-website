@@ -35,16 +35,14 @@ export function Header() {
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-6 lg:px-8" aria-label="Navigazione principale">
         <a href="#home" className="group flex items-center" aria-label="Revolution Gym home">
-          <span className="relative grid size-14 place-items-center overflow-hidden rounded-full border border-revolution-red/70 bg-black/70 p-1.5 shadow-glow transition duration-500 group-hover:scale-105 group-hover:border-white/80">
-            <Image
-              src="/revolution-gym-mark.svg"
-              alt=""
-              width={56}
-              height={56}
-              className="h-full w-full object-contain"
-              priority
-            />
-          </span>
+          <Image
+            src="/revolution-gym-logo.svg"
+            alt="Revolution Gym"
+            width={180}
+            height={63}
+            className="h-auto w-32 object-contain drop-shadow-[0_0_18px_rgba(215,38,38,0.35)] transition duration-500 group-hover:scale-105 sm:w-40"
+            priority
+          />
         </a>
 
         <div className="hidden items-center gap-5 lg:flex xl:gap-8">
