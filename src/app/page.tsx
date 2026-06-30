@@ -68,18 +68,18 @@ export default function Home() {
     <main id="home" className="min-h-screen bg-revolution-black text-white">
       <Header />
 
-      <section className="relative flex min-h-screen items-center overflow-hidden bg-revolution-black pt-24" aria-labelledby="hero-title">
+      <section className="relative flex min-h-[100svh] items-center overflow-hidden bg-revolution-black pt-24" aria-labelledby="hero-title">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-cover bg-center opacity-80 saturate-125" style={{ backgroundImage: `url(${photography.heroRing})` }} />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_56%_35%,rgba(215,38,38,0.24),transparent_30rem),linear-gradient(90deg,rgba(5,5,5,0.88),rgba(5,5,5,0.54)_43%,rgba(5,5,5,0.68))]" />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/75" />
+          <div className="absolute inset-0 bg-cover bg-center opacity-100 brightness-125 contrast-125 saturate-125" style={{ backgroundImage: `url(${photography.heroRing})` }} />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_56%_35%,rgba(215,38,38,0.18),transparent_30rem)]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/55" />
           <div className="absolute inset-0 bg-[linear-gradient(115deg,rgba(255,255,255,0.12)_0_1px,transparent_1px_100%)] bg-[length:84px_84px] opacity-10" />
         </div>
 
-        <div className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-14 px-6 py-24 sm:py-28 lg:grid-cols-[1fr_0.72fr] lg:px-8">
-          <div className="animate-hero-reveal">
+        <div className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-10 px-5 py-20 sm:px-6 sm:py-28 lg:grid-cols-[1fr_0.72fr] lg:gap-16 lg:px-8">
+          <div className="animate-hero-reveal relative rounded-[2rem] bg-[linear-gradient(90deg,rgba(0,0,0,0.82),rgba(0,0,0,0.58)_58%,rgba(0,0,0,0))] p-5 backdrop-blur-[2px] sm:p-8 lg:-ml-8 lg:p-10">
             <p className="mb-5 text-xs font-black uppercase tracking-[0.5em] text-revolution-red sm:text-sm">Bacoli / Sala pesi e wellness</p>
-            <h1 id="hero-title" className="font-display text-6xl font-black uppercase leading-[0.82] tracking-[-0.06em] text-white sm:text-7xl md:text-8xl lg:text-9xl">
+            <h1 id="hero-title" className="font-display text-5xl font-black uppercase leading-[0.82] tracking-[-0.06em] text-white sm:text-7xl md:text-8xl lg:text-9xl">
               REVOLUTION <span className="block text-transparent [-webkit-text-stroke:1.5px_#ffffff]">GYM</span>
             </h1>
             <p className="mt-7 text-sm font-black uppercase tracking-[0.32em] text-white sm:text-base">BODYBUILDING & SALA PESI • HYROX • COMBAT SPORTS • WELLNESS</p>
@@ -98,7 +98,7 @@ export default function Home() {
 
           <div className="relative hidden min-h-[34rem] animate-hero-float overflow-hidden rounded-[2.5rem] border border-white/15 bg-black/40 p-4 shadow-2xl shadow-black/60 lg:block">
             <div className="absolute inset-4 overflow-hidden rounded-[2rem] border border-white/10">
-              <Image src={photography.heroGym} alt="Sala pesi Revolution Gym con manubri e attrezzature professionali" fill sizes="(min-width: 1024px) 36vw, 0vw" className="object-cover object-center saturate-125" priority />
+              <Image src={photography.heroGym} alt="Sala pesi Revolution Gym con manubri e attrezzature professionali" fill sizes="(min-width: 1024px) 36vw, 0vw" className="premium-media-image object-cover object-center saturate-125 transition duration-700 hover:scale-105" priority />
               <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-black/10 to-black/70" />
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_65%_20%,rgba(255,255,255,0.24),transparent_18rem),radial-gradient(circle_at_22%_72%,rgba(215,38,38,0.22),transparent_16rem)]" />
             </div>
@@ -117,7 +117,7 @@ export default function Home() {
         </a>
       </section>
 
-      <section id="pilastri" className="relative isolate overflow-hidden bg-[#050505] py-24 text-white sm:py-32" aria-labelledby="pilastri-title">
+      <section id="pilastri" className="relative isolate overflow-hidden bg-[#050505] py-28 text-white sm:py-36" aria-labelledby="pilastri-title">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_12%_10%,rgba(215,38,38,0.28),transparent_28rem),radial-gradient(circle_at_88%_45%,rgba(255,255,255,0.08),transparent_20rem),linear-gradient(180deg,#050505_0%,#111111_48%,#050505_100%)]" />
         <div className="absolute inset-0 -z-10 bg-[linear-gradient(120deg,rgba(255,255,255,0.08)_0_1px,transparent_1px_100%)] bg-[length:104px_104px] opacity-10" />
         <div className="absolute left-1/2 top-0 -z-10 h-px w-[min(82rem,90vw)] -translate-x-1/2 bg-gradient-to-r from-transparent via-revolution-red to-transparent" />
@@ -141,7 +141,7 @@ export default function Home() {
                 style={{ "--reveal-delay": `${index * 100}ms` } as CSSProperties}
               >
                 <div className="relative min-h-80 overflow-hidden xl:min-h-full">
-                  <div className="absolute inset-0 scale-105 bg-cover bg-center grayscale transition duration-700 group-hover:scale-110 group-hover:grayscale-0" style={{ backgroundImage: `url(${pillar.image})` }} />
+                  <div className="premium-media-image absolute inset-0 scale-105 bg-cover bg-center grayscale transition duration-700 group-hover:scale-110 group-hover:grayscale-0" style={{ backgroundImage: `url(${pillar.image})` }} />
                   <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/35 to-black/88 xl:bg-gradient-to-r" />
                   <div className="absolute left-6 top-6 rounded-full border border-white/15 bg-black/50 px-4 py-2 text-[0.65rem] font-black uppercase tracking-[0.28em] text-white/75 backdrop-blur-md">
                     Pilastro 0{index + 1}
@@ -175,7 +175,7 @@ export default function Home() {
       </section>
 
 
-      <section id="hyrox" className="relative isolate overflow-hidden bg-[#030303] py-24 text-white sm:py-32" aria-labelledby="hyrox-title">
+      <section id="hyrox" className="relative isolate overflow-hidden bg-[#030303] py-28 text-white sm:py-36" aria-labelledby="hyrox-title">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_18%_20%,rgba(215,38,38,0.36),transparent_30rem),radial-gradient(circle_at_82%_12%,rgba(255,255,255,0.12),transparent_22rem),linear-gradient(135deg,#030303_0%,#101010_45%,#050505_100%)]" />
         <div className="absolute inset-0 -z-10 bg-[linear-gradient(115deg,rgba(255,255,255,0.10)_0_1px,transparent_1px_100%)] bg-[length:118px_118px] opacity-10" />
         <div className="absolute left-1/2 top-0 -z-10 h-px w-[min(92rem,92vw)] -translate-x-1/2 bg-gradient-to-r from-transparent via-revolution-red to-transparent" />
@@ -226,7 +226,7 @@ export default function Home() {
             <div className="grid gap-6 md:grid-cols-3">
               {hyroxMedia.map((media, index) => (
                 <div key={media.label} className={`hyrox-media scroll-reveal group relative min-h-72 overflow-hidden rounded-[2.25rem] border border-white/10 bg-zinc-950 shadow-2xl shadow-black/50 ${media.className}`} style={{ "--reveal-delay": `${220 + index * 90}ms` } as CSSProperties}>
-                  <div className="absolute inset-0 scale-105 bg-cover bg-center grayscale transition duration-700 group-hover:scale-110 group-hover:grayscale-0" style={{ backgroundImage: `url(${media.image})` }} />
+                  <div className="premium-media-image absolute inset-0 scale-105 bg-cover bg-center grayscale transition duration-700 group-hover:scale-110 group-hover:grayscale-0" style={{ backgroundImage: `url(${media.image})` }} />
                   <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/50 to-black/95" />
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_35%_25%,rgba(215,38,38,0.35),transparent_18rem)]" />
                   <div className="relative flex h-full min-h-72 flex-col justify-between p-7">
@@ -267,7 +267,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(215,38,38,0.20),transparent_24rem),linear-gradient(135deg,rgba(255,255,255,0.08)_0_1px,transparent_1px_100%)] bg-[length:auto,92px_92px] opacity-80" />
         <div className="absolute right-0 top-16 h-72 w-72 rounded-full bg-revolution-red/10 blur-3xl" />
 
-        <div className="relative mx-auto grid max-w-7xl gap-14 px-6 py-24 sm:py-32 lg:grid-cols-[0.88fr_1.12fr] lg:px-8">
+        <div className="relative mx-auto grid max-w-7xl gap-14 px-6 py-28 sm:py-36 lg:grid-cols-[0.88fr_1.12fr] lg:px-8">
           <div className="scroll-reveal">
             <p className="text-sm font-black uppercase tracking-[0.42em] text-revolution-red">Chi siamo</p>
             <h2 id="about-title" className="mt-5 font-display text-5xl font-black uppercase leading-[0.92] tracking-[-0.04em] sm:text-6xl lg:text-7xl">
@@ -305,8 +305,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="metodo" className="relative isolate overflow-hidden bg-black py-28 text-white sm:py-40" aria-labelledby="method-title">
-        <div className="absolute inset-0 -z-10 bg-cover bg-center grayscale" style={{ backgroundImage: `url(${photography.coachAntonio})` }} />
+      <section id="metodo" className="relative isolate overflow-hidden bg-black py-32 text-white sm:py-44" aria-labelledby="method-title">
+        <div className="premium-media-image absolute inset-0 -z-10 bg-cover bg-center grayscale" style={{ backgroundImage: `url(${photography.coachAntonio})` }} />
         <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(0,0,0,0.96),rgba(0,0,0,0.72)_48%,rgba(0,0,0,0.92)),radial-gradient(circle_at_70%_30%,rgba(215,38,38,0.30),transparent_28rem)]" />
         <div className="absolute inset-x-0 top-0 -z-10 h-px bg-gradient-to-r from-transparent via-revolution-red to-transparent" />
 
@@ -337,7 +337,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="discipline" className="relative isolate overflow-hidden bg-revolution-black py-24 text-white sm:py-32" aria-labelledby="discipline-title">
+      <section id="discipline" className="relative isolate overflow-hidden bg-revolution-black py-28 text-white sm:py-36" aria-labelledby="discipline-title">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_18%_12%,rgba(215,38,38,0.28),transparent_28rem),radial-gradient(circle_at_88%_78%,rgba(215,38,38,0.20),transparent_24rem),linear-gradient(180deg,#050505_0%,#0b0b0b_46%,#050505_100%)]" />
         <div className="absolute inset-0 -z-10 bg-[linear-gradient(120deg,rgba(255,255,255,0.08)_0_1px,transparent_1px_100%)] bg-[length:96px_96px] opacity-10" />
         <div className="absolute left-1/2 top-0 -z-10 h-px w-[min(72rem,86vw)] -translate-x-1/2 bg-gradient-to-r from-transparent via-revolution-red to-transparent" />
@@ -361,7 +361,7 @@ export default function Home() {
                 style={{ "--reveal-delay": `${index * 90}ms` } as CSSProperties}
               >
                 <div
-                  className="absolute inset-0 scale-105 bg-cover bg-center transition duration-700 ease-out group-hover:scale-110 group-hover:grayscale-0"
+                  className="premium-media-image absolute inset-0 scale-105 bg-cover bg-center transition duration-700 ease-out group-hover:scale-110 group-hover:grayscale-0"
                   style={{ backgroundImage: `url(${discipline.image})` }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/62 to-black/95 transition duration-700 group-hover:from-black/10 group-hover:via-black/48 group-hover:to-black" />
@@ -393,7 +393,7 @@ export default function Home() {
       </section>
 
 
-      <section id="gallery" className="relative isolate overflow-hidden bg-revolution-black py-24 text-white sm:py-32" aria-labelledby="gallery-title">
+      <section id="gallery" className="relative isolate overflow-hidden bg-revolution-black py-28 text-white sm:py-36" aria-labelledby="gallery-title">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_18%_18%,rgba(215,38,38,0.22),transparent_26rem),linear-gradient(180deg,#050505_0%,#0b0b0b_50%,#050505_100%)]" />
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="scroll-reveal max-w-4xl">
@@ -402,10 +402,10 @@ export default function Home() {
             <p className="mt-7 max-w-3xl text-lg leading-8 text-zinc-300 sm:text-xl">Bodybuilding & Sala Pesi, HYROX, combat sports e ring convivono in un racconto visivo essenziale, notturno e premium, fedele all’identità del centro.</p>
           </div>
 
-          <div className="mt-16 grid auto-rows-[22rem] gap-6 lg:grid-cols-12">
+          <div className="mt-16 grid auto-rows-[18rem] gap-6 sm:auto-rows-[22rem] lg:grid-cols-12">
             {galleryItems.map((item, index) => (
               <article key={item.title} className={`gallery-card scroll-reveal group relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-zinc-950 shadow-2xl shadow-black/50 ${item.className}`} style={{ "--reveal-delay": `${index * 90}ms` } as CSSProperties}>
-                <div className="absolute inset-0 scale-105 bg-cover bg-center grayscale transition duration-700 group-hover:scale-110 group-hover:grayscale-0" style={{ backgroundImage: `url(${item.image})` }} />
+                <div className="premium-media-image absolute inset-0 scale-105 bg-cover bg-center grayscale transition duration-700 group-hover:scale-110 group-hover:grayscale-0" style={{ backgroundImage: `url(${item.image})` }} />
                 <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-black/35 to-black/90" />
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(215,38,38,0.28),transparent_18rem)] opacity-80" />
                 <div className="absolute bottom-0 left-0 right-0 p-7 sm:p-9">
@@ -440,7 +440,7 @@ export default function Home() {
         </div>
       </Section>
 
-      <section id="wellness" className="relative isolate overflow-hidden bg-revolution-black py-24 text-white sm:py-32" aria-labelledby="wellness-title">
+      <section id="wellness" className="relative isolate overflow-hidden bg-revolution-black py-28 text-white sm:py-36" aria-labelledby="wellness-title">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_12%_18%,rgba(215,38,38,0.18),transparent_24rem),radial-gradient(circle_at_86%_20%,rgba(255,255,255,0.08),transparent_18rem),linear-gradient(180deg,#050505_0%,#090909_52%,#050505_100%)]" />
         <div className="absolute inset-0 -z-10 bg-[linear-gradient(135deg,rgba(255,255,255,0.07)_0_1px,transparent_1px_100%)] bg-[length:110px_110px] opacity-10" />
         <div className="absolute left-1/2 top-0 -z-10 h-px w-[min(76rem,88vw)] -translate-x-1/2 bg-gradient-to-r from-transparent via-white/30 to-transparent" />
@@ -469,7 +469,7 @@ export default function Home() {
               >
                 <div className="relative min-h-64 overflow-hidden md:min-h-full">
                   <div
-                    className="absolute inset-0 scale-105 bg-cover bg-center grayscale transition duration-700 group-hover:scale-110 group-hover:grayscale-0"
+                    className="premium-media-image absolute inset-0 scale-105 bg-cover bg-center grayscale transition duration-700 group-hover:scale-110 group-hover:grayscale-0"
                     style={{ backgroundImage: `url(${service.image})` }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-black/45 to-black/85 md:bg-gradient-to-r" />
@@ -516,7 +516,7 @@ export default function Home() {
         </div>
       </Section>
 
-      <section id="contact" className="relative isolate overflow-hidden bg-revolution-black py-24 text-white sm:py-32" aria-labelledby="contact-title">
+      <section id="contact" className="relative isolate overflow-hidden bg-revolution-black py-28 text-white sm:py-36" aria-labelledby="contact-title">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_12%_18%,rgba(215,38,38,0.24),transparent_24rem),radial-gradient(circle_at_86%_74%,rgba(255,255,255,0.10),transparent_20rem),linear-gradient(180deg,#050505_0%,#101010_52%,#050505_100%)]" />
         <div className="absolute inset-0 -z-10 bg-[linear-gradient(120deg,rgba(255,255,255,0.08)_0_1px,transparent_1px_100%)] bg-[length:96px_96px] opacity-10" />
         <div className="absolute left-1/2 top-0 -z-10 h-px w-[min(76rem,88vw)] -translate-x-1/2 bg-gradient-to-r from-transparent via-revolution-red to-transparent" />
