@@ -2,6 +2,9 @@
 
 import { useEffect, useState } from "react";
 
+const whatsappBookingUrl =
+  "https://wa.me/393382332258?text=Ciao%2C%20vorrei%20prenotare%20una%20visita%20alla%20Revolution%20Gym.";
+
 const navItems = [
   { label: "Home", href: "#home" },
   { label: "Chi siamo", href: "#chi-siamo" },
@@ -48,7 +51,7 @@ export function Header() {
         </div>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <a href="#contact" className="rounded-full border border-white/20 bg-white/10 px-4 py-2.5 text-[0.68rem] font-black uppercase tracking-[0.22em] text-white transition duration-300 hover:border-revolution-red hover:bg-revolution-red">
+          <a href={whatsappBookingUrl} target="_blank" rel="noopener noreferrer" className="rounded-full border border-white/20 bg-white/10 px-4 py-2.5 text-[0.68rem] font-black uppercase tracking-[0.22em] text-white transition duration-300 hover:border-revolution-red hover:bg-revolution-red">
             Prenota
           </a>
         </div>

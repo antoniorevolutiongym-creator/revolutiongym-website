@@ -4,6 +4,9 @@ import { Header } from "@/components/Header";
 import { Section } from "@/components/Section";
 import { aboutHighlights, differentiators, disciplines, services, wellnessServices } from "@/lib/content";
 
+const whatsappBookingUrl =
+  "https://wa.me/393382332258?text=Ciao%2C%20vorrei%20prenotare%20una%20visita%20alla%20Revolution%20Gym.";
+
 export default function Home() {
   return (
     <main id="home" className="min-h-screen bg-revolution-black text-white">
@@ -30,7 +33,7 @@ export default function Home() {
               <a href="#chi-siamo" className="rounded-full bg-revolution-red px-7 py-4 text-center text-xs font-black uppercase tracking-[0.24em] text-white shadow-glow transition duration-300 hover:-translate-y-1 hover:bg-white hover:text-black">
                 Scopri il centro
               </a>
-              <a href="#contact" className="rounded-full border border-white/25 bg-white/5 px-7 py-4 text-center text-xs font-black uppercase tracking-[0.24em] text-white transition duration-300 hover:-translate-y-1 hover:border-revolution-red hover:bg-revolution-red">
+              <a href={whatsappBookingUrl} target="_blank" rel="noopener noreferrer" className="rounded-full border border-white/25 bg-white/5 px-7 py-4 text-center text-xs font-black uppercase tracking-[0.24em] text-white transition duration-300 hover:-translate-y-1 hover:border-revolution-red hover:bg-revolution-red">
                 Prenota una visita
               </a>
             </div>
@@ -97,7 +100,7 @@ export default function Home() {
                 <h3 className="mt-5 font-display text-4xl font-black uppercase leading-none tracking-[-0.04em] sm:text-5xl">Forza, resistenza, strategia.</h3>
                 <p className="mt-6 text-lg leading-8 text-white/85">Un percorso riservato per costruire ritmo, transizioni e gestione dello sforzo con coaching tecnico, intensità progressiva e attenzione reale al livello di partenza.</p>
               </div>
-              <a href="#contact" className="inline-flex w-fit items-center gap-3 rounded-full bg-white px-6 py-4 text-xs font-black uppercase tracking-[0.24em] text-black transition duration-500 hover:-translate-y-1 hover:bg-black hover:text-white">
+              <a href={whatsappBookingUrl} target="_blank" rel="noopener noreferrer" className="inline-flex w-fit items-center gap-3 rounded-full bg-white px-6 py-4 text-xs font-black uppercase tracking-[0.24em] text-black transition duration-500 hover:-translate-y-1 hover:bg-black hover:text-white">
                 Prenota una prova <span aria-hidden="true">→</span>
               </a>
             </div>
@@ -344,18 +347,60 @@ export default function Home() {
         </div>
       </Section>
 
-      <section id="contact" className="bg-white text-revolution-black">
-        <div className="mx-auto grid max-w-7xl gap-12 px-6 py-24 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
-          <div>
-            <p className="text-sm font-black uppercase tracking-[0.35em] text-revolution-red">Contatti</p>
-            <h2 className="mt-5 font-display text-5xl font-black uppercase tracking-tight">Entra in Revolution Gym Bacoli.</h2>
-          </div>
-          <div className="rounded-[2rem] bg-revolution-black p-8 text-white sm:p-10">
-            <p className="text-2xl font-semibold leading-10">Prenota una visita e confrontati con il team: ti aiuteremo a scegliere il percorso più coerente tra HYROX, Functional Training, Combat Sport, Pilates, Yoga, postura e fisioterapia.</p>
-            <div className="mt-10 grid gap-4 sm:grid-cols-2">
-              <a className="rounded-full bg-revolution-red px-6 py-4 text-center text-sm font-black uppercase tracking-[0.22em]" href="mailto:info@revolutiongymbacoli.it">Email</a>
-              <a className="rounded-full border border-white/20 px-6 py-4 text-center text-sm font-black uppercase tracking-[0.22em]" href="tel:+390000000000">Chiama</a>
+      <section id="contact" className="relative isolate overflow-hidden bg-revolution-black py-24 text-white sm:py-32" aria-labelledby="contact-title">
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_12%_18%,rgba(215,38,38,0.24),transparent_24rem),radial-gradient(circle_at_86%_74%,rgba(255,255,255,0.10),transparent_20rem),linear-gradient(180deg,#050505_0%,#101010_52%,#050505_100%)]" />
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(120deg,rgba(255,255,255,0.08)_0_1px,transparent_1px_100%)] bg-[length:96px_96px] opacity-10" />
+        <div className="absolute left-1/2 top-0 -z-10 h-px w-[min(76rem,88vw)] -translate-x-1/2 bg-gradient-to-r from-transparent via-revolution-red to-transparent" />
+
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
+            <div className="scroll-reveal">
+              <p className="text-sm font-black uppercase tracking-[0.45em] text-revolution-red">Contatti</p>
+              <h2 id="contact-title" className="mt-5 font-display text-5xl font-black uppercase leading-[0.92] tracking-[-0.05em] text-white sm:text-6xl lg:text-7xl">Entra in Revolution Gym Bacoli.</h2>
+              <p className="mt-7 max-w-2xl text-lg leading-8 text-zinc-300 sm:text-xl">Prenota una visita e confrontati con il team: ti aiuteremo a scegliere il percorso più coerente tra HYROX, Functional Training, Combat Sport, Pilates, Yoga, postura e fisioterapia.</p>
             </div>
+
+            <div className="scroll-reveal rounded-[2.5rem] border border-white/10 bg-white/[0.045] p-6 shadow-2xl shadow-black/60 backdrop-blur-xl sm:p-8" style={{ "--reveal-delay": "120ms" } as CSSProperties}>
+              <div className="grid gap-4 sm:grid-cols-2">
+                {[
+                  { label: "Indirizzo", value: "Via Miseno 91, Bacoli (Napoli), 80070", href: "https://www.google.com/maps/search/?api=1&query=Via%20Miseno%2091%2C%20Bacoli%20%28Napoli%29%2C%2080070" },
+                  { label: "Telefono", value: "3382332258", href: "tel:+393382332258" },
+                  { label: "Fisso", value: "0815235944", href: "tel:+390815235944" },
+                  { label: "Instagram", value: "@r.evolutiongym", href: "https://www.instagram.com/r.evolutiongym/" },
+                  { label: "TikTok", value: "@r.evolutiongym", href: "https://www.tiktok.com/@r.evolutiongym" },
+                  { label: "Instagram Team Costagliola", value: "@teamcostagliola", href: "https://www.instagram.com/teamcostagliola/" },
+                ].map((item) => (
+                  <a key={item.label} href={item.href} target={item.href.startsWith("http") ? "_blank" : undefined} rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined} className="group rounded-[1.5rem] border border-white/10 bg-black/45 p-5 transition duration-500 hover:-translate-y-1 hover:border-revolution-red/70 hover:bg-revolution-red/10">
+                    <p className="text-xs font-black uppercase tracking-[0.32em] text-revolution-red">{item.label}</p>
+                    <p className="mt-4 text-lg font-black leading-7 text-white transition group-hover:text-white">{item.value}</p>
+                  </a>
+                ))}
+              </div>
+
+              <div className="mt-5 rounded-[1.75rem] border border-revolution-red/25 bg-revolution-red p-6 shadow-glow">
+                <p className="text-xs font-black uppercase tracking-[0.36em] text-white/75">Orari</p>
+                <div className="mt-5 grid gap-3 text-lg font-black text-white sm:grid-cols-3">
+                  <p>Lun-Ven<br /><span className="text-white/75">7:00-22:00</span></p>
+                  <p>Sabato<br /><span className="text-white/75">9:00-20:00</span></p>
+                  <p>Domenica<br /><span className="text-white/75">9:00-13:00</span></p>
+                </div>
+              </div>
+
+              <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                <a className="rounded-full bg-white px-6 py-4 text-center text-sm font-black uppercase tracking-[0.22em] text-revolution-black transition duration-500 hover:-translate-y-1 hover:bg-revolution-red hover:text-white" href={whatsappBookingUrl} target="_blank" rel="noopener noreferrer">Prenota su WhatsApp</a>
+                <a className="rounded-full border border-white/20 px-6 py-4 text-center text-sm font-black uppercase tracking-[0.22em] text-white transition duration-500 hover:-translate-y-1 hover:border-revolution-red hover:bg-revolution-red" href="tel:+393382332258">Chiama ora</a>
+              </div>
+            </div>
+          </div>
+
+          <div className="scroll-reveal mt-12 overflow-hidden rounded-[2.5rem] border border-white/10 bg-white/[0.035] p-3 shadow-2xl shadow-black/60" style={{ "--reveal-delay": "180ms" } as CSSProperties}>
+            <iframe
+              title="Mappa Revolution Gym Bacoli"
+              src="https://www.google.com/maps?q=Via%20Miseno%2091%2C%20Bacoli%20%28Napoli%29%2C%2080070&output=embed"
+              className="h-[24rem] w-full rounded-[2rem] border-0 grayscale invert-[0.9] md:h-[30rem]"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </div>
         </div>
       </section>
