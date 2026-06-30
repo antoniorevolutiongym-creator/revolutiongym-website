@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { CSSProperties } from "react";
+import { AnimatedCounters } from "@/components/AnimatedCounters";
 import { Header } from "@/components/Header";
 import { Section } from "@/components/Section";
 import { aboutHighlights, differentiators, disciplines, services, wellnessServices } from "@/lib/content";
@@ -7,15 +8,19 @@ import { aboutHighlights, differentiators, disciplines, services, wellnessServic
 const whatsappBookingUrl =
   "https://wa.me/393382332258?text=Ciao%2C%20vorrei%20prenotare%20una%20visita%20alla%20Revolution%20Gym.";
 
-const heroVisual = {
-  image: "/images/hero-combat-ring.svg",
-  video: "",
+const photography = {
+  hero: "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=2400&q=82",
+  strength: "https://images.unsplash.com/photo-1534367610401-9f5ed68180aa?auto=format&fit=crop&w=1800&q=80",
+  hyrox: "https://images.unsplash.com/photo-1517963879433-6ad2b056d712?auto=format&fit=crop&w=1800&q=80",
+  combat: "https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=1800&q=80",
+  wellness: "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1800&q=80",
+  coaching: "https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&w=1800&q=80",
 };
 
 const hyroxMedia = [
-  { label: "Energia race-day", title: "Energia race-day", image: "/images/hyrox-area.svg", className: "md:col-span-2" },
-  { label: "Classi HYROX", title: "Classi HYROX", image: "/images/sala-fitness-panoramica.svg", className: "" },
-  { label: "Preparazione in azione", title: "Preparazione in azione", image: "/images/area-panatta.svg", className: "md:col-span-3" },
+  { label: "Energia race-day", title: "Energia race-day", image: photography.hyrox, className: "md:col-span-2" },
+  { label: "Classi HYROX", title: "Classi HYROX", image: photography.strength, className: "" },
+  { label: "Preparazione in azione", title: "Preparazione in azione", image: photography.wellness, className: "md:col-span-3" },
 ];
 
 
@@ -24,33 +29,33 @@ const mainPillars = [
     title: "Bodybuilding & Sala Pesi",
     description: "Una sala pesi completa e curata per costruire forza, ipertrofia e controllo del corpo con un metodo progressivo.",
     benefits: ["Attrezzature professionali", "Programmi su misura", "Progressione tecnica"],
-    image: "/images/sala-fitness-panoramica.svg",
+    image: photography.strength,
   },
   {
     title: "HYROX",
     description: "Preparazione dedicata per corsa, stazioni e transizioni, con coaching tecnico e intensità calibrata sul tuo livello.",
     benefits: ["Sessioni specifiche", "Simulazioni gara", "Condizionamento completo"],
-    image: "/images/hyrox-area.svg",
+    image: photography.hyrox,
   },
   {
     title: "Combat Sports",
     description: "Muay Thai, Boxe e Kickboxing in un ambiente energico, tecnico e controllato, dal primo approccio al lavoro avanzato.",
     benefits: ["Tecnica sul ring", "Classi guidate", "Disciplina e sicurezza"],
-    image: "/images/combat-ring.svg",
+    image: photography.combat,
   },
   {
     title: "Wellness",
     description: "Pilates, Yoga, postura e fisioterapia completano l’allenamento con attenzione a mobilità, recupero e benessere quotidiano.",
     benefits: ["Mobilità e postura", "Recupero attivo", "Supporto specializzato"],
-    image: "/images/area-panatta.svg",
+    image: photography.wellness,
   },
 ];
 
 const galleryItems = [
-  { title: "Bodybuilding & Sala Pesi", eyebrow: "Training floor", image: "/images/sala-fitness-panoramica.svg", className: "lg:col-span-5" },
-  { title: "HYROX", eyebrow: "Official Training Club", image: "/images/hyrox-area.svg", className: "lg:col-span-7" },
-  { title: "Combat", eyebrow: "Muay Thai & Boxing", image: "/images/combat-ring.svg", className: "lg:col-span-7" },
-  { title: "Ring", eyebrow: "Night session", image: "/images/hero-combat-ring.svg", className: "lg:col-span-5" },
+  { title: "Bodybuilding & Sala Pesi", eyebrow: "Training floor", image: photography.strength, className: "lg:col-span-5" },
+  { title: "HYROX", eyebrow: "Official Training Club", image: photography.hyrox, className: "lg:col-span-7" },
+  { title: "Combat", eyebrow: "Muay Thai & Boxing", image: photography.combat, className: "lg:col-span-7" },
+  { title: "Ring", eyebrow: "Night session", image: photography.hero, className: "lg:col-span-5" },
 ];
 
 export default function Home() {
@@ -60,7 +65,7 @@ export default function Home() {
 
       <section className="relative flex min-h-screen items-center overflow-hidden bg-revolution-black pt-24" aria-labelledby="hero-title">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-cover bg-center opacity-45 grayscale" style={{ backgroundImage: `url(${heroVisual.image})` }} />
+          <div className="absolute inset-0 bg-cover bg-center opacity-45 grayscale" style={{ backgroundImage: `url(${photography.hero})` }} />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(215,38,38,0.32),transparent_28rem),linear-gradient(90deg,rgba(5,5,5,0.96),rgba(5,5,5,0.72)_42%,rgba(5,5,5,0.92))]" />
           <div className="absolute inset-0 bg-[linear-gradient(115deg,rgba(255,255,255,0.12)_0_1px,transparent_1px_100%)] bg-[length:84px_84px] opacity-10" />
         </div>
@@ -86,11 +91,7 @@ export default function Home() {
           </div>
 
           <div className="relative hidden min-h-[34rem] animate-hero-float overflow-hidden rounded-[2.5rem] border border-white/10 bg-white/[0.03] p-4 shadow-2xl shadow-black/60 lg:block">
-            {heroVisual.video ? (
-              <video className="h-full w-full rounded-[2rem] border border-white/10 object-cover grayscale" src={heroVisual.video} autoPlay muted loop playsInline poster={heroVisual.image} />
-            ) : (
-              <div className="h-full rounded-[2rem] border border-white/10 bg-cover bg-center grayscale" style={{ backgroundImage: `url(${heroVisual.image})` }} />
-            )}
+            <div className="h-full rounded-[2rem] border border-white/10 bg-cover bg-center grayscale" style={{ backgroundImage: `url(${photography.hero})` }} />
             <div className="absolute -left-8 bottom-14 rounded-3xl border border-revolution-red/40 bg-black/70 p-5 backdrop-blur-xl">
               <p className="text-xs font-black uppercase tracking-[0.35em] text-revolution-red">Bacoli</p>
               <p className="mt-2 font-display text-3xl font-black uppercase text-white">Bodybuilding & Sala Pesi • HYROX</p>
@@ -230,18 +231,14 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-16 grid gap-5 md:grid-cols-3">
-            {[
-              { value: "12+", label: "sessioni HYROX e conditioning" },
-              { value: "360°", label: "corsa, stazioni e transizioni" },
-              { value: "01", label: "programma progressivo dedicato" },
-            ].map((stat, index) => (
-              <article key={stat.label} className="hyrox-stat scroll-reveal rounded-[2rem] border border-white/10 bg-white/[0.045] p-7 shadow-2xl shadow-black/40 backdrop-blur-md" style={{ "--reveal-delay": `${index * 110}ms` } as CSSProperties}>
-                <p className="font-display text-6xl font-black uppercase leading-none tracking-[-0.06em] text-white sm:text-7xl">{stat.value}</p>
-                <div className="mt-6 h-px w-20 bg-gradient-to-r from-revolution-red to-transparent" />
-                <p className="mt-6 text-sm font-black uppercase tracking-[0.24em] text-zinc-200">✓ {stat.label}</p>
-              </article>
-            ))}
+          <div className="mt-16 scroll-reveal">
+            <AnimatedCounters
+              counters={[
+                { value: 12, suffix: "+", label: "sessioni HYROX e conditioning" },
+                { value: 360, suffix: "°", label: "corsa, stazioni e transizioni" },
+                { value: 1, label: "programma progressivo dedicato" },
+              ]}
+            />
           </div>
 
           <div className="hyrox-cta scroll-reveal mt-16 overflow-hidden rounded-[2.75rem] border border-white/10 bg-white p-8 text-revolution-black shadow-2xl shadow-black/50 sm:p-12 lg:flex lg:items-center lg:justify-between lg:gap-10" style={{ "--reveal-delay": "180ms" } as CSSProperties}>
@@ -294,6 +291,38 @@ export default function Home() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="metodo" className="relative isolate overflow-hidden bg-black py-28 text-white sm:py-40" aria-labelledby="method-title">
+        <div className="absolute inset-0 -z-10 bg-cover bg-center grayscale" style={{ backgroundImage: `url(${photography.coaching})` }} />
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(0,0,0,0.96),rgba(0,0,0,0.72)_48%,rgba(0,0,0,0.92)),radial-gradient(circle_at_70%_30%,rgba(215,38,38,0.30),transparent_28rem)]" />
+        <div className="absolute inset-x-0 top-0 -z-10 h-px bg-gradient-to-r from-transparent via-revolution-red to-transparent" />
+
+        <div className="mx-auto grid max-w-[92rem] gap-14 px-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-end lg:px-8">
+          <div className="scroll-reveal">
+            <p className="text-sm font-black uppercase tracking-[0.52em] text-revolution-red">Il Metodo Revolution</p>
+            <h2 id="method-title" className="mt-6 font-display text-6xl font-black uppercase leading-[0.82] tracking-[-0.06em] text-white sm:text-7xl lg:text-8xl xl:text-9xl">
+              Metodo prima. Intensità dopo.
+            </h2>
+            <p className="mt-8 max-w-3xl text-2xl font-semibold leading-9 text-zinc-100 sm:text-3xl">
+              Ogni percorso parte da ascolto, valutazione e progressione: non vendiamo caos, costruiamo continuità.
+            </p>
+          </div>
+
+          <div className="scroll-reveal grid gap-5" style={{ "--reveal-delay": "140ms" } as CSSProperties}>
+            {[
+              { title: "Valutiamo", text: "Obiettivi, livello, mobilità e storia sportiva entrano nel programma prima del carico." },
+              { title: "Alleniamo", text: "Coach presenti, tecnica leggibile e stimoli calibrati per forza, conditioning e recupero." },
+              { title: "Misuriamo", text: "Progressi, sensazioni e continuità guidano gli step successivi, senza improvvisazione." },
+            ].map((item, index) => (
+              <article key={item.title} className="rounded-[2rem] border border-white/10 bg-black/65 p-7 shadow-2xl shadow-black/50 backdrop-blur-md transition duration-500 hover:-translate-y-1 hover:border-revolution-red/70 hover:bg-revolution-red/10 sm:p-8">
+                <p className="font-display text-4xl font-black uppercase leading-none text-revolution-red">0{index + 1}</p>
+                <h3 className="mt-6 font-display text-4xl font-black uppercase leading-none tracking-[-0.04em] text-white sm:text-5xl">{item.title}</h3>
+                <p className="mt-5 text-lg leading-8 text-zinc-300">{item.text}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>

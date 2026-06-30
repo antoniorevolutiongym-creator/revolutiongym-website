@@ -286,3 +286,18 @@ body {
 .gallery-card:hover::after {
   animation: hyrox-sheen 1100ms cubic-bezier(0.16, 1, 0.3, 1) both;
 }
+
+.counter-card {
+  position: relative;
+  isolation: isolate;
+  transition:
+    transform 700ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 700ms ease,
+    box-shadow 700ms ease;
+}
+
+.counter-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(215, 38, 38, 0.65);
+  box-shadow: 0 34px 90px rgba(0, 0, 0, 0.56), 0 0 62px rgba(215, 38, 38, 0.18);
+}
