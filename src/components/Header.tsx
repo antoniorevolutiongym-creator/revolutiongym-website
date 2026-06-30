@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const navItems = [
@@ -35,14 +34,9 @@ export function Header() {
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-6 lg:px-8" aria-label="Navigazione principale">
         <a href="#home" className="group flex items-center" aria-label="Revolution Gym home">
-          <Image
-            src="/revolution-gym-navbar-logo.svg"
-            alt="Revolution Gym"
-            width={150}
-            height={53}
-            className="h-auto w-28 object-contain drop-shadow-[0_0_18px_rgba(215,38,38,0.35)] transition duration-500 group-hover:scale-105 sm:w-36"
-            priority
-          />
+          <span className="font-display text-xl font-black uppercase tracking-[0.12em] text-white transition duration-500 group-hover:scale-105 sm:text-2xl">
+            <span className="text-revolution-red">REVOLUTION</span> GYM
+          </span>
         </a>
 
         <div className="hidden items-center gap-5 lg:flex xl:gap-8">
