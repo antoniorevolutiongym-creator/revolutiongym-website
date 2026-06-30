@@ -9,18 +9,23 @@ const whatsappBookingUrl =
   "https://wa.me/393382332258?text=Ciao%2C%20vorrei%20prenotare%20una%20visita%20alla%20Revolution%20Gym.";
 
 const photography = {
-  hero: "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=2400&q=82",
-  strength: "https://images.unsplash.com/photo-1534367610401-9f5ed68180aa?auto=format&fit=crop&w=1800&q=80",
-  hyrox: "https://images.unsplash.com/photo-1517963879433-6ad2b056d712?auto=format&fit=crop&w=1800&q=80",
-  combat: "https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=1800&q=80",
-  wellness: "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1800&q=80",
-  coaching: "https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&w=1800&q=80",
+  heroRing: "/images/hero-ring.jpg",
+  heroGym: "/images/hero-gym.jpg",
+  bodybuilding01: "/images/bodybuilding-01.jpg",
+  bodybuilding02: "/images/bodybuilding-02.jpg",
+  bodybuilding03: "/images/bodybuilding-03.jpg",
+  hyrox01: "/images/hyrox-01.jpg",
+  hyrox02: "/images/hyrox-02.jpg",
+  combat01: "/images/combat-01.jpg",
+  combat02: "/images/combat-02.jpg",
+  wellness01: "/images/wellness-01.jpg",
+  coachAntonio: "/images/coach-antonio.jpg",
 };
 
 const hyroxMedia = [
-  { label: "Energia race-day", title: "Energia race-day", image: photography.hyrox, className: "md:col-span-2" },
-  { label: "Classi HYROX", title: "Classi HYROX", image: photography.strength, className: "" },
-  { label: "Preparazione in azione", title: "Preparazione in azione", image: photography.wellness, className: "md:col-span-3" },
+  { label: "Energia race-day", title: "Energia race-day", image: photography.hyrox01, className: "md:col-span-2" },
+  { label: "Classi HYROX", title: "Classi HYROX", image: photography.hyrox02, className: "" },
+  { label: "Preparazione in azione", title: "Preparazione in azione", image: photography.wellness01, className: "md:col-span-3" },
 ];
 
 
@@ -29,33 +34,33 @@ const mainPillars = [
     title: "Bodybuilding & Sala Pesi",
     description: "Una sala pesi completa e curata per costruire forza, ipertrofia e controllo del corpo con un metodo progressivo.",
     benefits: ["Attrezzature professionali", "Programmi su misura", "Progressione tecnica"],
-    image: photography.strength,
+    image: photography.bodybuilding01,
   },
   {
     title: "HYROX",
     description: "Preparazione dedicata per corsa, stazioni e transizioni, con coaching tecnico e intensità calibrata sul tuo livello.",
     benefits: ["Sessioni specifiche", "Simulazioni gara", "Condizionamento completo"],
-    image: photography.hyrox,
+    image: photography.hyrox01,
   },
   {
     title: "Combat Sports",
     description: "Muay Thai, Boxe e Kickboxing in un ambiente energico, tecnico e controllato, dal primo approccio al lavoro avanzato.",
     benefits: ["Tecnica sul ring", "Classi guidate", "Disciplina e sicurezza"],
-    image: photography.combat,
+    image: photography.combat01,
   },
   {
     title: "Wellness",
     description: "Pilates, Yoga, postura e fisioterapia completano l’allenamento con attenzione a mobilità, recupero e benessere quotidiano.",
     benefits: ["Mobilità e postura", "Recupero attivo", "Supporto specializzato"],
-    image: photography.wellness,
+    image: photography.wellness01,
   },
 ];
 
 const galleryItems = [
-  { title: "Bodybuilding & Sala Pesi", eyebrow: "Training floor", image: photography.strength, className: "lg:col-span-5" },
-  { title: "HYROX", eyebrow: "Official Training Club", image: photography.hyrox, className: "lg:col-span-7" },
-  { title: "Combat", eyebrow: "Muay Thai & Boxing", image: photography.combat, className: "lg:col-span-7" },
-  { title: "Ring", eyebrow: "Night session", image: photography.hero, className: "lg:col-span-5" },
+  { title: "Bodybuilding & Sala Pesi", eyebrow: "Training floor", image: photography.bodybuilding02, className: "lg:col-span-5" },
+  { title: "HYROX", eyebrow: "Official Training Club", image: photography.hyrox02, className: "lg:col-span-7" },
+  { title: "Combat", eyebrow: "Muay Thai & Boxing", image: photography.combat02, className: "lg:col-span-7" },
+  { title: "Ring", eyebrow: "Night session", image: photography.heroRing, className: "lg:col-span-5" },
 ];
 
 export default function Home() {
@@ -65,7 +70,7 @@ export default function Home() {
 
       <section className="relative flex min-h-screen items-center overflow-hidden bg-revolution-black pt-24" aria-labelledby="hero-title">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-cover bg-center opacity-45 grayscale" style={{ backgroundImage: `url(${photography.hero})` }} />
+          <div className="absolute inset-0 bg-cover bg-center opacity-45 grayscale" style={{ backgroundImage: `url(${photography.heroRing})` }} />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(215,38,38,0.32),transparent_28rem),linear-gradient(90deg,rgba(5,5,5,0.96),rgba(5,5,5,0.72)_42%,rgba(5,5,5,0.92))]" />
           <div className="absolute inset-0 bg-[linear-gradient(115deg,rgba(255,255,255,0.12)_0_1px,transparent_1px_100%)] bg-[length:84px_84px] opacity-10" />
         </div>
@@ -91,7 +96,7 @@ export default function Home() {
           </div>
 
           <div className="relative hidden min-h-[34rem] animate-hero-float overflow-hidden rounded-[2.5rem] border border-white/10 bg-white/[0.03] p-4 shadow-2xl shadow-black/60 lg:block">
-            <div className="h-full rounded-[2rem] border border-white/10 bg-cover bg-center grayscale" style={{ backgroundImage: `url(${photography.hero})` }} />
+            <div className="h-full rounded-[2rem] border border-white/10 bg-cover bg-center grayscale" style={{ backgroundImage: `url(${photography.heroGym})` }} />
             <div className="absolute -left-8 bottom-14 rounded-3xl border border-revolution-red/40 bg-black/70 p-5 backdrop-blur-xl">
               <p className="text-xs font-black uppercase tracking-[0.35em] text-revolution-red">Bacoli</p>
               <p className="mt-2 font-display text-3xl font-black uppercase text-white">Bodybuilding & Sala Pesi • HYROX</p>
@@ -296,7 +301,7 @@ export default function Home() {
       </section>
 
       <section id="metodo" className="relative isolate overflow-hidden bg-black py-28 text-white sm:py-40" aria-labelledby="method-title">
-        <div className="absolute inset-0 -z-10 bg-cover bg-center grayscale" style={{ backgroundImage: `url(${photography.coaching})` }} />
+        <div className="absolute inset-0 -z-10 bg-cover bg-center grayscale" style={{ backgroundImage: `url(${photography.coachAntonio})` }} />
         <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(0,0,0,0.96),rgba(0,0,0,0.72)_48%,rgba(0,0,0,0.92)),radial-gradient(circle_at_70%_30%,rgba(215,38,38,0.30),transparent_28rem)]" />
         <div className="absolute inset-x-0 top-0 -z-10 h-px bg-gradient-to-r from-transparent via-revolution-red to-transparent" />
 
