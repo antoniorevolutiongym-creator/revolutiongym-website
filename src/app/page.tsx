@@ -52,6 +52,102 @@ export default function Home() {
         </a>
       </section>
 
+
+      <section id="hyrox" className="relative isolate overflow-hidden bg-[#030303] py-24 text-white sm:py-32" aria-labelledby="hyrox-title">
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_18%_20%,rgba(215,38,38,0.36),transparent_30rem),radial-gradient(circle_at_82%_12%,rgba(255,255,255,0.12),transparent_22rem),linear-gradient(135deg,#030303_0%,#101010_45%,#050505_100%)]" />
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(115deg,rgba(255,255,255,0.10)_0_1px,transparent_1px_100%)] bg-[length:118px_118px] opacity-10" />
+        <div className="absolute left-1/2 top-0 -z-10 h-px w-[min(92rem,92vw)] -translate-x-1/2 bg-gradient-to-r from-transparent via-revolution-red to-transparent" />
+        <div className="absolute -right-24 top-24 -z-10 h-80 w-80 rounded-full border border-revolution-red/20 bg-revolution-red/10 blur-2xl" />
+
+        <div className="mx-auto max-w-[92rem] px-6 lg:px-8">
+          <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
+            <div className="scroll-reveal">
+              <p className="text-sm font-black uppercase tracking-[0.52em] text-revolution-red">Programma di punta</p>
+              <h2 id="hyrox-title" className="mt-5 font-display text-6xl font-black uppercase leading-[0.82] tracking-[-0.06em] text-white sm:text-7xl lg:text-8xl xl:text-9xl">
+                HYROX <span className="block text-transparent [-webkit-text-stroke:1.5px_rgba(255,255,255,0.92)]">Official Training Club</span>
+              </h2>
+              <p className="mt-8 max-w-3xl text-2xl font-semibold leading-9 text-zinc-100 sm:text-3xl">
+                Preparati alla gara fitness più famosa al mondo.
+              </p>
+            </div>
+
+            <div className="hyrox-command scroll-reveal rounded-[2.5rem] border border-white/10 bg-white/[0.045] p-5 shadow-2xl shadow-black/60 backdrop-blur-xl sm:p-7" style={{ "--reveal-delay": "120ms" } as CSSProperties}>
+              <div className="grid gap-4 sm:grid-cols-2">
+                {[
+                  "Allenamenti specifici",
+                  "Programmazione per principianti e agonisti",
+                  "Simulazioni gara",
+                  "Preparazione atletica",
+                  "Coach esperti",
+                ].map((item, index) => (
+                  <article key={item} className="group rounded-[1.6rem] border border-white/10 bg-black/45 p-5 transition duration-500 hover:-translate-y-1 hover:border-revolution-red/70 hover:bg-revolution-red/10">
+                    <p className="font-display text-sm font-black uppercase tracking-[0.28em] text-revolution-red">0{index + 1}</p>
+                    <h3 className="mt-4 text-lg font-black uppercase leading-tight tracking-[0.08em] text-white">{item}</h3>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-16 grid gap-6 lg:grid-cols-[0.72fr_1.28fr]">
+            <div className="scroll-reveal flex flex-col justify-between gap-6 rounded-[2.5rem] border border-revolution-red/25 bg-revolution-red p-8 text-white shadow-glow sm:p-10" style={{ "--reveal-delay": "160ms" } as CSSProperties}>
+              <div>
+                <p className="text-xs font-black uppercase tracking-[0.42em] text-white/70">Metodo race-day</p>
+                <h3 className="mt-5 font-display text-4xl font-black uppercase leading-none tracking-[-0.04em] sm:text-5xl">Forza, resistenza, strategia.</h3>
+                <p className="mt-6 text-lg leading-8 text-white/85">Un percorso premium per imparare ritmo, transizioni e gestione dello sforzo con coaching tecnico, intensità progressiva e attenzione al tuo livello di partenza.</p>
+              </div>
+              <a href="#contact" className="inline-flex w-fit items-center gap-3 rounded-full bg-white px-6 py-4 text-xs font-black uppercase tracking-[0.24em] text-black transition duration-500 hover:-translate-y-1 hover:bg-black hover:text-white">
+                Entra nel percorso <span aria-hidden="true">→</span>
+              </a>
+            </div>
+
+            <div className="grid gap-6 md:grid-cols-3">
+              {[
+                { label: "Foto gara", title: "Foto gara", className: "md:col-span-2" },
+                { label: "Foto classi", title: "Foto classi", className: "" },
+                { label: "Video competizioni", title: "Video competizioni", className: "md:col-span-3" },
+              ].map((media, index) => (
+                <div key={media.label} className={`hyrox-media scroll-reveal group relative min-h-72 overflow-hidden rounded-[2.25rem] border border-white/10 bg-zinc-950 shadow-2xl shadow-black/50 ${media.className}`} style={{ "--reveal-delay": `${220 + index * 90}ms` } as CSSProperties}>
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_35%_25%,rgba(215,38,38,0.35),transparent_18rem),linear-gradient(135deg,#171717,#050505)]" />
+                  <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(255,255,255,0.10)_0_1px,transparent_1px_100%)] bg-[length:46px_46px] opacity-20" />
+                  <div className="relative flex h-full min-h-72 flex-col justify-between p-7">
+                    <p className="w-fit rounded-full border border-white/15 bg-black/45 px-4 py-2 text-[0.65rem] font-black uppercase tracking-[0.28em] text-white/70 backdrop-blur-md">Segnaposto</p>
+                    <div>
+                      <p className="text-xs font-black uppercase tracking-[0.36em] text-revolution-red">{media.label}</p>
+                      <h3 className="mt-3 font-display text-4xl font-black uppercase tracking-[-0.04em] text-white">{media.title}</h3>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-16 grid gap-5 md:grid-cols-3">
+            {[
+              { value: "12+", label: "Classi ogni settimana" },
+              { value: "360°", label: "Preparazione completa" },
+              { value: "01", label: "Percorso per ogni livello" },
+            ].map((stat, index) => (
+              <article key={stat.label} className="hyrox-stat scroll-reveal rounded-[2rem] border border-white/10 bg-white/[0.045] p-7 shadow-2xl shadow-black/40 backdrop-blur-md" style={{ "--reveal-delay": `${index * 110}ms` } as CSSProperties}>
+                <p className="font-display text-6xl font-black uppercase leading-none tracking-[-0.06em] text-white sm:text-7xl">{stat.value}</p>
+                <div className="mt-6 h-px w-20 bg-gradient-to-r from-revolution-red to-transparent" />
+                <p className="mt-6 text-sm font-black uppercase tracking-[0.24em] text-zinc-200">✓ {stat.label}</p>
+              </article>
+            ))}
+          </div>
+
+          <div className="hyrox-cta scroll-reveal mt-16 overflow-hidden rounded-[2.75rem] border border-white/10 bg-white p-8 text-revolution-black shadow-2xl shadow-black/50 sm:p-12 lg:flex lg:items-center lg:justify-between lg:gap-10" style={{ "--reveal-delay": "180ms" } as CSSProperties}>
+            <div>
+              <p className="text-xs font-black uppercase tracking-[0.42em] text-revolution-red">HYROX Revolution Gym</p>
+              <h3 className="mt-5 font-display text-4xl font-black uppercase leading-none tracking-[-0.04em] sm:text-6xl">Preparati alla tua prossima HYROX.</h3>
+            </div>
+            <a href="#contact" className="mt-8 inline-flex rounded-full bg-revolution-black px-8 py-5 text-sm font-black uppercase tracking-[0.25em] text-white shadow-glow transition duration-500 hover:-translate-y-1 hover:bg-revolution-red lg:mt-0">
+              SCOPRI HYROX
+            </a>
+          </div>
+        </div>
+      </section>
+
       <section id="chi-siamo" className="relative overflow-hidden bg-revolution-black text-white" aria-labelledby="about-title">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(215,38,38,0.20),transparent_24rem),linear-gradient(135deg,rgba(255,255,255,0.08)_0_1px,transparent_1px_100%)] bg-[length:auto,92px_92px] opacity-80" />
         <div className="absolute right-0 top-16 h-72 w-72 rounded-full bg-revolution-red/10 blur-3xl" />
