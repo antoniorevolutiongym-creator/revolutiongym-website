@@ -36,11 +36,11 @@ export function Header() {
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-6 lg:px-8" aria-label="Navigazione principale">
         <a href="#home" className="group flex items-center" aria-label="Revolution Gym home">
           <Image
-            src="/revolution-gym-logo.svg"
+            src="/revolution-gym-navbar-logo.svg"
             alt="Revolution Gym"
-            width={180}
-            height={63}
-            className="h-auto w-32 object-contain drop-shadow-[0_0_18px_rgba(215,38,38,0.35)] transition duration-500 group-hover:scale-105 sm:w-40"
+            width={150}
+            height={53}
+            className="h-auto w-28 object-contain drop-shadow-[0_0_18px_rgba(215,38,38,0.35)] transition duration-500 group-hover:scale-105 sm:w-36"
             priority
           />
         </a>
