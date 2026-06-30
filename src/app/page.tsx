@@ -7,6 +7,24 @@ import { aboutHighlights, differentiators, disciplines, services, wellnessServic
 const whatsappBookingUrl =
   "https://wa.me/393382332258?text=Ciao%2C%20vorrei%20prenotare%20una%20visita%20alla%20Revolution%20Gym.";
 
+const heroVisual = {
+  image: "/images/hero-combat-ring.jpg",
+  video: "",
+};
+
+const hyroxMedia = [
+  { label: "Energia race-day", title: "Energia race-day", image: "/images/hyrox-area.jpg", className: "md:col-span-2" },
+  { label: "Classi HYROX", title: "Classi HYROX", image: "/images/sala-fitness-panoramica.jpg", className: "" },
+  { label: "Preparazione in azione", title: "Preparazione in azione", image: "/images/area-panatta.jpg", className: "md:col-span-3" },
+];
+
+const galleryItems = [
+  { title: "Fitness", eyebrow: "Training floor", image: "/images/sala-fitness-panoramica.jpg", className: "lg:col-span-5" },
+  { title: "HYROX", eyebrow: "Official Training Club", image: "/images/hyrox-area.jpg", className: "lg:col-span-7" },
+  { title: "Combat", eyebrow: "Muay Thai & Boxing", image: "/images/combat-ring.jpg", className: "lg:col-span-7" },
+  { title: "Ring", eyebrow: "Night session", image: "/images/hero-combat-ring.jpg", className: "lg:col-span-5" },
+];
+
 export default function Home() {
   return (
     <main id="home" className="min-h-screen bg-revolution-black text-white">
@@ -14,12 +32,12 @@ export default function Home() {
 
       <section className="relative flex min-h-screen items-center overflow-hidden bg-revolution-black pt-24" aria-labelledby="hero-title">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-[url('/images/hero-combat-ring.jpg')] bg-cover bg-center opacity-35 grayscale" />
+          <div className="absolute inset-0 bg-cover bg-center opacity-45 grayscale" style={{ backgroundImage: `url(${heroVisual.image})` }} />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(215,38,38,0.32),transparent_28rem),linear-gradient(90deg,rgba(5,5,5,0.96),rgba(5,5,5,0.72)_42%,rgba(5,5,5,0.92))]" />
           <div className="absolute inset-0 bg-[linear-gradient(115deg,rgba(255,255,255,0.12)_0_1px,transparent_1px_100%)] bg-[length:84px_84px] opacity-10" />
         </div>
 
-        <div className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-12 px-6 py-20 lg:grid-cols-[1fr_0.72fr] lg:px-8">
+        <div className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-14 px-6 py-24 sm:py-28 lg:grid-cols-[1fr_0.72fr] lg:px-8">
           <div className="animate-hero-reveal">
             <p className="mb-5 text-xs font-black uppercase tracking-[0.5em] text-revolution-red sm:text-sm">Bacoli / Centro fitness</p>
             <h1 id="hero-title" className="font-display text-6xl font-black uppercase leading-[0.82] tracking-[-0.06em] text-white sm:text-7xl md:text-8xl lg:text-9xl">
@@ -39,8 +57,12 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative hidden min-h-[34rem] animate-hero-float rounded-[2.5rem] border border-white/10 bg-white/[0.03] p-4 shadow-2xl shadow-black/60 lg:block">
-            <div className="h-full rounded-[2rem] border border-white/10 bg-[url('/images/hero-combat-ring.jpg')] bg-cover bg-center grayscale" />
+          <div className="relative hidden min-h-[34rem] animate-hero-float overflow-hidden rounded-[2.5rem] border border-white/10 bg-white/[0.03] p-4 shadow-2xl shadow-black/60 lg:block">
+            {heroVisual.video ? (
+              <video className="h-full w-full rounded-[2rem] border border-white/10 object-cover grayscale" src={heroVisual.video} autoPlay muted loop playsInline poster={heroVisual.image} />
+            ) : (
+              <div className="h-full rounded-[2rem] border border-white/10 bg-cover bg-center grayscale" style={{ backgroundImage: `url(${heroVisual.image})` }} />
+            )}
             <div className="absolute -left-8 bottom-14 rounded-3xl border border-revolution-red/40 bg-black/70 p-5 backdrop-blur-xl">
               <p className="text-xs font-black uppercase tracking-[0.35em] text-revolution-red">Bacoli</p>
               <p className="mt-2 font-display text-3xl font-black uppercase text-white">Wellness • Training</p>
@@ -106,14 +128,11 @@ export default function Home() {
             </div>
 
             <div className="grid gap-6 md:grid-cols-3">
-              {[
-                { label: "Energia race-day", title: "Energia race-day", className: "md:col-span-2" },
-                { label: "Classi HYROX", title: "Classi HYROX", className: "" },
-                { label: "Preparazione in azione", title: "Preparazione in azione", className: "md:col-span-3" },
-              ].map((media, index) => (
+              {hyroxMedia.map((media, index) => (
                 <div key={media.label} className={`hyrox-media scroll-reveal group relative min-h-72 overflow-hidden rounded-[2.25rem] border border-white/10 bg-zinc-950 shadow-2xl shadow-black/50 ${media.className}`} style={{ "--reveal-delay": `${220 + index * 90}ms` } as CSSProperties}>
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_35%_25%,rgba(215,38,38,0.35),transparent_18rem),linear-gradient(135deg,#171717,#050505)]" />
-                  <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(255,255,255,0.10)_0_1px,transparent_1px_100%)] bg-[length:46px_46px] opacity-20" />
+                  <div className="absolute inset-0 scale-105 bg-cover bg-center grayscale transition duration-700 group-hover:scale-110 group-hover:grayscale-0" style={{ backgroundImage: `url(${media.image})` }} />
+                  <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/50 to-black/95" />
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_35%_25%,rgba(215,38,38,0.35),transparent_18rem)]" />
                   <div className="relative flex h-full min-h-72 flex-col justify-between p-7">
                     <p className="w-fit rounded-full border border-white/15 bg-black/45 px-4 py-2 text-[0.65rem] font-black uppercase tracking-[0.28em] text-white/70 backdrop-blur-md">Revolution Gym</p>
                     <div>
@@ -157,7 +176,7 @@ export default function Home() {
         <div className="absolute right-0 top-16 h-72 w-72 rounded-full bg-revolution-red/10 blur-3xl" />
 
         <div className="relative mx-auto grid max-w-7xl gap-14 px-6 py-24 sm:py-32 lg:grid-cols-[0.88fr_1.12fr] lg:px-8">
-          <div className="animate-hero-reveal">
+          <div className="scroll-reveal">
             <p className="text-sm font-black uppercase tracking-[0.42em] text-revolution-red">Chi siamo</p>
             <h2 id="about-title" className="mt-5 font-display text-5xl font-black uppercase leading-[0.92] tracking-[-0.04em] sm:text-6xl lg:text-7xl">
               Revolution Gym Bacoli
@@ -171,7 +190,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid gap-5">
+          <div className="scroll-reveal grid gap-5" style={{ "--reveal-delay": "120ms" } as CSSProperties}>
             <div className="rounded-[2.5rem] border border-white/10 bg-white/[0.04] p-6 shadow-2xl shadow-black/40 backdrop-blur-sm sm:p-8">
               <div className="grid gap-4 sm:grid-cols-2">
                 {aboutHighlights.map((item, index) => (
@@ -242,6 +261,32 @@ export default function Home() {
                     Scopri di più
                     <span aria-hidden="true" className="transition duration-500 group-hover:translate-x-1">→</span>
                   </a>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+      <section id="gallery" className="relative isolate overflow-hidden bg-revolution-black py-24 text-white sm:py-32" aria-labelledby="gallery-title">
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_18%_18%,rgba(215,38,38,0.22),transparent_26rem),linear-gradient(180deg,#050505_0%,#0b0b0b_50%,#050505_100%)]" />
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="scroll-reveal max-w-4xl">
+            <p className="mb-4 text-sm font-black uppercase tracking-[0.45em] text-revolution-red">Gallery</p>
+            <h2 id="gallery-title" className="font-display text-5xl font-black uppercase leading-[0.92] tracking-[-0.05em] text-white sm:text-6xl lg:text-7xl">Dentro l’esperienza Revolution</h2>
+            <p className="mt-7 max-w-3xl text-lg leading-8 text-zinc-300 sm:text-xl">Fitness, HYROX, combat sport e ring convivono in un racconto visivo essenziale, notturno e premium, fedele all’identità del centro.</p>
+          </div>
+
+          <div className="mt-16 grid auto-rows-[22rem] gap-6 lg:grid-cols-12">
+            {galleryItems.map((item, index) => (
+              <article key={item.title} className={`gallery-card scroll-reveal group relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-zinc-950 shadow-2xl shadow-black/50 ${item.className}`} style={{ "--reveal-delay": `${index * 90}ms` } as CSSProperties}>
+                <div className="absolute inset-0 scale-105 bg-cover bg-center grayscale transition duration-700 group-hover:scale-110 group-hover:grayscale-0" style={{ backgroundImage: `url(${item.image})` }} />
+                <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-black/35 to-black/90" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(215,38,38,0.28),transparent_18rem)] opacity-80" />
+                <div className="absolute bottom-0 left-0 right-0 p-7 sm:p-9">
+                  <p className="text-xs font-black uppercase tracking-[0.36em] text-revolution-red">{item.eyebrow}</p>
+                  <h3 className="mt-3 font-display text-5xl font-black uppercase leading-none tracking-[-0.05em] text-white sm:text-6xl">{item.title}</h3>
                 </div>
               </article>
             ))}
