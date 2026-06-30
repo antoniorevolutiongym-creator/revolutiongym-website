@@ -1,8 +1,7 @@
 import type { CSSProperties } from "react";
 import { Header } from "@/components/Header";
-import { Placeholder } from "@/components/Placeholder";
 import { Section } from "@/components/Section";
-import { aboutHighlights, differentiators, disciplines, services } from "@/lib/content";
+import { aboutHighlights, differentiators, disciplines, services, wellnessServices } from "@/lib/content";
 
 export default function Home() {
   return (
@@ -172,13 +171,63 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section id="wellness" eyebrow="Wellness" title="Recupero, equilibrio e cura professionale" description="Pilates, Yoga, riequilibrio posturale e area fisioterapia dialogano con il training per creare un’esperienza completa e raffinata.">
-        <div className="grid gap-5 md:grid-cols-3">
-          <Placeholder label="Sala training" />
-          <Placeholder label="Dettagli attrezzature" />
-          <Placeholder label="Momento wellness" />
+      <section id="wellness" className="relative isolate overflow-hidden bg-revolution-black py-24 text-white sm:py-32" aria-labelledby="wellness-title">
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_12%_18%,rgba(215,38,38,0.18),transparent_24rem),radial-gradient(circle_at_86%_20%,rgba(255,255,255,0.08),transparent_18rem),linear-gradient(180deg,#050505_0%,#090909_52%,#050505_100%)]" />
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(135deg,rgba(255,255,255,0.07)_0_1px,transparent_1px_100%)] bg-[length:110px_110px] opacity-10" />
+        <div className="absolute left-1/2 top-0 -z-10 h-px w-[min(76rem,88vw)] -translate-x-1/2 bg-gradient-to-r from-transparent via-white/30 to-transparent" />
+
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="scroll-reveal grid gap-10 lg:grid-cols-[0.78fr_1fr] lg:items-end">
+            <div>
+              <p className="text-sm font-black uppercase tracking-[0.45em] text-revolution-red">Wellness</p>
+              <h2 id="wellness-title" className="mt-5 font-display text-5xl font-black uppercase leading-[0.92] tracking-[-0.05em] text-white sm:text-6xl lg:text-7xl">
+                Un centro completo per il tuo benessere
+              </h2>
+            </div>
+            <div className="rounded-[2rem] border border-white/10 bg-white/[0.035] p-6 shadow-2xl shadow-black/40 backdrop-blur-md sm:p-8">
+              <p className="text-lg leading-8 text-zinc-300 sm:text-xl">
+                Revolution Gym unisce l’energia del combat sport e del fitness a un’anima wellness premium: spazi, professionisti e rituali pensati per respirare meglio, muoversi meglio e recuperare con eleganza.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-16 grid gap-6">
+            {wellnessServices.map((service, index) => (
+              <article
+                key={service.title}
+                className="wellness-card scroll-reveal group grid overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.035] shadow-2xl shadow-black/45 backdrop-blur-sm transition duration-700 hover:border-revolution-red/60 md:grid-cols-[0.82fr_1.18fr]"
+                style={{ "--reveal-delay": `${index * 90}ms` } as CSSProperties}
+              >
+                <div className="relative min-h-64 overflow-hidden md:min-h-full">
+                  <div
+                    className="absolute inset-0 scale-105 bg-cover bg-center grayscale transition duration-700 group-hover:scale-110 group-hover:grayscale-0"
+                    style={{ backgroundImage: `url(${service.image})` }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-black/45 to-black/85 md:bg-gradient-to-r" />
+                  <div className="absolute left-6 top-6 rounded-full border border-white/15 bg-black/50 px-4 py-2 text-[0.65rem] font-black uppercase tracking-[0.28em] text-white/80 backdrop-blur-md">
+                    Wellness 0{index + 1}
+                  </div>
+                </div>
+
+                <div className="relative flex min-h-64 flex-col justify-center p-7 sm:p-10 lg:p-12">
+                  <div className="absolute right-8 top-8 flex h-14 w-14 items-center justify-center rounded-full border border-revolution-red/40 bg-revolution-red/10 text-2xl font-black text-revolution-red shadow-[0_0_35px_rgba(215,38,38,0.18)] transition duration-700 group-hover:scale-110 group-hover:bg-revolution-red group-hover:text-white">
+                    <span aria-hidden="true">{service.icon}</span>
+                  </div>
+                  <div className="h-px w-20 bg-gradient-to-r from-revolution-red to-transparent transition-all duration-700 group-hover:w-40" />
+                  <h3 className="mt-7 max-w-3xl font-display text-3xl font-black uppercase leading-none tracking-[-0.03em] text-white sm:text-4xl lg:text-5xl">
+                    {service.title}
+                  </h3>
+                  <p className="mt-6 max-w-2xl text-base leading-8 text-zinc-300 sm:text-lg">{service.description}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <p className="scroll-reveal mx-auto mt-16 max-w-4xl text-center font-display text-3xl font-black uppercase leading-tight tracking-[-0.03em] text-white sm:text-5xl">
+            <span className="text-revolution-red">“</span>Il benessere è il punto di partenza di ogni grande performance.<span className="text-revolution-red">”</span>
+          </p>
         </div>
-      </Section>
+      </section>
 
       <Section id="app" eyebrow="App" title="La tua esperienza Revolution sempre con te">
         <div className="grid gap-5 md:grid-cols-3">

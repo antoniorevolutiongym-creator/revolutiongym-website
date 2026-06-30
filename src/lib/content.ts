@@ -46,6 +46,33 @@ export const disciplines = [
   },
 ];
 
+export const wellnessServices = [
+  {
+    title: "Pilates",
+    description: "Controllo, respirazione e forza profonda in un percorso elegante per migliorare postura, stabilità e consapevolezza del corpo.",
+    image: "https://placehold.co/1200x720/111111/d72626?text=Pilates+Premium",
+    icon: "✦",
+  },
+  {
+    title: "Yoga",
+    description: "Una pratica rilassante e raffinata per ritrovare equilibrio mentale, mobilità e presenza attraverso movimento e respiro.",
+    image: "https://placehold.co/1200x720/0d0d0d/d72626?text=Yoga+Relax",
+    icon: "◐",
+  },
+  {
+    title: "Riequilibrio Posturale",
+    description: "Valutazione attenta e lavoro mirato per sciogliere tensioni, migliorare l’allineamento e rendere ogni gesto più fluido.",
+    image: "https://placehold.co/1200x720/141414/d72626?text=Postura",
+    icon: "⌁",
+  },
+  {
+    title: "Area Fisioterapia con fisioterapista specializzato",
+    description: "Uno spazio professionale dedicato a recupero, prevenzione e continuità del benessere, con supporto specialistico personalizzato.",
+    image: "https://placehold.co/1200x720/101010/d72626?text=Fisioterapia",
+    icon: "+",
+  },
+];
+
 export const differentiators = [
   "Ambienti curati con atmosfera esclusiva e non affollata",
   "Percorsi misurabili costruiti intorno ai tuoi obiettivi",
