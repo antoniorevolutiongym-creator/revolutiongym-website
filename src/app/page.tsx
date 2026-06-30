@@ -19,7 +19,7 @@ const hyroxMedia = [
 ];
 
 const galleryItems = [
-  { title: "Fitness", eyebrow: "Training floor", image: "/images/sala-fitness-panoramica.jpg", className: "lg:col-span-5" },
+  { title: "Bodybuilding & Sala Pesi", eyebrow: "Training floor", image: "/images/sala-fitness-panoramica.jpg", className: "lg:col-span-5" },
   { title: "HYROX", eyebrow: "Official Training Club", image: "/images/hyrox-area.jpg", className: "lg:col-span-7" },
   { title: "Combat", eyebrow: "Muay Thai & Boxing", image: "/images/combat-ring.jpg", className: "lg:col-span-7" },
   { title: "Ring", eyebrow: "Night session", image: "/images/hero-combat-ring.jpg", className: "lg:col-span-5" },
@@ -39,13 +39,13 @@ export default function Home() {
 
         <div className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-14 px-6 py-24 sm:py-28 lg:grid-cols-[1fr_0.72fr] lg:px-8">
           <div className="animate-hero-reveal">
-            <p className="mb-5 text-xs font-black uppercase tracking-[0.5em] text-revolution-red sm:text-sm">Bacoli / Centro fitness</p>
+            <p className="mb-5 text-xs font-black uppercase tracking-[0.5em] text-revolution-red sm:text-sm">Bacoli / Sala pesi e wellness</p>
             <h1 id="hero-title" className="font-display text-6xl font-black uppercase leading-[0.82] tracking-[-0.06em] text-white sm:text-7xl md:text-8xl lg:text-9xl">
               REVOLUTION <span className="block text-transparent [-webkit-text-stroke:1.5px_#ffffff]">GYM</span>
             </h1>
-            <p className="mt-7 text-sm font-black uppercase tracking-[0.32em] text-white sm:text-base">WELLNESS • TRAINING • COMBAT SPORT</p>
+            <p className="mt-7 text-sm font-black uppercase tracking-[0.32em] text-white sm:text-base">BODYBUILDING & SALA PESI • HYROX • COMBAT SPORTS • WELLNESS</p>
             <p className="mt-7 max-w-2xl text-lg leading-8 text-zinc-200 sm:text-xl">
-              A Bacoli, un centro completo dove wellness, training e combat sport convivono con metodo, cura e identità.
+              A Bacoli, un centro completo dove bodybuilding, HYROX, combat sports e wellness convivono con metodo, cura e identità.
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <a href="#chi-siamo" className="rounded-full bg-revolution-red px-7 py-4 text-center text-xs font-black uppercase tracking-[0.24em] text-white shadow-glow transition duration-300 hover:-translate-y-1 hover:bg-white hover:text-black">
@@ -65,7 +65,7 @@ export default function Home() {
             )}
             <div className="absolute -left-8 bottom-14 rounded-3xl border border-revolution-red/40 bg-black/70 p-5 backdrop-blur-xl">
               <p className="text-xs font-black uppercase tracking-[0.35em] text-revolution-red">Bacoli</p>
-              <p className="mt-2 font-display text-3xl font-black uppercase text-white">Wellness • Training</p>
+              <p className="mt-2 font-display text-3xl font-black uppercase text-white">Bodybuilding & Sala Pesi • HYROX</p>
             </div>
           </div>
         </div>
@@ -183,10 +183,10 @@ export default function Home() {
             </h2>
             <div className="mt-8 h-px w-32 bg-gradient-to-r from-revolution-red to-transparent" />
             <p className="mt-8 text-xl font-semibold leading-9 text-zinc-100">
-              Revolution Gym è un fitness e wellness center completo a Bacoli, creato per chi vuole allenarsi con serietà, recuperare con attenzione e vivere lo sport in un ambiente curato.
+              Revolution Gym è un bodybuilding e wellness center completo a Bacoli, creato per chi vuole allenarsi con serietà, recuperare con attenzione e vivere lo sport in un ambiente curato.
             </p>
             <p className="mt-6 text-lg leading-8 text-zinc-400">
-              Wellness • Training • Combat Sport non è uno slogan: è la struttura del centro. HYROX Official Training Club, Muay Thai, Boxing, Functional Training, Pilates, Yoga, Riequilibrio Posturale e Area Fisioterapia lavorano insieme per dare continuità a performance, prevenzione e qualità del movimento.
+              Bodybuilding & Sala Pesi • HYROX • Combat Sports • Wellness non è uno slogan: è la struttura del centro. HYROX, Muay Thai, Boxe, Kickboxing, Bodybuilding & Sala Pesi, Pilates, Yoga, Riequilibrio Posturale e Area Fisioterapia lavorano insieme per dare continuità a performance, prevenzione e qualità del movimento.
             </p>
           </div>
 
@@ -202,8 +202,8 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="grid gap-5 md:grid-cols-3">
-              {["Wellness integrato", "Training misurabile", "Combat sport tecnico"].map((item) => (
+            <div className="grid gap-5 md:grid-cols-4">
+              {["Bodybuilding & Sala Pesi", "HYROX", "Combat Sports", "Wellness"].map((item) => (
                 <div key={item} className="rounded-[1.75rem] bg-white p-6 text-revolution-black transition duration-500 hover:-translate-y-1 hover:shadow-glow">
                   <p className="font-display text-2xl font-black uppercase leading-tight">{item}</p>
                 </div>
@@ -222,14 +222,14 @@ export default function Home() {
           <div className="scroll-reveal max-w-4xl">
             <p className="mb-4 text-sm font-black uppercase tracking-[0.45em] text-revolution-red">Discipline</p>
             <h2 id="discipline-title" className="font-display text-5xl font-black uppercase leading-[0.92] tracking-[-0.05em] text-white sm:text-6xl lg:text-7xl">
-              Wellness, training e combat sport nello stesso centro
+              Bodybuilding, HYROX, combat sports e wellness nello stesso centro
             </h2>
             <p className="mt-7 max-w-3xl text-lg leading-8 text-zinc-300 sm:text-xl">
               Ogni disciplina ha un’identità chiara e la stessa attenzione al dettaglio: tecnica, progressione e qualità dell’esperienza, dal primo ingresso al lavoro avanzato.
             </p>
           </div>
 
-          <div className="mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <div className="mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {disciplines.map((discipline, index) => (
               <article
                 key={discipline.title}
@@ -275,7 +275,7 @@ export default function Home() {
           <div className="scroll-reveal max-w-4xl">
             <p className="mb-4 text-sm font-black uppercase tracking-[0.45em] text-revolution-red">Gallery</p>
             <h2 id="gallery-title" className="font-display text-5xl font-black uppercase leading-[0.92] tracking-[-0.05em] text-white sm:text-6xl lg:text-7xl">Dentro l’esperienza Revolution</h2>
-            <p className="mt-7 max-w-3xl text-lg leading-8 text-zinc-300 sm:text-xl">Fitness, HYROX, combat sport e ring convivono in un racconto visivo essenziale, notturno e premium, fedele all’identità del centro.</p>
+            <p className="mt-7 max-w-3xl text-lg leading-8 text-zinc-300 sm:text-xl">Bodybuilding & Sala Pesi, HYROX, combat sports e ring convivono in un racconto visivo essenziale, notturno e premium, fedele all’identità del centro.</p>
           </div>
 
           <div className="mt-16 grid auto-rows-[22rem] gap-6 lg:grid-cols-12">
@@ -294,7 +294,7 @@ export default function Home() {
         </div>
       </section>
 
-      <Section id="training" eyebrow="Training" title="Training completo, programmato e verificabile" description="Dalla preparazione HYROX al functional training, ogni percorso nasce da obiettivi concreti e da una progressione sostenibile.">
+      <Section id="training" eyebrow="Training" title="Training completo, programmato e verificabile" description="Dalla preparazione HYROX alla sala pesi, ogni percorso nasce da obiettivi concreti e da una progressione sostenibile.">
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
             <div key={service} className="rounded-3xl border border-white/10 bg-zinc-950 p-7 transition hover:-translate-y-1 hover:border-revolution-red/70">
@@ -305,7 +305,7 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section id="combat-sport" eyebrow="Combat Sport" title="Muay Thai e Boxing: tecnica prima dell’intensità">
+      <Section id="combat-sport" eyebrow="Combat Sports" title="Muay Thai e Boxing: tecnica prima dell’intensità">
         <div className="grid gap-6 lg:grid-cols-4">
           {differentiators.map((item, index) => (
             <div key={item} className="rounded-[2rem] bg-white p-8 text-revolution-black">
@@ -402,7 +402,7 @@ export default function Home() {
             <div className="scroll-reveal">
               <p className="text-sm font-black uppercase tracking-[0.45em] text-revolution-red">Contatti</p>
               <h2 id="contact-title" className="mt-5 font-display text-5xl font-black uppercase leading-[0.92] tracking-[-0.05em] text-white sm:text-6xl lg:text-7xl">Entra in Revolution Gym Bacoli.</h2>
-              <p className="mt-7 max-w-2xl text-lg leading-8 text-zinc-300 sm:text-xl">Prenota una visita e confrontati con il team: ti aiuteremo a scegliere il percorso più coerente tra HYROX, Functional Training, Combat Sport, Pilates, Yoga, postura e fisioterapia.</p>
+              <p className="mt-7 max-w-2xl text-lg leading-8 text-zinc-300 sm:text-xl">Prenota una visita e confrontati con il team: ti aiuteremo a scegliere il percorso più coerente tra HYROX, Bodybuilding & Sala Pesi, Combat Sports, Pilates, Yoga, postura e fisioterapia.</p>
             </div>
 
             <div className="scroll-reveal rounded-[2.5rem] border border-white/10 bg-white/[0.045] p-6 shadow-2xl shadow-black/60 backdrop-blur-xl sm:p-8" style={{ "--reveal-delay": "120ms" } as CSSProperties}>
@@ -459,7 +459,7 @@ export default function Home() {
             height={84}
             className="h-auto w-44 object-contain sm:w-56"
           />
-          <p>© 2026 Revolution Gym Bacoli. Wellness • Training • Combat Sport.</p>
+          <p>© 2026 Revolution Gym Bacoli. Bodybuilding & Sala Pesi • HYROX • Combat Sports • Wellness.</p>
         </div>
       </footer>
     </main>
