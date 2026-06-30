@@ -1,46 +1,46 @@
 export const services = [
-  "Personal training su appuntamento",
-  "Functional Training",
+  "Valutazione iniziale e programma su misura",
+  "Functional Training per forza, mobilità e condizionamento",
   "Preparazione HYROX Official Training Club",
-  "Ricondizionamento fisico e postura",
-  "Small group training premium",
-  "Mobilità, recovery e riequilibrio posturale",
+  "Personal training riservato su appuntamento",
+  "Small group training a numero controllato",
+  "Mobilità, recupero e riequilibrio posturale",
 ];
 
 export const disciplines = [
   {
     title: "HYROX Official Training Club",
-    description: "Preparazione atletica completa per affrontare forza, resistenza e mentalità race-day con metodo professionale.",
+    description: "Sessioni strutturate per costruire forza resistente, ritmo gara e lucidità nelle transizioni, con progressioni adatte al tuo livello.",
     image: "https://placehold.co/900x1100/101010/d72626?text=HYROX+Training",
     href: "#training",
   },
   {
     title: "Muay Thai",
-    description: "Tecnica, controllo e potenza in un percorso striking elegante, intenso e guidato da coach specializzati.",
+    description: "Tecnica di striking, clinch, timing e condizionamento in un percorso rigoroso, intenso e seguito da coach specializzati.",
     image: "https://placehold.co/900x1100/111111/d72626?text=Muay+Thai",
     href: "#combat-sport",
   },
   {
     title: "Boxing",
-    description: "Footwork, precisione e condizionamento per trasformare disciplina e carattere in performance sul ring e nella vita.",
+    description: "Footwork, guardia, precisione e gestione della distanza per trasformare disciplina e controllo in qualità atletica reale.",
     image: "https://placehold.co/900x1100/0f0f0f/d72626?text=Boxing",
     href: "#combat-sport",
   },
   {
     title: "Functional Training",
-    description: "Allenamenti dinamici e misurabili per sviluppare forza reale, mobilità e capacità atletica quotidiana.",
+    description: "Allenamenti dinamici e misurabili per sviluppare forza, mobilità, resistenza e capacità di muoversi meglio ogni giorno.",
     image: "https://placehold.co/900x1100/121212/d72626?text=Functional+Training",
     href: "#training",
   },
   {
-    title: "Pilates & Yoga",
-    description: "Respirazione, stabilità e fluidità per ritrovare equilibrio, consapevolezza e qualità del movimento.",
+    title: "Pilates e Yoga",
+    description: "Respirazione, stabilità, controllo e fluidità per dare al corpo una base più forte e alla mente uno spazio di presenza.",
     image: "https://placehold.co/900x1100/141414/d72626?text=Pilates+Yoga",
     href: "#wellness",
   },
   {
-    title: "Postural Rebalancing & Physiotherapy",
-    description: "Valutazione, recupero e riequilibrio posturale per muoverti meglio con un approccio attento e professionale.",
+    title: "Postura e Fisioterapia",
+    description: "Riequilibrio posturale, prevenzione e recupero in un’area dedicata, con fisioterapista specializzato e attenzione individuale.",
     image: "https://placehold.co/900x1100/101010/d72626?text=Postura+Fisio",
     href: "#wellness",
   },
@@ -49,35 +49,35 @@ export const disciplines = [
 export const wellnessServices = [
   {
     title: "Pilates",
-    description: "Controllo, respirazione e forza profonda in un percorso elegante per migliorare postura, stabilità e consapevolezza del corpo.",
+    description: "Un lavoro preciso su controllo, respirazione e forza profonda per migliorare postura, stabilità e consapevolezza del movimento.",
     image: "https://placehold.co/1200x720/111111/d72626?text=Pilates+Premium",
     icon: "✦",
   },
   {
     title: "Yoga",
-    description: "Una pratica rilassante e raffinata per ritrovare equilibrio mentale, mobilità e presenza attraverso movimento e respiro.",
+    description: "Pratiche guidate per mobilità, equilibrio e presenza: un tempo protetto in cui il respiro diventa parte dell’allenamento.",
     image: "https://placehold.co/1200x720/0d0d0d/d72626?text=Yoga+Relax",
     icon: "◐",
   },
   {
     title: "Riequilibrio Posturale",
-    description: "Valutazione attenta e lavoro mirato per sciogliere tensioni, migliorare l’allineamento e rendere ogni gesto più fluido.",
+    description: "Valutazione attenta e lavoro mirato su tensioni, allineamento e qualità del gesto, per rendere il corpo più libero ed efficiente.",
     image: "https://placehold.co/1200x720/141414/d72626?text=Postura",
     icon: "⌁",
   },
   {
     title: "Area Fisioterapia con fisioterapista specializzato",
-    description: "Uno spazio professionale dedicato a recupero, prevenzione e continuità del benessere, con supporto specialistico personalizzato.",
+    description: "Uno spazio riservato a recupero, prevenzione e continuità del benessere, con supporto specialistico e percorsi personalizzati.",
     image: "https://placehold.co/1200x720/101010/d72626?text=Fisioterapia",
     icon: "+",
   },
 ];
 
 export const differentiators = [
-  "Ambienti curati con atmosfera esclusiva e non affollata",
-  "Percorsi misurabili costruiti intorno ai tuoi obiettivi",
-  "Coach presenti, discreti e orientati alla tecnica",
-  "Esperienza premium dal primo ingresso al follow-up",
+  "Muay Thai e Boxing con attenzione a tecnica, controllo e progressione",
+  "Classi a numero sostenibile per lavorare con qualità, non in confusione",
+  "Coach presenti sul gesto, sul ritmo e sulla sicurezza dell’allenamento",
+  "Un ambiente essenziale e curato, pensato per concentrazione e continuità",
 ];
 
 export const aboutHighlights = [
@@ -90,6 +90,6 @@ export const aboutHighlights = [
   "Functional Training",
   "Pilates",
   "Yoga",
-  "Postural Rebalancing",
+  "Riequilibrio Posturale",
   "Area fisioterapia",
 ];
