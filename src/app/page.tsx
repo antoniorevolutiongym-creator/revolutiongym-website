@@ -70,8 +70,9 @@ export default function Home() {
 
       <section className="relative flex min-h-screen items-center overflow-hidden bg-revolution-black pt-24" aria-labelledby="hero-title">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-cover bg-center opacity-45 grayscale" style={{ backgroundImage: `url(${photography.heroRing})` }} />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(215,38,38,0.32),transparent_28rem),linear-gradient(90deg,rgba(5,5,5,0.96),rgba(5,5,5,0.72)_42%,rgba(5,5,5,0.92))]" />
+          <div className="absolute inset-0 bg-cover bg-center opacity-80 saturate-125" style={{ backgroundImage: `url(${photography.heroRing})` }} />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_56%_35%,rgba(215,38,38,0.24),transparent_30rem),linear-gradient(90deg,rgba(5,5,5,0.88),rgba(5,5,5,0.54)_43%,rgba(5,5,5,0.68))]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/75" />
           <div className="absolute inset-0 bg-[linear-gradient(115deg,rgba(255,255,255,0.12)_0_1px,transparent_1px_100%)] bg-[length:84px_84px] opacity-10" />
         </div>
 
@@ -95,9 +96,13 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative hidden min-h-[34rem] animate-hero-float overflow-hidden rounded-[2.5rem] border border-white/10 bg-white/[0.03] p-4 shadow-2xl shadow-black/60 lg:block">
-            <div className="h-full rounded-[2rem] border border-white/10 bg-cover bg-center grayscale" style={{ backgroundImage: `url(${photography.heroGym})` }} />
-            <div className="absolute -left-8 bottom-14 rounded-3xl border border-revolution-red/40 bg-black/70 p-5 backdrop-blur-xl">
+          <div className="relative hidden min-h-[34rem] animate-hero-float overflow-hidden rounded-[2.5rem] border border-white/15 bg-black/40 p-4 shadow-2xl shadow-black/60 lg:block">
+            <div className="absolute inset-4 overflow-hidden rounded-[2rem] border border-white/10">
+              <Image src={photography.heroGym} alt="Sala pesi Revolution Gym con manubri e attrezzature professionali" fill sizes="(min-width: 1024px) 36vw, 0vw" className="object-cover object-center saturate-125" priority />
+              <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-black/10 to-black/70" />
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_65%_20%,rgba(255,255,255,0.24),transparent_18rem),radial-gradient(circle_at_22%_72%,rgba(215,38,38,0.22),transparent_16rem)]" />
+            </div>
+            <div className="absolute -left-8 bottom-14 rounded-3xl border border-revolution-red/40 bg-black/75 p-5 backdrop-blur-xl">
               <p className="text-xs font-black uppercase tracking-[0.35em] text-revolution-red">Bacoli</p>
               <p className="mt-2 font-display text-3xl font-black uppercase text-white">Bodybuilding & Sala Pesi • HYROX</p>
             </div>
