@@ -1,7 +1,8 @@
+import type { CSSProperties } from "react";
 import { Header } from "@/components/Header";
 import { Placeholder } from "@/components/Placeholder";
 import { Section } from "@/components/Section";
-import { aboutHighlights, differentiators, services } from "@/lib/content";
+import { aboutHighlights, differentiators, disciplines, services } from "@/lib/content";
 
 export default function Home() {
   return (
@@ -94,16 +95,60 @@ export default function Home() {
         </div>
       </section>
 
-      <Section id="discipline" eyebrow="Discipline" title="Un ecosistema premium per corpo, mente e performance" description="Discipline integrate, ambienti scenografici e percorsi ordinati per allenarti con intensità, controllo e una direzione chiara.">
-        <div className="grid gap-6 md:grid-cols-3">
-          {['HYROX Official Training Club', 'Muay Thai & Boxing', 'Pilates, Yoga e Postura'].map((item) => (
-            <div key={item} className="rounded-[2rem] border border-white/10 bg-white/[0.03] p-8">
-              <h3 className="font-display text-3xl font-black uppercase">{item}</h3>
-              <p className="mt-4 text-zinc-400">Programmi curati per trasformare energia, tecnica e benessere in risultati concreti e sostenibili.</p>
-            </div>
-          ))}
+      <section id="discipline" className="relative isolate overflow-hidden bg-revolution-black py-24 text-white sm:py-32" aria-labelledby="discipline-title">
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_18%_12%,rgba(215,38,38,0.28),transparent_28rem),radial-gradient(circle_at_88%_78%,rgba(215,38,38,0.20),transparent_24rem),linear-gradient(180deg,#050505_0%,#0b0b0b_46%,#050505_100%)]" />
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(120deg,rgba(255,255,255,0.08)_0_1px,transparent_1px_100%)] bg-[length:96px_96px] opacity-10" />
+        <div className="absolute left-1/2 top-0 -z-10 h-px w-[min(72rem,86vw)] -translate-x-1/2 bg-gradient-to-r from-transparent via-revolution-red to-transparent" />
+
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="scroll-reveal max-w-4xl">
+            <p className="mb-4 text-sm font-black uppercase tracking-[0.45em] text-revolution-red">Discipline</p>
+            <h2 id="discipline-title" className="font-display text-5xl font-black uppercase leading-[0.92] tracking-[-0.05em] text-white sm:text-6xl lg:text-7xl">
+              Un ecosistema premium per corpo, mente e performance
+            </h2>
+            <p className="mt-7 max-w-3xl text-lg leading-8 text-zinc-300 sm:text-xl">
+              Sei percorsi distinti, un’unica filosofia: allenarti con precisione, stile e intensità in un ambiente costruito per far emergere la tua versione più forte.
+            </p>
+          </div>
+
+          <div className="mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {disciplines.map((discipline, index) => (
+              <article
+                key={discipline.title}
+                className="discipline-card scroll-reveal group relative min-h-[31rem] overflow-hidden rounded-[2.25rem] border border-white/10 bg-zinc-950 shadow-2xl shadow-black/50"
+                style={{ "--reveal-delay": `${index * 90}ms` } as CSSProperties}
+              >
+                <div
+                  className="absolute inset-0 scale-105 bg-cover bg-center transition duration-700 ease-out group-hover:scale-110 group-hover:grayscale-0"
+                  style={{ backgroundImage: `url(${discipline.image})` }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/62 to-black/95 transition duration-700 group-hover:from-black/10 group-hover:via-black/48 group-hover:to-black" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(215,38,38,0.34),transparent_22rem)] opacity-60 transition duration-700 group-hover:opacity-100" />
+                <div className="absolute inset-x-6 top-6 flex items-center justify-between">
+                  <span className="rounded-full border border-white/15 bg-black/40 px-4 py-2 text-[0.65rem] font-black uppercase tracking-[0.28em] text-white/75 backdrop-blur-md">
+                    0{index + 1}
+                  </span>
+                  <span className="h-3 w-3 rounded-full bg-revolution-red shadow-[0_0_28px_rgba(215,38,38,0.9)]" />
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
+                  <div className="h-px w-20 bg-gradient-to-r from-revolution-red to-transparent transition-all duration-500 group-hover:w-36" />
+                  <h3 className="mt-6 font-display text-3xl font-black uppercase leading-none tracking-[-0.03em] text-white sm:text-4xl">
+                    {discipline.title}
+                  </h3>
+                  <p className="mt-5 text-sm leading-7 text-zinc-300 sm:text-base">{discipline.description}</p>
+                  <a
+                    href={discipline.href}
+                    className="mt-7 inline-flex items-center gap-3 rounded-full border border-white/15 bg-white px-5 py-3 text-[0.68rem] font-black uppercase tracking-[0.24em] text-black transition duration-500 hover:border-revolution-red hover:bg-revolution-red hover:text-white group-hover:-translate-y-1 group-hover:shadow-glow"
+                  >
+                    Scopri di più
+                    <span aria-hidden="true" className="transition duration-500 group-hover:translate-x-1">→</span>
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
-      </Section>
+      </section>
 
       <Section id="training" eyebrow="Training" title="Allenamento costruito sulle tue ambizioni" description="Functional training, preparazione atletica e coaching su misura per evolvere con metodo, presenza e precisione.">
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
