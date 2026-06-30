@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">Revolution Gym official logo</title>
+  <desc id="desc">Revolution Gym premium logo with red barbell mark and white wordmark on black.</desc>
+  <rect width="1200" height="420" rx="40" fill="#050505"/>
+  <g transform="translate(70 54)">
+    <circle cx="156" cy="156" r="142" fill="#0b0b0b" stroke="#d72626" stroke-width="16"/>
+    <circle cx="156" cy="156" r="116" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="5"/>
+    <g fill="#d72626">
+      <rect x="38" y="133" width="236" height="46" rx="23"/>
+      <rect x="16" y="111" width="34" height="90" rx="8"/>
+      <rect x="-8" y="96" width="30" height="120" rx="8"/>
+      <rect x="262" y="111" width="34" height="90" rx="8"/>
+      <rect x="290" y="96" width="30" height="120" rx="8"/>
+    </g>
+    <path d="M118 242 160 70h78l-27 111h45l-96 92 26-101h-45z" fill="#fff"/>
+  </g>
+  <g transform="translate(392 96)">
+    <text x="0" y="96" fill="#fff" font-family="Arial Black, Impact, sans-serif" font-size="93" font-weight="900" letter-spacing="-5">REVOLUTION</text>
+    <text x="4" y="202" fill="#d72626" font-family="Arial Black, Impact, sans-serif" font-size="118" font-style="italic" font-weight="900" letter-spacing="4">GYM</text>
+    <rect x="6" y="236" width="635" height="8" rx="4" fill="#fff" opacity=".9"/>
+    <text x="9" y="286" fill="#fff" font-family="Montserrat, Arial, sans-serif" font-size="31" font-weight="800" letter-spacing="11">WELLNESS • TRAINING • COMBAT SPORT</text>
+  </g>
+</svg>
