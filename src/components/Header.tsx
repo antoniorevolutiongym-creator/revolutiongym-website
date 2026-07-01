@@ -1,21 +1,25 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const whatsappBookingUrl =
   "https://wa.me/393382332258?text=Ciao%2C%20vorrei%20prenotare%20una%20visita%20alla%20Revolution%20Gym.";
 
 const navItems = [
-  { label: "Home", href: "#home" },
-  { label: "Chi siamo", href: "#chi-siamo" },
-  { label: "Metodo", href: "#metodo" },
-  { label: "Discipline", href: "#discipline" },
-  { label: "Wellness", href: "#wellness" },
-  { label: "App", href: "#app" },
-  { label: "Contatti", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "HYROX", href: "/hyrox" },
+  { label: "Chi siamo", href: "/#chi-siamo" },
+  { label: "Metodo", href: "/#metodo" },
+  { label: "Discipline", href: "/#discipline" },
+  { label: "Wellness", href: "/#wellness" },
+  { label: "App", href: "/#app" },
+  { label: "Contatti", href: "/#contact" },
 ];
 
 export function Header() {
+  const pathname = usePathname();
   const [hasScrolled, setHasScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -37,17 +41,17 @@ export function Header() {
       }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-6 lg:px-8" aria-label="Navigazione principale">
-        <a href="#home" className="group flex items-center" aria-label="Revolution Gym home">
+        <Link href="/" className="group flex items-center" aria-label="Revolution Gym home">
           <span className="font-display text-xl font-black uppercase tracking-[0.12em] text-white transition duration-500 group-hover:scale-105 sm:text-2xl">
             <span className="text-revolution-red">REVOLUTION</span> GYM
           </span>
-        </a>
+        </Link>
 
         <div className="hidden items-center gap-5 lg:flex xl:gap-8">
           {navItems.map((item) => (
-            <a key={item.label} href={item.href} className="text-[0.68rem] font-bold uppercase tracking-[0.22em] text-zinc-100 transition duration-300 hover:text-revolution-red">
+            <Link key={item.label} href={item.href} className={`text-[0.68rem] font-bold uppercase tracking-[0.22em] transition duration-300 hover:text-revolution-red ${pathname === item.href ? "text-revolution-red" : "text-zinc-100"}`}>
               {item.label}
-            </a>
+            </Link>
           ))}
         </div>
 
@@ -71,14 +75,14 @@ export function Header() {
       <div id="mobile-navigation" className={`lg:hidden ${isMenuOpen ? "block" : "hidden"}`}>
         <div className="mx-5 mb-5 rounded-[1.5rem] border border-white/10 bg-black/95 p-4 shadow-2xl">
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.label}
               href={item.href}
-              className="block rounded-2xl px-4 py-3 text-sm font-black uppercase tracking-[0.22em] text-zinc-100 transition hover:bg-white/10 hover:text-revolution-red"
+              className={`block rounded-2xl px-4 py-3 text-sm font-black uppercase tracking-[0.22em] transition hover:bg-white/10 hover:text-revolution-red ${pathname === item.href ? "text-revolution-red" : "text-zinc-100"}`}
               onClick={() => setIsMenuOpen(false)}
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </div>
       </div>
