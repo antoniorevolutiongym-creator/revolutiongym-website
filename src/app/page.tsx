@@ -7,67 +7,32 @@ const contactUrl =
   "https://wa.me/393382332258?text=Ciao%2C%20vorrei%20ricevere%20informazioni%20su%20Revolution%20Gym.";
 const images = {
   hero: "/images/cb5db689-77a9-4312-98cd-debff4f99b26.jpeg",
-  sala: "/images/15d5ba0f-2122-4561-8526-70e77d636329.jpeg",
-  combat: "/images/IMG_4878.jpeg",
-  hyrox: "/images/IMG_4865.jpeg",
-  wellness: "/images/IMG_4875.jpeg",
+  sala: "/images/bodybuilding-01.jpg",
+  combat: "/images/combat-01.jpg",
+  hyrox: "/images/hyrox-01.jpg",
+  wellness: "/images/wellness-01.jpg",
 };
 
 const areas = [
   {
     title: "Sala Pesi",
-    text: "Allenamento con macchine, pesi liberi e supporto tecnico per costruire forza, migliorare la composizione corporea e lavorare sui tuoi obiettivi in modo concreto.",
+    text: "Forza, composizione corporea e lavoro tecnico con macchine, bilancieri e pesi liberi.",
     image: images.sala,
-    href: "#sala-pesi",
   },
   {
-    title: "Combat Sport",
-    text: "Muay Thai, boxe e preparazione tecnica in un ambiente dedicato a disciplina, intensità, crescita fisica e mentale.",
+    title: "Sala Combat",
+    text: "Muay Thai, boxe e preparazione tecnica in uno spazio dedicato a disciplina, intensità e crescita.",
     image: images.combat,
-    href: "#combat-sport",
   },
   {
-    title: "HYROX",
-    text: "Un metodo di allenamento completo che unisce corsa, forza e resistenza, ideale per chi cerca performance, condizionamento e sfida personale.",
+    title: "Area HYROX",
+    text: "Corsa, sled, ergometri e station training per costruire resistenza, forza e performance.",
     image: images.hyrox,
-    href: "#hyrox",
   },
   {
-    title: "Wellness",
-    text: "Yoga e Pilates per migliorare postura, mobilità, controllo del corpo, respirazione e benessere generale.",
+    title: "Area Wellness",
+    text: "Yoga, Pilates e lavoro sul controllo del corpo per migliorare mobilità, postura e benessere.",
     image: images.wellness,
-    href: "#wellness",
-  },
-];
-
-const focusAreas = [
-  {
-    eyebrow: "Sala Pesi",
-    title: "Forza, tecnica e risultati",
-    text: "La sala pesi di Revolution Gym è pensata per chi vuole allenarsi con continuità e qualità. Che il tuo obiettivo sia migliorare la forma fisica, aumentare la forza, tonificare o lavorare sulla composizione corporea, troverai uno spazio attrezzato e un ambiente dove allenarti con metodo.",
-    image: images.sala,
-    id: "sala-pesi",
-  },
-  {
-    eyebrow: "Combat Sport",
-    title: "Tecnica, disciplina e carattere",
-    text: "L’area combat è il cuore pulsante di Revolution Gym. Qui si svolgono allenamenti dedicati agli sport da combattimento, con lavoro tecnico, preparazione fisica e sviluppo delle capacità atletiche. Un ambiente adatto sia a chi si avvicina per la prima volta a queste discipline, sia a chi vuole allenarsi con più intensità e continuità.",
-    image: images.combat,
-    id: "combat-sport",
-  },
-  {
-    eyebrow: "HYROX",
-    title: "Performance, resistenza, completezza",
-    text: "HYROX è un format di allenamento che unisce corsa, forza e resistenza in un lavoro strutturato e coinvolgente. È ideale per chi vuole migliorare condizionamento, capacità aerobica, tenuta mentale e performance generale attraverso sessioni complete e stimolanti.",
-    image: images.hyrox,
-    id: "hyrox",
-  },
-  {
-    eyebrow: "Wellness",
-    title: "Equilibrio, controllo e benessere",
-    text: "L’area wellness di Revolution Gym è dedicata a chi vuole ritagliarsi uno spazio per stare bene, muoversi meglio e ritrovare equilibrio. I corsi di Yoga e Pilates aiutano a migliorare mobilità, postura, respirazione, controllo del corpo e qualità del movimento, con un lavoro profondo ma accessibile a diversi livelli.",
-    image: images.wellness,
-    id: "wellness",
   },
 ];
 
@@ -121,42 +86,25 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="aree" className="bg-[#0a0a0a] px-5 py-24 sm:px-6 lg:px-8 lg:py-32" aria-labelledby="areas-title">
-        <div className="mx-auto max-w-7xl">
-          <p className="text-xs font-black uppercase tracking-[0.45em] text-revolution-red">Le nostre aree</p>
-          <h2 id="areas-title" className="mt-4 max-w-4xl font-display text-5xl font-black uppercase leading-none tracking-[-0.05em] sm:text-7xl">Training completo, identità forte</h2>
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+      <section id="aree" className="relative overflow-hidden bg-[#050505] px-5 py-24 sm:px-6 lg:px-8 lg:py-32" aria-labelledby="areas-title">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(215,38,38,0.18),transparent_34rem)]" />
+        <div className="relative mx-auto max-w-7xl">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-xs font-black uppercase tracking-[0.45em] text-revolution-red">Training areas</p>
+            <h2 id="areas-title" className="mt-4 font-display text-5xl font-black uppercase leading-none tracking-[-0.05em] sm:text-7xl">LE NOSTRE AREE</h2>
+            <p className="mt-6 text-lg leading-8 text-zinc-300 sm:text-xl">Quattro aree, un solo obiettivo: farti allenare meglio.</p>
+          </div>
+          <div className="mt-14 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
             {areas.map((area) => (
-              <a key={area.title} href={area.href} className="group block overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.035] shadow-2xl shadow-black/40 outline-none transition duration-500 hover:-translate-y-2 hover:border-revolution-red/60 hover:shadow-revolution-red/10 focus-visible:border-revolution-red focus-visible:ring-2 focus-visible:ring-revolution-red/70 active:scale-[0.98]">
-                <div className="relative aspect-[4/5] overflow-hidden sm:aspect-[5/4] xl:aspect-[4/5]">
-                  <Image src={area.image} alt={area.title} fill sizes="(min-width:1280px) 25vw, (min-width:640px) 50vw, 100vw" className="object-cover transition duration-700 group-hover:scale-105" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-black/10 transition duration-500 group-hover:from-black/80 group-hover:via-black/35" />
+              <article key={area.title} className="group overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] shadow-2xl shadow-black/45 transition duration-500 hover:-translate-y-2 hover:border-revolution-red/60 hover:bg-white/[0.06] hover:shadow-revolution-red/10">
+                <div className="relative aspect-[16/11] overflow-hidden">
+                  <Image src={area.image} alt={`${area.title} Revolution Gym`} fill sizes="(min-width:1280px) 25vw, (min-width:768px) 50vw, 100vw" className="object-cover transition duration-700 group-hover:scale-105" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent" />
+                  <div className="absolute bottom-0 left-0 h-1 w-20 bg-revolution-red transition duration-500 group-hover:w-32" />
                 </div>
                 <div className="p-6 sm:p-7">
-                  <h3 className="font-display text-3xl font-black uppercase tracking-[-0.03em]">{area.title}</h3>
+                  <h3 className="font-display text-3xl font-black uppercase tracking-[-0.03em] text-white">{area.title}</h3>
                   <p className="mt-4 text-sm leading-7 text-zinc-300">{area.text}</p>
-                </div>
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="focus" className="bg-[#050505] px-5 py-24 sm:px-6 lg:px-8 lg:py-32" aria-labelledby="focus-title">
-        <div className="mx-auto max-w-7xl">
-          <p className="text-xs font-black uppercase tracking-[0.45em] text-revolution-red">Focus aree</p>
-          <h2 id="focus-title" className="mt-4 font-display text-5xl font-black uppercase leading-none tracking-[-0.05em] sm:text-7xl">Dentro Revolution Gym</h2>
-          <div className="mt-12 space-y-8">
-            {focusAreas.map((area, index) => (
-              <article id={area.id} key={area.eyebrow} className="grid scroll-mt-24 overflow-hidden rounded-[2.25rem] border border-white/10 bg-white/[0.035] shadow-2xl shadow-black/45 lg:grid-cols-2">
-                <div className={`relative min-h-[20rem] sm:min-h-[24rem] lg:min-h-[30rem] ${index % 2 ? "lg:order-2" : ""}`}>
-                  <Image src={area.image} alt={area.eyebrow} fill sizes="(min-width:1024px) 50vw, 100vw" className="object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/15 to-transparent" />
-                </div>
-                <div className="flex flex-col justify-center p-7 sm:p-10 lg:p-14">
-                  <p className="text-xs font-black uppercase tracking-[0.4em] text-revolution-red">{area.eyebrow}</p>
-                  <h3 className="mt-4 font-display text-4xl font-black uppercase leading-none tracking-[-0.04em] sm:text-6xl">{area.title}</h3>
-                  <p className="mt-6 text-base leading-8 text-zinc-300 sm:text-lg">{area.text}</p>
                 </div>
               </article>
             ))}
