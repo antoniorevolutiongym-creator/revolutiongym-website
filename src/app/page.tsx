@@ -6,15 +6,11 @@ const whatsappUrl =
 const contactUrl =
   "https://wa.me/393382332258?text=Ciao%2C%20vorrei%20ricevere%20informazioni%20su%20Revolution%20Gym.";
 const mapsUrl = "https://www.google.com/maps/search/?api=1&query=Revolution%20Gym%20Via%20Miseno%2091%20Bacoli%20NA";
-const instagramUrl = "https://www.instagram.com/revolutiongym_bacoli/";
-
 const images = {
   hero: "/images/cb5db689-77a9-4312-98cd-debff4f99b26.jpeg",
-  about: "/images/15d5ba0f-2122-4561-8526-70e77d636329.jpeg",
-  sala: "/images/2e996e2b-b11a-4144-a677-79799b226b16.jpeg",
+  sala: "/images/15d5ba0f-2122-4561-8526-70e77d636329.jpeg",
   combat: "/images/IMG_4869.jpeg",
   hyrox: "/images/IMG_4865.jpeg",
-  wellness: "/images/c1a6078e-3cf2-4a5f-b751-9a87e76ea4c8.jpeg",
 };
 
 const areas = [
@@ -36,7 +32,6 @@ const areas = [
   {
     title: "Wellness",
     text: "Yoga e Pilates per migliorare postura, mobilità, controllo del corpo, respirazione e benessere generale.",
-    image: images.wellness,
   },
 ];
 
@@ -63,7 +58,6 @@ const focusAreas = [
     eyebrow: "Wellness",
     title: "Equilibrio, controllo e benessere",
     text: "L’area wellness di Revolution Gym è dedicata a chi vuole ritagliarsi uno spazio per stare bene, muoversi meglio e ritrovare equilibrio. I corsi di Yoga e Pilates aiutano a migliorare mobilità, postura, respirazione, controllo del corpo e qualità del movimento, con un lavoro profondo ma accessibile a diversi livelli.",
-    image: images.wellness,
   },
 ];
 
@@ -117,23 +111,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="chi-siamo" className="relative bg-[#050505] px-5 py-24 sm:px-6 lg:px-8 lg:py-32" aria-labelledby="about-title">
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-          <div className="relative min-h-[28rem] overflow-hidden rounded-[2rem] border border-white/10 bg-zinc-950 shadow-2xl shadow-black/50">
-            <Image src={images.about} alt="Sala allenamento Revolution Gym" fill sizes="(min-width:1024px) 44vw, 100vw" className="object-cover" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-          </div>
-          <div>
-            <p className="text-xs font-black uppercase tracking-[0.45em] text-revolution-red">Chi siamo</p>
-            <h2 id="about-title" className="mt-4 font-display text-4xl font-black uppercase leading-none tracking-[-0.04em] sm:text-6xl">Un unico spazio, più modi di vivere l’allenamento</h2>
-            <div className="mt-7 space-y-5 text-lg leading-8 text-zinc-300">
-              <p>Revolution Gym è un centro sportivo a Bacoli nato per offrire un’esperienza di allenamento completa. Dalla sala pesi agli sport da combattimento, passando per HYROX, Yoga e Pilates, ogni area è pensata per aiutarti a migliorare forma fisica, performance, mobilità e benessere.</p>
-              <p>Che tu voglia rimetterti in forma, allenarti con costanza, imparare una disciplina o spingere di più sulla performance, qui trovi spazi, corsi e supporto per farlo davvero.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section id="aree" className="bg-[#0a0a0a] px-5 py-24 sm:px-6 lg:px-8 lg:py-32" aria-labelledby="areas-title">
         <div className="mx-auto max-w-7xl">
           <p className="text-xs font-black uppercase tracking-[0.45em] text-revolution-red">Le nostre aree</p>
@@ -141,10 +118,16 @@ export default function Home() {
           <div className="mt-12 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
             {areas.map((area) => (
               <article key={area.title} className="group overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.035] shadow-2xl shadow-black/40 transition duration-500 hover:-translate-y-2 hover:border-revolution-red/60">
-                <div className="relative min-h-72 overflow-hidden">
-                  <Image src={area.image} alt={area.title} fill sizes="(min-width:1280px) 25vw, (min-width:640px) 50vw, 100vw" className="object-cover grayscale transition duration-700 group-hover:scale-110 group-hover:grayscale-0" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
-                </div>
+                {area.image ? (
+                  <div className="relative min-h-72 overflow-hidden">
+                    <Image src={area.image} alt={area.title} fill sizes="(min-width:1280px) 25vw, (min-width:640px) 50vw, 100vw" className="object-cover grayscale transition duration-700 group-hover:scale-110 group-hover:grayscale-0" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+                  </div>
+                ) : (
+                  <div className="relative flex min-h-72 items-end overflow-hidden bg-[radial-gradient(circle_at_30%_20%,rgba(215,38,38,0.28),transparent_18rem),linear-gradient(135deg,rgba(255,255,255,0.10),rgba(255,255,255,0.02))] p-6">
+                    <p className="max-w-xs text-xs font-black uppercase leading-6 tracking-[0.28em] text-white/65">Yoga · Pilates · mobilità · respiro</p>
+                  </div>
+                )}
                 <div className="p-6">
                   <h3 className="font-display text-3xl font-black uppercase tracking-[-0.03em]">{area.title}</h3>
                   <p className="mt-4 text-sm leading-7 text-zinc-300">{area.text}</p>
@@ -162,10 +145,16 @@ export default function Home() {
           <div className="mt-12 space-y-8">
             {focusAreas.map((area, index) => (
               <article key={area.eyebrow} className="grid overflow-hidden rounded-[2.25rem] border border-white/10 bg-white/[0.035] shadow-2xl shadow-black/45 lg:grid-cols-2">
-                <div className={`relative min-h-[24rem] ${index % 2 ? "lg:order-2" : ""}`}>
-                  <Image src={area.image} alt={area.eyebrow} fill sizes="(min-width:1024px) 50vw, 100vw" className="object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-                </div>
+                {area.image ? (
+                  <div className={`relative min-h-[24rem] ${index % 2 ? "lg:order-2" : ""}`}>
+                    <Image src={area.image} alt={area.eyebrow} fill sizes="(min-width:1024px) 50vw, 100vw" className="object-cover" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                  </div>
+                ) : (
+                  <div className={`relative flex min-h-[24rem] items-end bg-[radial-gradient(circle_at_30%_20%,rgba(215,38,38,0.28),transparent_22rem),linear-gradient(135deg,rgba(255,255,255,0.10),rgba(255,255,255,0.02))] p-8 ${index % 2 ? "lg:order-2" : ""}`}>
+                    <p className="max-w-sm text-sm font-black uppercase leading-7 tracking-[0.32em] text-white/65">Yoga · Pilates · mobilità · respirazione</p>
+                  </div>
+                )}
                 <div className="flex flex-col justify-center p-7 sm:p-10 lg:p-14">
                   <p className="text-xs font-black uppercase tracking-[0.4em] text-revolution-red">{area.eyebrow}</p>
                   <h3 className="mt-4 font-display text-4xl font-black uppercase leading-none tracking-[-0.04em] sm:text-6xl">{area.title}</h3>
@@ -193,33 +182,24 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-revolution-red px-5 py-20 text-white sm:px-6 lg:px-8" aria-labelledby="final-cta-title">
-        <div className="mx-auto max-w-5xl text-center">
-          <h2 id="final-cta-title" className="font-display text-5xl font-black uppercase leading-none tracking-[-0.05em] sm:text-7xl">Inizia il tuo percorso con Revolution Gym</h2>
-          <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-white/85">Che tu voglia allenarti in sala pesi, avvicinarti agli sport da combattimento, migliorare la tua performance o dedicarti al benessere, da Revolution Gym trovi lo spazio giusto per iniziare e crescere.</p>
-          <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
-            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="rounded-full bg-white px-8 py-4 text-xs font-black uppercase tracking-[0.22em] text-black transition hover:-translate-y-1 hover:bg-black hover:text-white">Prenota una prova</a>
-            <a href={contactUrl} target="_blank" rel="noopener noreferrer" className="rounded-full border border-white/40 bg-black/10 px-8 py-4 text-xs font-black uppercase tracking-[0.22em] text-white transition hover:-translate-y-1 hover:bg-black">Contattaci su WhatsApp</a>
-          </div>
-        </div>
-      </section>
-
-      <section id="contatti" className="bg-[#050505] px-5 py-24 sm:px-6 lg:px-8 lg:py-32" aria-labelledby="contact-title">
-        <div className="mx-auto grid max-w-7xl gap-10 rounded-[2.25rem] border border-white/10 bg-white/[0.035] p-7 shadow-2xl shadow-black/50 sm:p-10 lg:grid-cols-[1fr_0.9fr] lg:p-14">
+      <section id="contatti" className="relative overflow-hidden bg-revolution-red px-5 py-20 text-white sm:px-6 lg:px-8 lg:py-28" aria-labelledby="contact-title">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(255,255,255,0.22),transparent_28rem)]" />
+        <div className="relative mx-auto grid max-w-7xl gap-10 rounded-[2.25rem] border border-white/20 bg-black/25 p-7 shadow-2xl shadow-black/40 backdrop-blur sm:p-10 lg:grid-cols-[1fr_0.9fr] lg:p-14">
           <div>
-            <p className="text-xs font-black uppercase tracking-[0.45em] text-revolution-red">Contatti</p>
-            <h2 id="contact-title" className="mt-4 font-display text-5xl font-black uppercase leading-none tracking-[-0.05em] sm:text-7xl">Vieni a trovarci</h2>
-            <address className="mt-8 not-italic text-xl leading-9 text-zinc-200">
+            <p className="text-xs font-black uppercase tracking-[0.45em] text-white/75">Contatti · prova</p>
+            <h2 id="contact-title" className="mt-4 font-display text-5xl font-black uppercase leading-none tracking-[-0.05em] sm:text-7xl">Inizia il tuo percorso con Revolution Gym</h2>
+            <p className="mt-6 max-w-3xl text-lg leading-8 text-white/85">Prenota una prova o parla con il team per scegliere il percorso più adatto tra sala pesi, combat sport, HYROX e wellness.</p>
+            <address className="mt-8 not-italic text-xl leading-9 text-white/90">
               <strong className="text-white">Revolution Gym</strong><br />
               Via Miseno 91, Bacoli (NA)<br /><br />
-              <a className="hover:text-revolution-red" href="tel:+393382332258">338 233 2258</a><br />
-              <a className="hover:text-revolution-red" href="tel:+390815235944">081 523 5944</a>
+              <a className="hover:text-black" href="tel:+393382332258">338 233 2258</a><br />
+              <a className="hover:text-black" href="tel:+390815235944">081 523 5944</a>
             </address>
           </div>
           <div className="flex flex-col justify-center gap-3">
-            <Button href={mapsUrl}>Apri su Maps</Button>
-            <Button href={contactUrl} variant="secondary">Contattaci</Button>
-            <Button href={instagramUrl} variant="secondary">Seguici su Instagram</Button>
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="rounded-full bg-white px-8 py-4 text-center text-xs font-black uppercase tracking-[0.22em] text-black transition hover:-translate-y-1 hover:bg-black hover:text-white">Prenota una prova</a>
+            <a href={mapsUrl} target="_blank" rel="noopener noreferrer" className="rounded-full border border-white/40 bg-black/10 px-8 py-4 text-center text-xs font-black uppercase tracking-[0.22em] text-white transition hover:-translate-y-1 hover:bg-black">Apri su Maps</a>
+            <a href={contactUrl} target="_blank" rel="noopener noreferrer" className="rounded-full border border-white/40 bg-black/10 px-8 py-4 text-center text-xs font-black uppercase tracking-[0.22em] text-white transition hover:-translate-y-1 hover:bg-black">Contattaci su WhatsApp</a>
           </div>
         </div>
       </section>
