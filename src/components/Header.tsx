@@ -5,17 +5,16 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const whatsappBookingUrl =
-  "https://wa.me/393382332258?text=Ciao%2C%20vorrei%20prenotare%20una%20visita%20alla%20Revolution%20Gym.";
+  "https://wa.me/393382332258?text=Ciao%2C%20vorrei%20prenotare%20una%20prova%20alla%20Revolution%20Gym.";
 
 const navItems = [
   { label: "Home", href: "/" },
   { label: "HYROX", href: "/hyrox" },
   { label: "Chi siamo", href: "/#chi-siamo" },
-  { label: "Metodo", href: "/#metodo" },
-  { label: "Discipline", href: "/#discipline" },
-  { label: "Wellness", href: "/#wellness" },
-  { label: "App", href: "/#app" },
-  { label: "Contatti", href: "/#contact" },
+  { label: "Aree", href: "/#aree" },
+  { label: "Focus", href: "/#focus" },
+  { label: "Perché", href: "/#perche" },
+  { label: "Contatti", href: "/#contatti" },
 ];
 
 export function Header() {
