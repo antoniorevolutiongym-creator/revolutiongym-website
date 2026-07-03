@@ -14,6 +14,7 @@ const navItems = [
   { label: "Sala Pesi", href: "/#sala-pesi" },
   { label: "Combat", href: "/#combat" },
   { label: "Wellness", href: "/#wellness" },
+  { label: "Personal", href: "/#personal-training" },
   { label: "Contatti", href: "/#contatti" },
 ];
 
