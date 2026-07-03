@@ -7,7 +7,7 @@ const contactUrl =
   "https://wa.me/393382332258?text=Ciao%2C%20vorrei%20ricevere%20informazioni%20su%20Revolution%20Gym.";
 
 const images = {
-  hero: "/images/hero-gym.jpg",
+  hero: "/images/hero-ring.jpg",
   heroRing: "/images/hero-ring.jpg",
   sala: "/images/bodybuilding-01.jpg",
   salaWide: "/images/bodybuilding-02.jpg",
@@ -29,16 +29,16 @@ const paths = [
     image: images.sala,
   },
   {
-    eyebrow: "02 / Race Ready",
-    title: "Area HYROX",
-    copy: "Endurance, sled, ergometri e stazioni funzionali con programmazione chiara, ritmo e dati misurabili.",
-    image: images.hyrox,
-  },
-  {
-    eyebrow: "03 / Fight Room",
+    eyebrow: "02 / Fight Room",
     title: "Sala Combat",
     copy: "Boxe, Muay Thai e kickboxing in una sala autentica: tecnica, disciplina, fiato e mentalità round dopo round.",
     image: images.combat,
+  },
+  {
+    eyebrow: "03 / Race Ready",
+    title: "Area HYROX",
+    copy: "Endurance, sled, ergometri e stazioni funzionali con programmazione chiara, ritmo e dati misurabili.",
+    image: images.hyrox,
   },
   {
     eyebrow: "04 / Recovery",
@@ -182,24 +182,23 @@ export default function Home() {
       <Header />
 
       <section className="relative isolate min-h-screen overflow-hidden bg-[#050505] px-5 pb-16 pt-28 sm:px-6 lg:px-8 lg:pt-32" aria-labelledby="hero-title">
-        <Image src={images.hero} alt="Ring e area combat di Revolution Gym a Bacoli" fill priority sizes="100vw" className="-z-30 object-cover object-center opacity-80" />
-        <div className="absolute inset-0 -z-20 bg-[linear-gradient(90deg,#050505_0%,rgba(5,5,5,0.92)_38%,rgba(5,5,5,0.55)_62%,rgba(5,5,5,0.18)_100%),radial-gradient(circle_at_30%_25%,rgba(215,38,38,0.36),transparent_34rem)]" />
+        <Image src={images.hero} alt="Ring e area combat di Revolution Gym a Bacoli" fill priority sizes="100vw" className="-z-30 object-cover object-center opacity-75" />
+        <div className="absolute inset-0 -z-20 bg-[linear-gradient(90deg,#050505_0%,rgba(5,5,5,0.86)_34%,rgba(5,5,5,0.42)_68%,rgba(5,5,5,0.16)_100%),radial-gradient(circle_at_30%_25%,rgba(215,38,38,0.36),transparent_34rem)]" />
         <div className="absolute inset-x-0 bottom-0 -z-10 h-2/3 bg-gradient-to-t from-[#050505] via-[#050505]/75 to-transparent" />
-        <div className="mx-auto grid min-h-[calc(100svh-8rem)] max-w-[92rem] items-center gap-10 lg:grid-cols-[1fr_0.86fr]">
+        <div className="mx-auto grid min-h-[calc(100svh-8rem)] max-w-[92rem] items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
           <div className="relative z-10 py-12 lg:py-20">
-            <p className="text-xs font-black uppercase tracking-[0.5em] text-revolution-red sm:text-sm">Bacoli / Sala pesi e wellness</p>
+            <p className="text-xs font-black uppercase tracking-[0.5em] text-revolution-red sm:text-sm">BACOLI · TRAINING · COMBAT · WELLNESS</p>
             <h1 id="hero-title" className="mt-6 font-display text-[5rem] font-black uppercase leading-[0.76] tracking-[-0.1em] sm:text-[8.6rem] lg:text-[11rem] xl:text-[13rem]">
               Revolution <span className="block text-transparent [-webkit-text-stroke:1.5px_#fff] sm:[-webkit-text-stroke:2px_#fff]">Gym</span>
             </h1>
-            <p className="mt-8 max-w-4xl text-2xl font-black uppercase leading-tight tracking-[-0.04em] text-white sm:text-4xl lg:text-5xl">Bodybuilding & Sala Pesi · HYROX · Combat Sports · Wellness</p>
-            <p className="mt-7 max-w-3xl text-lg leading-8 text-zinc-200 sm:text-xl sm:leading-9">A Bacoli, un centro completo dove bodybuilding, HYROX, combat sports e wellness convivono con metodo, cura e identità.</p>
+            <p className="mt-8 max-w-3xl text-xl font-semibold leading-9 text-zinc-100 sm:text-2xl sm:leading-10">Il tuo centro sportivo a Bacoli per allenarti a 360°. Sala pesi, sala combat, HYROX e area wellness in un’unica struttura pensata per performance, benessere e risultati concreti.</p>
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
               <Button href={whatsappUrl}>Prenota una prova</Button>
-              <Button href="#scegli" variant="secondary">Scegli il percorso</Button>
+              <Button href="#scegli" variant="secondary">Scopri le aree</Button>
             </div>
           </div>
 
-          <div className="relative hidden min-h-[42rem] lg:block">
+          <div className="relative min-h-[34rem] lg:min-h-[42rem]">
             <div className="absolute right-0 top-0 h-[34rem] w-[82%] overflow-hidden rounded-[3rem] border border-white/10 bg-zinc-950 shadow-2xl shadow-black/70">
               <Image src={images.salaDetail} alt="Sala pesi Revolution Gym Bacoli" fill sizes="42vw" className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
@@ -234,7 +233,7 @@ export default function Home() {
         <div className="relative mx-auto max-w-[92rem]">
           <div className="max-w-5xl">
             <p className="text-xs font-black uppercase tracking-[0.45em] text-revolution-red">03 / Scegli il tuo percorso Revolution</p>
-            <h2 id="paths-title" className="mt-5 font-display text-5xl font-black uppercase leading-none tracking-[-0.06em] sm:text-7xl lg:text-8xl">Quattro strade. Stessa intensità.</h2>
+            <h2 id="paths-title" className="mt-5 font-display text-5xl font-black uppercase leading-none tracking-[-0.06em] sm:text-7xl lg:text-8xl">Le aree principali.</h2>
           </div>
           <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
             {paths.map((path) => (
@@ -264,7 +263,7 @@ export default function Home() {
           <div>
             <p className="text-xs font-black uppercase tracking-[0.45em] text-revolution-red">04 / Personal Training</p>
             <h2 id="personal-title" className="mt-5 font-display text-5xl font-black uppercase leading-[0.9] tracking-[-0.06em] sm:text-7xl lg:text-8xl">Personal Training, davvero.</h2>
-            <p className="mt-7 max-w-3xl text-xl leading-9 text-zinc-200 sm:text-2xl sm:leading-10">Percorsi individuali costruiti su obiettivi reali: ricomposizione, dimagrimento, performance, ripresa e continuità. Allenamento seguito, metodo chiaro e attenzione totale alla persona.</p>
+            <p className="mt-7 max-w-3xl text-xl leading-9 text-zinc-200 sm:text-2xl sm:leading-10">Percorsi individuali costruiti su obiettivi reali: ricomposizione corporea, dimagrimento, performance, ripresa e continuità. Metodo, attenzione e lavoro su misura.</p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Button href={whatsappUrl}>Prenota una consulenza</Button>
               <Button href="#contatti" variant="secondary">Parla con il team</Button>
