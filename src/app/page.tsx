@@ -66,7 +66,7 @@ const editorialSections = [
   },
   {
     id: "hyrox",
-    number: "06",
+    number: "05",
     eyebrow: "Performance / Official Training Club",
     title: "HYROX OFFICIAL TRAINING CLUB",
     headline: "Potenza, fiato e standard da gara.",
@@ -188,7 +188,7 @@ export default function Home() {
         <div className="mx-auto grid min-h-[calc(100svh-8rem)] max-w-[92rem] items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
           <div className="relative z-10 py-12 lg:py-20">
             <p className="text-xs font-black uppercase tracking-[0.5em] text-revolution-red sm:text-sm">BACOLI · TRAINING · COMBAT · WELLNESS</p>
-            <h1 id="hero-title" className="mt-6 font-display text-[5rem] font-black uppercase leading-[0.76] tracking-[-0.1em] sm:text-[8.6rem] lg:text-[11rem] xl:text-[13rem]">
+            <h1 id="hero-title" className="mt-6 font-display text-[4rem] font-black uppercase leading-[0.84] tracking-[-0.055em] sm:text-[6.6rem] lg:text-[8.4rem] xl:text-[9.8rem]">
               Revolution <span className="block text-transparent [-webkit-text-stroke:1.5px_#fff] sm:[-webkit-text-stroke:2px_#fff]">Gym</span>
             </h1>
             <p className="mt-8 max-w-3xl text-xl font-semibold leading-9 text-zinc-100 sm:text-2xl sm:leading-10">Il tuo centro sportivo a Bacoli per allenarti a 360°. Sala pesi, sala combat, HYROX e area wellness in un’unica struttura pensata per performance, benessere e risultati concreti.</p>
@@ -199,15 +199,19 @@ export default function Home() {
           </div>
 
           <div className="relative min-h-[34rem] lg:min-h-[42rem]">
-            <div className="absolute right-0 top-0 h-[34rem] w-[82%] overflow-hidden rounded-[3rem] border border-white/10 bg-zinc-950 shadow-2xl shadow-black/70">
-              <Image src={images.salaDetail} alt="Sala pesi Revolution Gym Bacoli" fill sizes="42vw" className="object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
+            <div className="absolute inset-0 overflow-hidden rounded-[3rem] border border-white/10 bg-zinc-950 shadow-2xl shadow-black/70">
+              <Image src={images.heroRing} alt="Ring della sala combat Revolution Gym Bacoli" fill sizes="(min-width:1024px) 46vw, 100vw" className="object-cover object-center" priority />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_62%_28%,rgba(215,38,38,0.22),transparent_26rem)]" />
             </div>
-            <div className="absolute bottom-3 left-0 h-[18rem] w-[52%] overflow-hidden rounded-[2.25rem] border border-white/10 bg-zinc-950 shadow-2xl shadow-black/70">
-              <Image src={images.heroRing} alt="Sala combat Revolution Gym Bacoli" fill sizes="24vw" className="object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+            <div className="absolute bottom-8 left-6 right-6 grid gap-3 sm:grid-cols-3">
+              {['Sala Pesi', 'Combat', 'HYROX'].map((item) => (
+                <div key={item} className="rounded-2xl border border-white/10 bg-black/65 px-4 py-4 text-center text-xs font-black uppercase tracking-[0.22em] backdrop-blur">
+                  {item}
+                </div>
+              ))}
             </div>
-            <div className="absolute bottom-14 right-10 rounded-[2rem] border border-revolution-red/40 bg-black/75 p-6 shadow-glow backdrop-blur">
+            <div className="absolute right-6 top-6 rounded-[2rem] border border-revolution-red/40 bg-black/75 p-6 shadow-glow backdrop-blur">
               <p className="font-display text-6xl font-black leading-none text-revolution-red">360°</p>
               <p className="mt-2 text-xs font-black uppercase tracking-[0.28em] text-white">Training Center</p>
             </div>
@@ -219,11 +223,11 @@ export default function Home() {
         <div className="mx-auto grid max-w-[92rem] gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
           <div>
             <p className="text-xs font-black uppercase tracking-[0.45em] text-revolution-red">02 / Chi siamo</p>
-            <h2 id="about-title" className="mt-5 font-display text-5xl font-black uppercase leading-none tracking-[-0.06em] sm:text-7xl lg:text-8xl">Non una palestra qualunque.</h2>
+            <h2 id="about-title" className="mt-5 font-display text-5xl font-black uppercase leading-none tracking-[-0.06em] sm:text-7xl lg:text-8xl">Centro completo per allenarti a 360°.</h2>
           </div>
           <div className="rounded-[2.5rem] border border-white/10 bg-white/[0.045] p-8 shadow-2xl shadow-black/45 sm:p-12">
-            <p className="text-2xl font-black uppercase leading-tight tracking-[-0.03em] text-white sm:text-4xl">Revolution Gym è un centro completo, scuro, fisico, riconoscibile: ogni area ha un’identità forte e lavora dentro un unico metodo.</p>
-            <p className="mt-6 text-base leading-8 text-zinc-300 sm:text-lg">Dalla sala pesi al ring, dalla preparazione HYROX al wellness, l’obiettivo è creare continuità: allenamenti importanti, cura tecnica e un ambiente che ti fa sentire dentro qualcosa di solido.</p>
+            <p className="text-2xl font-black uppercase leading-tight tracking-[-0.03em] text-white sm:text-4xl">Revolution Gym è un training center completo a Bacoli: Sala Pesi, Combat, HYROX, Wellness e Personal Training convivono in una struttura pensata per allenamenti concreti, progressione e continuità.</p>
+            <p className="mt-6 text-base leading-8 text-zinc-300 sm:text-lg">Qui puoi costruire forza, imparare tecnica, preparare una gara, recuperare qualità di movimento o lavorare uno a uno con un coach. Ogni area ha una funzione chiara e un percorso adatto al tuo livello.</p>
           </div>
         </div>
       </section>
@@ -262,8 +266,8 @@ export default function Home() {
           </div>
           <div>
             <p className="text-xs font-black uppercase tracking-[0.45em] text-revolution-red">04 / Personal Training</p>
-            <h2 id="personal-title" className="mt-5 font-display text-5xl font-black uppercase leading-[0.9] tracking-[-0.06em] sm:text-7xl lg:text-8xl">Personal Training, davvero.</h2>
-            <p className="mt-7 max-w-3xl text-xl leading-9 text-zinc-200 sm:text-2xl sm:leading-10">Percorsi individuali costruiti su obiettivi reali: ricomposizione corporea, dimagrimento, performance, ripresa e continuità. Metodo, attenzione e lavoro su misura.</p>
+            <h2 id="personal-title" className="mt-5 font-display text-5xl font-black uppercase leading-[0.9] tracking-[-0.06em] sm:text-7xl lg:text-8xl">Personal Training su misura.</h2>
+            <p className="mt-7 max-w-3xl text-xl leading-9 text-zinc-200 sm:text-2xl sm:leading-10">Coaching individuale per obiettivi reali: ricomposizione corporea, dimagrimento, forza, performance, ripresa e continuità. Valutazione, programma, tecnica e progressione seguite da vicino.</p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Button href={whatsappUrl}>Prenota una consulenza</Button>
               <Button href="#contatti" variant="secondary">Parla con il team</Button>
@@ -272,13 +276,15 @@ export default function Home() {
         </div>
       </section>
 
-      {editorialSections.map((section, index) => (
-        <EditorialSection key={section.id} section={section} index={index} />
-      ))}
+      {editorialSections
+        .filter((section) => section.id === "hyrox")
+        .map((section, index) => (
+          <EditorialSection key={section.id} section={section} index={index} />
+        ))}
 
       <section id="perche" className="relative bg-[#090909] px-5 py-20 sm:px-6 lg:px-8 lg:py-28" aria-labelledby="why-title">
         <div className="mx-auto max-w-[92rem] rounded-[3rem] border border-white/10 bg-[linear-gradient(135deg,rgba(215,38,38,0.18),rgba(255,255,255,0.04)_45%,rgba(0,0,0,0.55))] p-7 shadow-2xl shadow-black/55 sm:p-10 lg:p-14">
-          <p className="text-xs font-black uppercase tracking-[0.45em] text-revolution-red">09 / Perché scegliere Revolution Gym</p>
+          <p className="text-xs font-black uppercase tracking-[0.45em] text-revolution-red">06 / Perché scegliere Revolution Gym</p>
           <h2 id="why-title" className="mt-5 max-w-5xl font-display text-5xl font-black uppercase leading-none tracking-[-0.06em] sm:text-7xl lg:text-8xl">Tutto ha più peso quando è fatto con identità.</h2>
           <div className="mt-12 grid gap-4 md:grid-cols-2">
             {reasons.map((reason, index) => (
@@ -294,26 +300,28 @@ export default function Home() {
       <section id="contatti" className="relative overflow-hidden bg-[#050505] px-5 py-20 text-white sm:px-6 lg:px-8 lg:py-28" aria-labelledby="contact-title">
         <Image src={images.hero} alt="Revolution Gym Bacoli" fill sizes="100vw" className="-z-10 object-cover opacity-30" />
         <div className="absolute inset-0 -z-10 bg-gradient-to-r from-black via-black/90 to-black/60" />
-        <div className="relative mx-auto grid max-w-[92rem] gap-10 rounded-[3rem] border border-white/10 bg-black/65 p-7 shadow-2xl shadow-black/60 backdrop-blur sm:p-10 lg:grid-cols-[1fr_0.78fr] lg:p-14">
+        <div className="relative mx-auto grid max-w-[92rem] gap-8 rounded-[3rem] border border-white/10 bg-black/70 p-7 shadow-2xl shadow-black/60 backdrop-blur sm:p-10 lg:grid-cols-[0.9fr_1.1fr] lg:p-14">
           <div>
-            <p className="text-xs font-black uppercase tracking-[0.45em] text-revolution-red">10 / Contatti · Prenota</p>
-            <h2 id="contact-title" className="mt-5 font-display text-5xl font-black uppercase leading-none tracking-[-0.06em] sm:text-7xl lg:text-8xl">Entra nella Revolution.</h2>
-            <p className="mt-7 max-w-3xl text-xl leading-9 text-zinc-200">Prenota una prova, visita il centro a Bacoli e scegli il percorso più adatto al tuo obiettivo.</p>
-            <address className="mt-8 not-italic text-lg leading-9 text-zinc-200 sm:text-xl">
-              <strong className="text-white">Revolution Gym</strong><br />
-              Bacoli<br /><br />
-              <span className="text-zinc-500">telefono / whatsapp</span><br />
-              <a className="transition hover:text-revolution-red" href="tel:+393382332258">338 233 2258</a><br />
-              <span className="text-zinc-500">instagram</span><br />
-              <a className="transition hover:text-revolution-red" href="https://www.instagram.com/r.evolutiongym/" target="_blank" rel="noopener noreferrer">@r.evolutiongym</a>
-            </address>
+            <p className="text-xs font-black uppercase tracking-[0.45em] text-revolution-red">07 / Contatti · Prenota</p>
+            <h2 id="contact-title" className="mt-5 font-display text-5xl font-black uppercase leading-none tracking-[-0.06em] sm:text-7xl lg:text-8xl">Vieni ad allenarti da noi.</h2>
+            <p className="mt-7 max-w-3xl text-xl leading-9 text-zinc-200">Visita Revolution Gym a Bacoli, prenota una prova o scrivici per scegliere il percorso più adatto tra Sala Pesi, Combat, HYROX, Wellness e Personal Training.</p>
+            <div className="mt-8 grid gap-4 sm:grid-cols-2">
+              <a className="rounded-[1.5rem] border border-white/10 bg-white/[0.06] p-5 transition hover:border-revolution-red/60" href="https://www.google.com/maps/search/?api=1&query=Via%20Miseno%2091%2C%20Bacoli%2080070" target="_blank" rel="noopener noreferrer"><p className="text-xs font-black uppercase tracking-[0.28em] text-revolution-red">Indirizzo</p><p className="mt-3 text-lg font-bold leading-7">Via Miseno 91<br />80070 Bacoli (NA)</p></a>
+              <a className="rounded-[1.5rem] border border-white/10 bg-white/[0.06] p-5 transition hover:border-revolution-red/60" href="tel:+393382332258"><p className="text-xs font-black uppercase tracking-[0.28em] text-revolution-red">Telefono / WhatsApp</p><p className="mt-3 text-lg font-bold">338 233 2258</p></a>
+              <a className="rounded-[1.5rem] border border-white/10 bg-white/[0.06] p-5 transition hover:border-revolution-red/60" href="https://www.instagram.com/r.evolutiongym/" target="_blank" rel="noopener noreferrer"><p className="text-xs font-black uppercase tracking-[0.28em] text-revolution-red">Instagram</p><p className="mt-3 text-lg font-bold">@r.evolutiongym</p></a>
+              <div className="rounded-[1.5rem] border border-white/10 bg-white/[0.06] p-5"><p className="text-xs font-black uppercase tracking-[0.28em] text-revolution-red">Orari</p><p className="mt-3 text-lg font-bold leading-7">Lun–Ven 06:00–22:00<br />Sab 08:00–18:00</p></div>
+            </div>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <Button href={whatsappUrl}>Scrivici su WhatsApp</Button>
+              <Button href={contactUrl} variant="secondary">Richiedi informazioni</Button>
+            </div>
           </div>
-          <div className="flex flex-col justify-center gap-4 rounded-[2rem] border border-white/10 bg-white/[0.06] p-5 sm:p-7">
-            <Button href={whatsappUrl}>Scrivici su WhatsApp</Button>
-            <Button href={contactUrl} variant="secondary">Contattaci</Button>
+          <div className="min-h-[28rem] overflow-hidden rounded-[2.25rem] border border-white/10 bg-zinc-950 shadow-2xl shadow-black/60 lg:min-h-full">
+            <iframe title="Mappa Revolution Gym Bacoli" src="https://www.google.com/maps?q=Via%20Miseno%2091%2C%20Bacoli%2080070&output=embed" className="h-full min-h-[28rem] w-full grayscale invert-[0.9] contrast-125" loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
           </div>
         </div>
       </section>
+
     </main>
   );
 }
