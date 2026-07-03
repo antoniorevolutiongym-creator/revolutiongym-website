@@ -7,18 +7,18 @@ const contactUrl =
   "https://wa.me/393382332258?text=Ciao%2C%20vorrei%20ricevere%20informazioni%20su%20Revolution%20Gym.";
 
 const images = {
-  hero: "/images/hero-ring.jpg",
-  heroRing: "/images/hero-ring.jpg",
-  sala: "/images/bodybuilding-01.jpg",
-  salaWide: "/images/bodybuilding-02.jpg",
-  salaDetail: "/images/bodybuilding-03.jpg",
-  hyrox: "/images/hyrox-01.jpg",
-  hyroxWide: "/images/hyrox-02.jpg",
-  combat: "/images/combat-01.jpg",
-  combatWide: "/images/combat-02.jpg",
-  wellness: "/images/wellness-01.jpg",
-  wellnessWide: "/images/IMG_4876.jpeg",
-  personal: "/images/coach-antonio.jpg",
+  hero: "/images/IMG_4878.jpeg",
+  heroRing: "/images/IMG_4874.jpeg",
+  sala: "/images/15d5ba0f-2122-4561-8526-70e77d636329.jpeg",
+  salaWide: "/images/2e996e2b-b11a-4144-a677-79799b226b16.jpeg",
+  salaDetail: "/images/a081ff89-30d7-4a4d-b624-6418d48dd399.jpeg",
+  hyrox: "/images/IMG_4865.jpeg",
+  hyroxWide: "/images/IMG_4865.jpeg",
+  combat: "/images/IMG_4876.jpeg",
+  combatWide: "/images/IMG_4878.jpeg",
+  wellness: "/images/IMG_4860.jpeg",
+  wellnessWide: "/images/IMG_4860.jpeg",
+  personal: "/images/c1a6078e-3cf2-4a5f-b751-9a87e76ea4c8.jpeg",
 };
 
 const paths = [
@@ -188,10 +188,10 @@ export default function Home() {
         <div className="mx-auto grid min-h-[calc(100svh-8rem)] max-w-[92rem] items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
           <div className="relative z-10 py-12 lg:py-20">
             <p className="text-xs font-black uppercase tracking-[0.5em] text-revolution-red sm:text-sm">BACOLI · TRAINING · COMBAT · WELLNESS</p>
-            <h1 id="hero-title" className="mt-6 font-display text-[4rem] font-black uppercase leading-[0.84] tracking-[-0.055em] sm:text-[6.6rem] lg:text-[8.4rem] xl:text-[9.8rem]">
+            <h1 id="hero-title" className="mt-6 font-display text-[4rem] font-black uppercase leading-[0.84] tracking-[-0.055em] sm:text-[6.6rem] lg:text-[7.3rem] xl:text-[8.5rem]">
               Revolution <span className="block text-transparent [-webkit-text-stroke:1.5px_#fff] sm:[-webkit-text-stroke:2px_#fff]">Gym</span>
             </h1>
-            <p className="mt-8 max-w-3xl text-xl font-semibold leading-9 text-zinc-100 sm:text-2xl sm:leading-10">Il tuo centro sportivo a Bacoli per allenarti a 360°. Sala pesi, sala combat, HYROX e area wellness in un’unica struttura pensata per performance, benessere e risultati concreti.</p>
+            <p className="mt-8 max-w-3xl text-xl font-semibold leading-9 text-zinc-100 sm:text-2xl sm:leading-10">A Bacoli, un centro completo dove sala pesi, combat, HYROX e wellness convivono in un’unica struttura pensata per allenamento vero, continuità e risultati concreti.</p>
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
               <Button href={whatsappUrl}>Prenota una prova</Button>
               <Button href="#scegli" variant="secondary">Scopri le aree</Button>
@@ -226,8 +226,8 @@ export default function Home() {
             <h2 id="about-title" className="mt-5 font-display text-5xl font-black uppercase leading-none tracking-[-0.06em] sm:text-7xl lg:text-8xl">Centro completo per allenarti a 360°.</h2>
           </div>
           <div className="rounded-[2.5rem] border border-white/10 bg-white/[0.045] p-8 shadow-2xl shadow-black/45 sm:p-12">
-            <p className="text-2xl font-black uppercase leading-tight tracking-[-0.03em] text-white sm:text-4xl">Revolution Gym è un training center completo a Bacoli: Sala Pesi, Combat, HYROX, Wellness e Personal Training convivono in una struttura pensata per allenamenti concreti, progressione e continuità.</p>
-            <p className="mt-6 text-base leading-8 text-zinc-300 sm:text-lg">Qui puoi costruire forza, imparare tecnica, preparare una gara, recuperare qualità di movimento o lavorare uno a uno con un coach. Ogni area ha una funzione chiara e un percorso adatto al tuo livello.</p>
+            <p className="text-2xl font-black uppercase leading-tight tracking-[-0.03em] text-white sm:text-4xl">Revolution Gym è un training center completo a Bacoli: sala pesi, combat, HYROX, wellness e personal training convivono in una struttura pensata per allenamenti concreti, progressione e continuità.</p>
+            <p className="mt-6 text-base leading-8 text-zinc-300 sm:text-lg">Qui puoi costruire forza, migliorare tecnica, preparare una gara, recuperare qualità di movimento o lavorare uno a uno con un coach. Ogni area ha una funzione chiara e un percorso adatto al tuo livello.</p>
           </div>
         </div>
       </section>
