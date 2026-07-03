@@ -114,32 +114,42 @@ export default function Home() {
     <main id="home" className="min-h-screen overflow-hidden bg-revolution-black text-white">
       <Header />
 
-      <section className="relative isolate overflow-hidden bg-[#050505] px-5 pb-20 pt-28 sm:px-6 lg:px-8 lg:pb-28 lg:pt-36" aria-labelledby="hero-title">
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_18%_18%,rgba(215,38,38,0.28),transparent_34rem),radial-gradient(circle_at_82%_22%,rgba(255,255,255,0.08),transparent_28rem)]" />
-        <div className="mx-auto grid min-h-[calc(100svh-9rem)] max-w-7xl items-center gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:gap-14">
-          <div className="relative z-10 py-8">
-            <p className="text-xs font-black uppercase tracking-[0.45em] text-revolution-red">Wellness · Training · Combat Sport</p>
-            <h1 id="hero-title" className="mt-5 font-display text-6xl font-black uppercase leading-[0.82] tracking-[-0.075em] sm:text-8xl lg:text-[9.3rem] xl:text-[10.5rem]">
-              Revolution <span className="block text-transparent [-webkit-text-stroke:1.5px_#fff]">Gym</span>
+      <section className="relative isolate min-h-screen overflow-hidden bg-[#050505] px-5 pb-12 pt-28 sm:px-6 lg:px-8 lg:pb-16 lg:pt-32" aria-labelledby="hero-title">
+        <Image src={images.hero} alt="Ring e area combat di Revolution Gym a Bacoli" fill priority sizes="100vw" className="-z-20 object-cover object-center opacity-70" />
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,#050505_0%,rgba(5,5,5,0.82)_35%,rgba(5,5,5,0.24)_100%),radial-gradient(circle_at_24%_28%,rgba(215,38,38,0.36),transparent_30rem)]" />
+        <div className="absolute inset-x-0 bottom-0 -z-10 h-1/2 bg-gradient-to-t from-[#050505] via-[#050505]/70 to-transparent" />
+        <div className="mx-auto grid min-h-[calc(100svh-8rem)] max-w-[92rem] items-end gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+          <div className="relative z-10 max-w-5xl py-10 lg:py-20">
+            <p className="text-xs font-black uppercase tracking-[0.48em] text-revolution-red sm:text-sm">Wellness · Training · Combat Sport</p>
+            <h1 id="hero-title" className="mt-6 font-display text-[4.7rem] font-black uppercase leading-[0.78] tracking-[-0.09em] sm:text-[8.5rem] lg:text-[10.8rem] xl:text-[12.5rem]">
+              Revolution <span className="block text-transparent [-webkit-text-stroke:1.5px_#fff] sm:[-webkit-text-stroke:2px_#fff]">Gym</span>
             </h1>
-            <p className="mt-8 max-w-2xl text-lg leading-8 text-zinc-100 sm:text-2xl sm:leading-10">
+            <p className="mt-8 max-w-3xl text-xl font-semibold leading-9 text-zinc-100 sm:text-2xl sm:leading-10">
               Il tuo centro sportivo a Bacoli per allenarti a 360°. Sala pesi, sala combat, HYROX e area wellness in un’unica struttura pensata per performance, benessere e risultati concreti.
             </p>
-            <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-11 flex flex-col gap-3 sm:flex-row">
               <Button href={whatsappUrl}>Prenota una prova</Button>
               <Button href="#aree" variant="secondary">Scopri le aree</Button>
             </div>
           </div>
 
-          <div className="relative min-h-[24rem] overflow-hidden rounded-[2.5rem] border border-white/10 bg-zinc-950 shadow-2xl shadow-black/70 sm:min-h-[34rem] lg:min-h-[44rem]">
-            <Image src={images.hero} alt="Ring e area combat di Revolution Gym a Bacoli" fill priority sizes="(min-width:1024px) 54vw, 100vw" className="object-cover object-center" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-black/10" />
-            <div className="absolute bottom-0 left-0 right-0 flex items-end justify-between gap-6 p-6 sm:p-8">
-              <div>
-                <p className="text-xs font-black uppercase tracking-[0.35em] text-revolution-red">Bacoli</p>
-                <p className="mt-2 max-w-sm text-sm font-bold uppercase tracking-[0.18em] text-white/90">Ring, combat area e training floor in un’unica esperienza.</p>
+          <div className="relative mb-10 grid gap-4 sm:grid-cols-2 lg:mb-0">
+            <div className="relative min-h-[18rem] overflow-hidden rounded-[2.5rem] border border-white/10 bg-zinc-950 shadow-2xl shadow-black/70 sm:min-h-[30rem] lg:translate-y-10">
+              <Image src={images.salaWide} alt="Sala pesi Revolution Gym" fill sizes="(min-width:1024px) 26vw, 50vw" className="object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/10" />
+              <p className="absolute bottom-6 left-6 text-xs font-black uppercase tracking-[0.3em] text-white">Sala Pesi</p>
+            </div>
+            <div className="grid gap-4">
+              <div className="relative min-h-[14rem] overflow-hidden rounded-[2rem] border border-white/10 bg-zinc-950 shadow-2xl shadow-black/60 sm:min-h-[19rem]">
+                <Image src={images.hyroxWide} alt="Area HYROX Revolution Gym" fill sizes="(min-width:1024px) 24vw, 50vw" className="object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-black/10" />
+                <p className="absolute bottom-5 left-5 text-xs font-black uppercase tracking-[0.3em] text-white">HYROX</p>
               </div>
-              <div className="hidden h-24 w-1 bg-revolution-red sm:block" />
+              <div className="relative min-h-[14rem] overflow-hidden rounded-[2rem] border border-white/10 bg-zinc-950 shadow-2xl shadow-black/60 sm:min-h-[19rem]">
+                <Image src={images.wellnessWide} alt="Area wellness Revolution Gym" fill sizes="(min-width:1024px) 24vw, 50vw" className="object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/10" />
+                <p className="absolute bottom-5 left-5 text-xs font-black uppercase tracking-[0.3em] text-white">Wellness</p>
+              </div>
             </div>
           </div>
         </div>
@@ -150,14 +160,14 @@ export default function Home() {
         <div className="relative mx-auto max-w-7xl">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-xs font-black uppercase tracking-[0.45em] text-revolution-red">Training areas</p>
-            <h2 id="areas-title" className="mt-4 font-display text-5xl font-black uppercase leading-none tracking-[-0.05em] sm:text-7xl">LE NOSTRE AREE</h2>
+            <h2 id="areas-title" className="mt-4 font-display text-5xl font-black uppercase leading-none tracking-[-0.05em] sm:text-7xl">Le nostre aree:</h2>
             <p className="mt-6 text-lg leading-8 text-zinc-300 sm:text-xl">Quattro aree, un solo obiettivo: farti allenare meglio.</p>
           </div>
-          <div className="mt-14 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+          <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-2">
             {areas.map((area) => (
-              <article key={area.title} className="group overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.045] shadow-2xl shadow-black/45 transition duration-500 hover:-translate-y-2 hover:border-revolution-red/60 hover:bg-white/[0.07] hover:shadow-revolution-red/10">
-                <div className="relative aspect-[16/12] overflow-hidden">
-                  <Image src={area.image} alt={`${area.title} Revolution Gym`} fill sizes="(min-width:1280px) 25vw, (min-width:768px) 50vw, 100vw" className="object-cover transition duration-700 group-hover:scale-105" />
+              <article key={area.title} className="group overflow-hidden rounded-[2.5rem] border border-white/10 bg-white/[0.045] shadow-2xl shadow-black/45 transition duration-500 hover:-translate-y-2 hover:border-revolution-red/60 hover:bg-white/[0.07] hover:shadow-revolution-red/10">
+                <div className="relative aspect-[16/10] overflow-hidden">
+                  <Image src={area.image} alt={`${area.title} Revolution Gym`} fill sizes="(min-width:1024px) 50vw, (min-width:768px) 50vw, 100vw" className="object-cover transition duration-700 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/5 to-transparent" />
                   <div className="absolute bottom-0 left-0 h-1 w-20 bg-revolution-red transition duration-500 group-hover:w-32" />
                 </div>
@@ -201,7 +211,7 @@ export default function Home() {
         <div className="relative mx-auto max-w-7xl">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-xs font-black uppercase tracking-[0.45em] text-revolution-red">Corsi</p>
-            <h2 id="courses-title" className="mt-4 font-display text-5xl font-black uppercase leading-none tracking-[-0.05em] sm:text-7xl">I NOSTRI CORSI</h2>
+            <h2 id="courses-title" className="mt-4 font-display text-5xl font-black uppercase leading-none tracking-[-0.05em] sm:text-7xl">I nostri corsi:</h2>
             <p className="mt-6 text-lg leading-8 text-zinc-300 sm:text-xl">Allenamento, tecnica, performance e benessere: scegli il percorso giusto per te.</p>
           </div>
           <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
