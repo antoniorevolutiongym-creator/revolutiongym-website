@@ -10,9 +10,10 @@ const whatsappBookingUrl =
 const navItems = [
   { label: "Home", href: "/" },
   { label: "HYROX", href: "/hyrox" },
-  { label: "Aree", href: "/#aree" },
-  { label: "Allenati", href: "/#allenati" },
-  { label: "Corsi", href: "/#corsi" },
+  { label: "Percorsi", href: "/#scegli" },
+  { label: "Sala Pesi", href: "/#sala-pesi" },
+  { label: "Combat", href: "/#combat" },
+  { label: "Wellness", href: "/#wellness" },
   { label: "Contatti", href: "/#contatti" },
 ];
 
