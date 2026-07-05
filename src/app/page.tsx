@@ -7,8 +7,8 @@ const contactUrl =
   "https://wa.me/393382332258?text=Ciao%2C%20vorrei%20ricevere%20informazioni%20su%20Revolution%20Gym.";
 
 const images = {
-  hero: "/images/IMG_4869.jpeg",
-  heroRing: "/images/IMG_4869.jpeg",
+  hero: "/images/hero-ring.jpg",
+  heroRing: "/images/hero-ring.jpg",
   sala: "/images/68754fd6-ac1f-4327-9b0b-a8dc89163045.jpeg",
   salaWide: "/images/68754fd6-ac1f-4327-9b0b-a8dc89163045.jpeg",
   salaDetail: "/images/a081ff89-30d7-4a4d-b624-6418d48dd399.jpeg",
@@ -25,26 +25,32 @@ const paths = [
   {
     eyebrow: "01 / Strength",
     title: "Sala Pesi",
-    copy: "Forza, massa e controllo in una sala attrezzata per progressioni concrete e allenamenti senza distrazioni.",
+    copy: "Forza, ricomposizione corporea e lavoro tecnico in una sala attrezzata con macchine, bilancieri, manubri e progressioni concrete.",
     image: images.sala,
   },
   {
-    eyebrow: "02 / Fight Room",
-    title: "Sala Combat",
-    copy: "Boxe, Muay Thai e kickboxing in una sala autentica: tecnica, disciplina, fiato e mentalità round dopo round.",
+    eyebrow: "02 / Combat",
+    title: "Combat",
+    copy: "Muay Thai, boxe e lavoro tecnico in uno spazio dedicato a disciplina, ritmo, intensità e crescita reale.",
     image: images.combat,
   },
   {
-    eyebrow: "03 / Race Ready",
+    eyebrow: "03 / HYROX",
     title: "Area HYROX",
-    copy: "Endurance, sled, ergometri e stazioni funzionali con programmazione chiara, ritmo e dati misurabili.",
+    copy: "Corsa, sled, ergometri e station training per costruire resistenza, forza e performance con una programmazione precisa.",
     image: images.hyrox,
   },
   {
-    eyebrow: "04 / Recovery",
+    eyebrow: "04 / Wellness",
     title: "Area Wellness",
-    copy: "Pilates, yoga, mobilità e recupero per dare qualità al movimento e sostenere ogni percorso di allenamento.",
+    copy: "Mobilità, controllo, postura e recupero per migliorare qualità del movimento, benessere e continuità nel lavoro.",
     image: images.wellness,
+  },
+  {
+    eyebrow: "05 / Coaching",
+    title: "Personal Training",
+    copy: "Percorsi individuali costruiti su obiettivi reali: dimagrimento, ricomposizione, performance, ripresa e lavoro su misura.",
+    image: images.personal,
   },
 ];
 
@@ -52,70 +58,66 @@ const editorialSections = [
   {
     id: "sala-pesi",
     number: "05",
-    eyebrow: "Bodybuilding / Sala Pesi",
-    title: "Sala Pesi",
-    headline: "Una sala costruita per spingere davvero.",
-    copy: "Macchine professionali, bilancieri, manubri e postazioni complete per lavorare su forza, ipertrofia, ricomposizione corporea e preparazione atletica. Un ambiente intenso, ordinato e concreto: meno distrazioni, più carico, più metodo.",
+    eyebrow: "Sala Pesi / Strength",
+    title: "SALA PESI: FORZA, COSTRUZIONE E QUALITÀ DEL LAVORO",
+    headline: "",
+    copy: "Un’area pensata per chi vuole migliorare forza, composizione corporea, tecnica e continuità di allenamento.\n\nMacchine, manubri, bilancieri e lavoro programmato convivono in uno spazio ordinato, serio e costruito per allenarsi bene.",
     image: images.salaWide,
-    stats: ["Forza", "Ipertrofia", "Tecnica"],
-    cards: [
-      "Percorsi per principianti, intermedi e atleti avanzati.",
-      "Focus su esecuzione, progressione e continuità.",
-      "Attrezzatura solida per allenamenti completi e misurabili.",
-    ],
+    stats: ["Forza", "Costruzione", "Qualità"],
+    cards: ["SCOPRI LA SALA PESI"],
   },
   {
     id: "hyrox",
-    number: "05",
-    eyebrow: "Performance / Official Training Club",
-    title: "HYROX OFFICIAL TRAINING CLUB",
-    headline: "Potenza, fiato e standard da gara.",
-    copy: "Una sezione editoriale, fisica e ad alto impatto per preparare ogni stazione HYROX: corsa, sled, rowing, ski erg, wall ball e lavoro funzionale. Qui ogni sessione ha ritmo, dati e obiettivo.",
+    number: "06",
+    eyebrow: "HYROX / Performance",
+    title: "HYROX A BACOLI, CON STRUTTURA E PROGRAMMAZIONE VERA",
+    headline: "",
+    copy: "Da Revolution Gym l’area HYROX è pensata per lavorare su corsa, transizioni, sled, ergometri, forza resistente e gestione dello sforzo.\n\nDall’esordiente all’atleta che vuole migliorare il proprio tempo, il lavoro è costruito per dare progressione e continuità.",
     image: images.hyroxWide,
-    stats: ["Run", "Sled", "Stations"],
-    cards: [
-      "Programmazione specifica per costruire endurance e capacità lattacida.",
-      "Tecnica sulle stazioni per rendere ogni gesto più efficiente.",
-      "Simulazioni, pacing e lavoro mentale per arrivare pronto.",
-    ],
+    stats: ["Run", "Sled", "Pacing"],
+    cards: ["Sessioni HYROX dedicate", "Programmi per beginner e atleti", "Test, simulazioni e progressioni", "Lavoro su corsa, stazioni e pacing", "SCOPRI HYROX"],
   },
   {
     id: "combat",
     number: "07",
-    eyebrow: "Combat Sports / Ring Room",
-    title: "Sala Combat",
-    headline: "Il ring cambia il modo in cui ti alleni.",
-    copy: "Sacchi, ring, colpitori e lavoro tecnico per Muay Thai, boxe e kickboxing. Una sala ruvida e premium dove impari a muoverti, colpire, difenderti e restare presente anche quando l’intensità sale.",
+    eyebrow: "Combat / Ring Room",
+    title: "COMBAT: MUAY THAI, BOXE E LAVORO VERO",
+    headline: "",
+    copy: "Dalla tecnica al condizionamento, dalla preparazione al lavoro al sacco, l’area combat è lo spazio dedicato a chi cerca intensità, disciplina e crescita.\n\nMuay Thai e boxe non sono un’aggiunta: sono una parte identitaria di Revolution Gym.",
     image: images.combatWide,
-    stats: ["Boxe", "Muay Thai", "Kickboxing"],
-    cards: [
-      "Tecnica progressiva per chi inizia e per chi vuole crescere.",
-      "Condizionamento fisico completo: ritmo, core, gambe e fiato.",
-      "Mentalità, disciplina e controllo in un ambiente autentico.",
-    ],
+    stats: ["Muay Thai", "Boxe", "Tecnica"],
+    cards: ["SCOPRI COMBAT"],
   },
   {
     id: "wellness",
     number: "08",
     eyebrow: "Wellness / Recovery",
-    title: "Area Wellness",
-    headline: "Recupero, postura e controllo hanno lo stesso peso.",
-    copy: "Yoga, Pilates, mobilità, respirazione e riequilibrio posturale completano l’identità Revolution. Il benessere non è un’aggiunta morbida: è ciò che ti permette di allenarti meglio, più a lungo e con più qualità.",
+    title: "WELLNESS: MOBILITÀ, CONTROLLO E RECUPERO",
+    headline: "",
+    copy: "Allenarsi bene non significa solo spingere di più. Significa anche migliorare mobilità, postura, controllo del corpo e qualità del movimento.\n\nL’area wellness nasce per dare equilibrio al lavoro, supportare il recupero e migliorare la continuità.",
     image: images.wellnessWide,
-    stats: ["Pilates", "Yoga", "Mobility"],
-    cards: [
-      "Lavoro profondo su core, respirazione e postura.",
-      "Percorsi ideali per recupero, prevenzione e consapevolezza.",
-      "Equilibrio tra intensità, mobilità e qualità del movimento.",
-    ],
+    stats: ["Mobilità", "Controllo", "Recupero"],
+    cards: ["SCOPRI WELLNESS"],
   },
 ];
 
 const reasons = [
-  "Sala pesi, HYROX, combat, wellness e personal training hanno lo stesso peso strategico.",
-  "Aree forti, riconoscibili e pensate per allenamenti veri, non per riempire spazio.",
-  "Metodo tecnico, attenzione alla persona e identità premium in ogni percorso.",
-  "Un ambiente scuro, ordinato e concreto per iniziare, evolvere e restare costante.",
+  {
+    title: "UNA STRUTTURA COMPLETA",
+    copy: "Sala pesi, combat, HYROX, wellness e personal training nello stesso centro.",
+  },
+  {
+    title: "AREE VERE, NON IMPROVVISATE",
+    copy: "Ogni spazio ha una funzione chiara ed è pensato per un lavoro preciso.",
+  },
+  {
+    title: "METODO E CONTINUITÀ",
+    copy: "Allenarsi bene significa avere una direzione, non fare cose a caso.",
+  },
+  {
+    title: "AMBIENTE SERIO E RICONOSCIBILE",
+    copy: "Ordine, attenzione, tecnica e un’identità forte in ogni percorso.",
+  },
 ];
 
 function Button({ href, children, variant = "primary" }: { href: string; children: React.ReactNode; variant?: "primary" | "secondary" }) {
@@ -159,8 +161,10 @@ function EditorialSection({ section, index }: { section: (typeof editorialSectio
           <div>
             <p className="text-sm font-black uppercase tracking-[0.5em] text-revolution-red">{section.number}</p>
             <h2 id={`${section.id}-title`} className="mt-5 font-display text-5xl font-black uppercase leading-[0.88] tracking-[-0.06em] sm:text-7xl lg:text-8xl">{section.title}</h2>
-            <p className="mt-7 max-w-3xl text-2xl font-black uppercase leading-tight tracking-[-0.03em] text-white sm:text-4xl">{section.headline}</p>
-            <p className="mt-7 max-w-3xl text-base leading-8 text-zinc-300 sm:text-lg sm:leading-9">{section.copy}</p>
+            {section.headline ? (
+              <p className="mt-7 max-w-3xl text-2xl font-black uppercase leading-tight tracking-[-0.03em] text-white sm:text-4xl">{section.headline}</p>
+            ) : null}
+            <p className="mt-7 max-w-3xl whitespace-pre-line text-base leading-8 text-zinc-300 sm:text-lg sm:leading-9">{section.copy}</p>
           </div>
           <div className="mt-10 grid gap-4">
             {section.cards.map((card, cardIndex) => (
@@ -191,7 +195,7 @@ export default function Home() {
             <h1 id="hero-title" className="mt-6 font-display text-[3.5rem] font-black uppercase leading-[0.84] tracking-[-0.055em] sm:text-[5.8rem] lg:text-[7.3rem] xl:text-[8.5rem]">
               Revolution <span className="block text-transparent [-webkit-text-stroke:1.5px_#fff] sm:[-webkit-text-stroke:2px_#fff]">Gym</span>
             </h1>
-            <p className="mt-8 max-w-3xl text-xl font-semibold leading-9 text-zinc-100 sm:text-2xl sm:leading-10">A Bacoli, un centro completo dove sala pesi, combat, HYROX e wellness convivono in un’unica struttura pensata per allenamento vero, continuità e risultati concreti.</p>
+            <p className="mt-8 max-w-3xl text-xl font-semibold leading-9 text-zinc-100 sm:text-2xl sm:leading-10">A Bacoli, un centro completo dove sala pesi, combat, HYROX, wellness e personal training convivono in un’unica struttura pensata per allenamento vero, continuità e risultati concreti.</p>
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
               <Button href={whatsappUrl}>Prenota una prova</Button>
               <Button href="#scegli" variant="secondary">Scopri le aree</Button>
@@ -223,11 +227,12 @@ export default function Home() {
         <div className="mx-auto grid max-w-[92rem] gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
           <div>
             <p className="text-xs font-black uppercase tracking-[0.45em] text-revolution-red">02 / Chi siamo</p>
-            <h2 id="about-title" className="mt-5 font-display text-5xl font-black uppercase leading-none tracking-[-0.06em] sm:text-7xl lg:text-8xl">Centro completo per allenarti a 360°.</h2>
+            <h2 id="about-title" className="mt-5 font-display text-5xl font-black uppercase leading-none tracking-[-0.06em] sm:text-7xl lg:text-8xl">UN SOLO CENTRO.
+PIÙ MODI DI ALLENARTI BENE.</h2>
           </div>
           <div className="rounded-[2.5rem] border border-white/10 bg-white/[0.045] p-8 shadow-2xl shadow-black/45 sm:p-12">
-            <p className="text-2xl font-black uppercase leading-tight tracking-[-0.03em] text-white sm:text-4xl">Revolution Gym è un training center completo a Bacoli: sala pesi, combat, HYROX, wellness e personal training convivono in una struttura pensata per allenamenti concreti, progressione e continuità.</p>
-            <p className="mt-6 text-base leading-8 text-zinc-300 sm:text-lg">Qui puoi costruire forza, migliorare tecnica, preparare una gara, recuperare qualità di movimento o lavorare uno a uno con un coach. Ogni area ha una funzione chiara e un percorso adatto al tuo livello.</p>
+            <p className="text-2xl font-black uppercase leading-tight tracking-[-0.03em] text-white sm:text-4xl">Revolution Gym nasce per unire sotto lo stesso tetto forza, tecnica, performance e benessere.</p>
+            <p className="mt-6 text-base leading-8 text-zinc-300 sm:text-lg">Sala pesi, area combat, HYROX, wellness e personal training non sono reparti messi a caso: ogni spazio ha una funzione precisa, ma tutto segue la stessa idea di lavoro — allenarti con metodo, continuità e qualità.</p>
           </div>
         </div>
       </section>
@@ -236,10 +241,11 @@ export default function Home() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(215,38,38,0.22),transparent_34rem)]" />
         <div className="relative mx-auto max-w-[92rem]">
           <div className="max-w-5xl">
-            <p className="text-xs font-black uppercase tracking-[0.45em] text-revolution-red">03 / Scegli il tuo percorso Revolution</p>
-            <h2 id="paths-title" className="mt-5 font-display text-5xl font-black uppercase leading-none tracking-[-0.06em] sm:text-7xl lg:text-8xl">Le aree principali.</h2>
+            <p className="text-xs font-black uppercase tracking-[0.45em] text-revolution-red">03 / Aree principali</p>
+            <h2 id="paths-title" className="mt-5 font-display text-5xl font-black uppercase leading-none tracking-[-0.06em] sm:text-7xl lg:text-8xl">LE AREE PRINCIPALI</h2>
+            <p className="mt-6 max-w-3xl text-xl leading-9 text-zinc-300 sm:text-2xl sm:leading-10">Cinque percorsi diversi, una sola direzione: allenarti meglio, con più qualità e più continuità.</p>
           </div>
-          <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+          <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-5">
             {paths.map((path) => (
               <article key={path.title} className="group relative min-h-[34rem] overflow-hidden rounded-[2.5rem] border border-white/10 bg-zinc-950 shadow-2xl shadow-black/50 transition duration-500 hover:-translate-y-2 hover:border-revolution-red/70">
                 <Image src={path.image} alt={`${path.title} Revolution Gym`} fill sizes="(min-width:1280px) 25vw, (min-width:768px) 50vw, 100vw" className="object-cover transition duration-700 group-hover:scale-105" />
@@ -267,7 +273,9 @@ export default function Home() {
           <div>
             <p className="text-xs font-black uppercase tracking-[0.45em] text-revolution-red">04 / Personal Training</p>
             <h2 id="personal-title" className="mt-5 font-display text-5xl font-black uppercase leading-[0.9] tracking-[-0.06em] sm:text-7xl lg:text-8xl">Personal Training su misura.</h2>
-            <p className="mt-7 max-w-3xl text-xl leading-9 text-zinc-200 sm:text-2xl sm:leading-10">Coaching individuale per obiettivi reali: ricomposizione corporea, dimagrimento, forza, performance, ripresa e continuità. Valutazione, programma, tecnica e progressione seguite da vicino.</p>
+            <p className="mt-7 max-w-3xl whitespace-pre-line text-xl leading-9 text-zinc-200 sm:text-2xl sm:leading-10">Percorsi individuali costruiti su obiettivi reali: dimagrimento, ricomposizione corporea, performance, ritorno all’allenamento e supporto tecnico costante.
+
+Un lavoro uno a uno pensato per chi vuole essere seguito con più attenzione, metodo e precisione.</p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Button href={whatsappUrl}>Prenota una consulenza</Button>
               <Button href="#contatti" variant="secondary">Parla con il team</Button>
@@ -276,21 +284,22 @@ export default function Home() {
         </div>
       </section>
 
-      {editorialSections
-        .filter((section) => section.id === "hyrox")
-        .map((section, index) => (
-          <EditorialSection key={section.id} section={section} index={index} />
-        ))}
+      {editorialSections.map((section, index) => (
+        <EditorialSection key={section.id} section={section} index={index} />
+      ))}
 
       <section id="perche" className="relative bg-[#090909] px-5 py-20 sm:px-6 lg:px-8 lg:py-28" aria-labelledby="why-title">
         <div className="mx-auto max-w-[92rem] rounded-[3rem] border border-white/10 bg-[linear-gradient(135deg,rgba(215,38,38,0.18),rgba(255,255,255,0.04)_45%,rgba(0,0,0,0.55))] p-7 shadow-2xl shadow-black/55 sm:p-10 lg:p-14">
           <p className="text-xs font-black uppercase tracking-[0.45em] text-revolution-red">06 / Perché scegliere Revolution Gym</p>
-          <h2 id="why-title" className="mt-5 max-w-5xl font-display text-5xl font-black uppercase leading-none tracking-[-0.06em] sm:text-7xl lg:text-8xl">Tutto ha più peso quando è fatto con identità.</h2>
+          <h2 id="why-title" className="mt-5 max-w-5xl font-display text-5xl font-black uppercase leading-none tracking-[-0.06em] sm:text-7xl lg:text-8xl">PERCHÉ SCEGLIERE REVOLUTION GYM</h2>
           <div className="mt-12 grid gap-4 md:grid-cols-2">
             {reasons.map((reason, index) => (
-              <div key={reason} className="grid grid-cols-[4.5rem_1fr] gap-5 rounded-[1.75rem] border border-white/10 bg-black/35 p-5">
+              <div key={reason.title} className="grid grid-cols-[4.5rem_1fr] gap-5 rounded-[1.75rem] border border-white/10 bg-black/35 p-5">
                 <span className="font-display text-5xl font-black text-revolution-red">0{index + 1}</span>
-                <p className="text-lg font-black uppercase leading-tight tracking-[-0.02em] text-white">{reason}</p>
+                <div>
+                  <h3 className="text-lg font-black uppercase leading-tight tracking-[-0.02em] text-white">{reason.title}</h3>
+                  <p className="mt-3 text-sm font-semibold leading-7 text-zinc-300 sm:text-base">{reason.copy}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -303,17 +312,17 @@ export default function Home() {
         <div className="relative mx-auto grid max-w-[92rem] gap-8 rounded-[3rem] border border-white/10 bg-black/70 p-7 shadow-2xl shadow-black/60 backdrop-blur sm:p-10 lg:grid-cols-[0.9fr_1.1fr] lg:p-14">
           <div>
             <p className="text-xs font-black uppercase tracking-[0.45em] text-revolution-red">07 / Contatti · Prenota</p>
-            <h2 id="contact-title" className="mt-5 font-display text-5xl font-black uppercase leading-none tracking-[-0.06em] sm:text-7xl lg:text-8xl">Vieni ad allenarti da noi.</h2>
-            <p className="mt-7 max-w-3xl text-xl leading-9 text-zinc-200">Visita Revolution Gym a Bacoli, prenota una prova o scrivici per scegliere il percorso più adatto tra Sala Pesi, Combat, HYROX, Wellness e Personal Training.</p>
+            <h2 id="contact-title" className="mt-5 font-display text-5xl font-black uppercase leading-none tracking-[-0.06em] sm:text-7xl lg:text-8xl">ENTRA IN REVOLUTION</h2>
+            <p className="mt-7 max-w-3xl text-xl leading-9 text-zinc-200">Prenota una prova, vieni a visitare il centro a Bacoli e scegli il percorso più adatto al tuo obiettivo.</p>
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
-              <a className="rounded-[1.5rem] border border-white/10 bg-white/[0.06] p-5 transition hover:border-revolution-red/60" href="https://www.google.com/maps/search/?api=1&query=Via%20Miseno%2091%2C%20Bacoli%2080070" target="_blank" rel="noopener noreferrer"><p className="text-xs font-black uppercase tracking-[0.28em] text-revolution-red">Indirizzo</p><p className="mt-3 text-lg font-bold leading-7">Via Miseno 91<br />80070 Bacoli (NA)</p></a>
+              <a className="rounded-[1.5rem] border border-white/10 bg-white/[0.06] p-5 transition hover:border-revolution-red/60" href="https://www.google.com/maps/search/?api=1&query=Via%20Miseno%2091%2C%20Bacoli%2080070" target="_blank" rel="noopener noreferrer"><p className="text-xs font-black uppercase tracking-[0.28em] text-revolution-red">Indirizzo</p><p className="mt-3 text-lg font-bold leading-7">Revolution Gym<br />Via Miseno 91, Bacoli</p></a>
               <a className="rounded-[1.5rem] border border-white/10 bg-white/[0.06] p-5 transition hover:border-revolution-red/60" href="tel:+393382332258"><p className="text-xs font-black uppercase tracking-[0.28em] text-revolution-red">Telefono / WhatsApp</p><p className="mt-3 text-lg font-bold">338 233 2258</p></a>
-              <a className="rounded-[1.5rem] border border-white/10 bg-white/[0.06] p-5 transition hover:border-revolution-red/60" href="https://www.instagram.com/r.evolutiongym/" target="_blank" rel="noopener noreferrer"><p className="text-xs font-black uppercase tracking-[0.28em] text-revolution-red">Instagram</p><p className="mt-3 text-lg font-bold">@r.evolutiongym</p></a>
-              <div className="rounded-[1.5rem] border border-white/10 bg-white/[0.06] p-5"><p className="text-xs font-black uppercase tracking-[0.28em] text-revolution-red">Orari</p><p className="mt-3 text-lg font-bold leading-7">Lun–Ven 06:00–22:00<br />Sab 08:00–18:00</p></div>
+              <a className="rounded-[1.5rem] border border-white/10 bg-white/[0.06] p-5 transition hover:border-revolution-red/60" href="https://www.instagram.com/revolutiongym/" target="_blank" rel="noopener noreferrer"><p className="text-xs font-black uppercase tracking-[0.28em] text-revolution-red">Instagram</p><p className="mt-3 text-lg font-bold">@revolutiongym</p></a>
+              <div className="rounded-[1.5rem] border border-white/10 bg-white/[0.06] p-5"><p className="text-xs font-black uppercase tracking-[0.28em] text-revolution-red">Orari</p><p className="mt-3 text-lg font-bold leading-7">Lunedì–Venerdì: 06:30 – 22:30<br />Sabato: 09:00 – 18:00<br />Domenica: chiuso</p></div>
             </div>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Button href={whatsappUrl}>Scrivici su WhatsApp</Button>
-              <Button href={contactUrl} variant="secondary">Richiedi informazioni</Button>
+              <Button href={contactUrl} variant="secondary">Prenota una prova</Button>
             </div>
           </div>
           <div className="min-h-[28rem] overflow-hidden rounded-[2.25rem] border border-white/10 bg-zinc-950 shadow-2xl shadow-black/60 lg:min-h-full">
