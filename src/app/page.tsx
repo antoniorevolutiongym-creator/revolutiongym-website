@@ -7,13 +7,13 @@ const contactUrl =
   "https://wa.me/393382332258?text=Ciao%2C%20vorrei%20ricevere%20informazioni%20su%20Revolution%20Gym.";
 
 const images = {
-  hero: "/images/hero-ring.jpg",
-  heroRing: "/images/hero-ring.jpg",
+  hero: "/images/hero/ring-notte.jpg",
+  heroRing: "/images/hero/ring-notte.jpg",
   sala: "/images/68754fd6-ac1f-4327-9b0b-a8dc89163045.jpeg",
   salaWide: "/images/68754fd6-ac1f-4327-9b0b-a8dc89163045.jpeg",
   salaDetail: "/images/a081ff89-30d7-4a4d-b624-6418d48dd399.jpeg",
-  hyrox: "/images/IMG_4865.jpeg",
-  hyroxWide: "/images/IMG_4865.jpeg",
+  hyrox: "/images/hyrox/hyrox-area.jpg",
+  hyroxWide: "/images/hyrox/hyrox-area.jpg",
   combat: "/images/IMG_4869.jpeg",
   combatWide: "/images/IMG_4876.jpeg",
   wellness: "/images/IMG_4876.jpeg",
