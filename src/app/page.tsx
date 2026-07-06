@@ -2,10 +2,7 @@ import Image from "next/image";
 import { Header } from "@/components/Header";
 
 const whatsappUrl =
-  "https://wa.me/393382332258?text=Ciao%2C%20vorrei%20prenotare%20una%20prova%20alla%20Revolution%20Gym.";
-const contactUrl =
-  "https://wa.me/393382332258?text=Ciao%2C%20vorrei%20ricevere%20informazioni%20su%20Revolution%20Gym.";
-
+  "https://wa.me/393382332258?text=Ciao%2C%20vorrei%20prenotare%20una%20prova%20alla%20Revolution%20Gym";
 const images = {
   hero: "/images/hero/ring-notte.jpg",
   heroRing: "/images/hero/ring-notte.jpg",
@@ -24,32 +21,32 @@ const images = {
 const paths = [
   {
     eyebrow: "01 / Strength",
-    title: "Sala Pesi",
-    copy: "Forza, ricomposizione corporea e lavoro tecnico in una sala attrezzata con macchine, bilancieri, manubri e progressioni concrete.",
+    title: "SALA PESI",
+    copy: "Costruisci forza, ridisegna il fisico, migliora ogni gesto. Macchine isotoniche, bilancieri, manubri e progressioni pensate per portarti dove vuoi arrivare — un passo alla volta, con metodo.",
     image: images.sala,
   },
   {
     eyebrow: "02 / Combat",
-    title: "Combat",
-    copy: "Muay Thai, boxe e lavoro tecnico in uno spazio dedicato a disciplina, ritmo, intensità e crescita reale.",
+    title: "SALA COMBAT",
+    copy: "Il ring non mente. Qui la Muay Thai e la Boxe si allenano come si allena un atleta vero: tecnica, sparring, condizionamento e la mentalità che fa la differenza tra chi si allena e chi combatte. Formiamo fighter da gara e diamo a ogni persona la versione più forte di sé. Sali. Il resto lo costruiamo insieme.",
     image: images.combat,
   },
   {
     eyebrow: "03 / HYROX",
     title: "Area HYROX",
-    copy: "Corsa, sled, ergometri e station training per costruire resistenza, forza e performance con una programmazione precisa.",
+    copy: "L’unica area a Bacoli dove ti prepari davvero alla gara HYROX, non ci giochi. Corsa, sled, ergometri, forza resistente e transizioni allenate come in competizione, dentro una programmazione che ti porta al giorno della gara pronto a spingere dal primo all’ultimo metro. Che sia la tua prima HYROX o il tuo prossimo PB, qui trovi chi le gare le corre davvero.",
     image: images.hyrox,
   },
   {
     eyebrow: "04 / Wellness",
     title: "Area Wellness",
-    copy: "Mobilità, controllo, postura e recupero per migliorare qualità del movimento, benessere e continuità nel lavoro.",
+    copy: "Il tuo corpo lavora meglio quando si muove bene. Yoga, Pilates e mobilità per postura, controllo e recupero: le fondamenta invisibili di ogni risultato.",
     image: images.wellness,
   },
   {
     eyebrow: "05 / Coaching",
     title: "Personal Training",
-    copy: "Percorsi individuali costruiti su obiettivi reali: dimagrimento, ricomposizione, performance, ripresa e lavoro su misura.",
+    copy: "Percorsi individuali su misura per dimagrimento, ricomposizione corporea, performance e continuità.",
     image: images.personal,
   },
 ];
@@ -70,23 +67,23 @@ const editorialSections = [
     id: "hyrox",
     number: "06",
     eyebrow: "HYROX / Performance",
-    title: "HYROX A BACOLI, CON STRUTTURA E PROGRAMMAZIONE VERA",
+    title: "CENTRO AFFILIATO HYROX A BACOLI",
     headline: "",
-    copy: "Da Revolution Gym l’area HYROX è pensata per lavorare su corsa, transizioni, sled, ergometri, forza resistente e gestione dello sforzo.\n\nDall’esordiente all’atleta che vuole migliorare il proprio tempo, il lavoro è costruito per dare progressione e continuità.",
+    copy: "Revolution Gym è centro affiliato HYROX. L’area HYROX è pensata per preparare la gara e migliorare corsa, sled, ergometri, transizioni, forza resistente e gestione dello sforzo.\n\nDall’esordiente all’atleta che vuole migliorare il proprio tempo: allenamenti strutturati, coaching tecnico e programmazione continua.",
     image: images.hyroxWide,
     stats: ["Run", "Sled", "Pacing"],
-    cards: ["Sessioni HYROX dedicate", "Programmi per beginner e atleti", "Test, simulazioni e progressioni", "Lavoro su corsa, stazioni e pacing", "SCOPRI HYROX"],
+    cards: ["Sessioni HYROX dedicate", "Programmi per principianti e atleti", "Test, simulazioni e race prep", "Coaching tecnico e metodo HYROX"],
   },
   {
     id: "combat",
     number: "07",
     eyebrow: "Combat / Ring Room",
-    title: "COMBAT: MUAY THAI, BOXE E LAVORO VERO",
+    title: "SALA COMBAT: MUAY THAI E BOXE",
     headline: "",
-    copy: "Dalla tecnica al condizionamento, dalla preparazione al lavoro al sacco, l’area combat è lo spazio dedicato a chi cerca intensità, disciplina e crescita.\n\nMuay Thai e boxe non sono un’aggiunta: sono una parte identitaria di Revolution Gym.",
+    copy: "La sala combat è il cuore tecnico di Revolution Gym. Qui si pratica Muay Thai e Boxe con lavoro al sacco, ring, tecnica, condizionamento e preparazione atletica.\n\nNon corsi generici: solo lavoro vero, progressivo e adatto al livello di chi si allena.",
     image: images.combatWide,
     stats: ["Muay Thai", "Boxe", "Tecnica"],
-    cards: ["SCOPRI COMBAT"],
+    cards: ["SCOPRI LA SALA COMBAT"],
   },
   {
     id: "wellness",
@@ -191,14 +188,14 @@ export default function Home() {
         <div className="absolute inset-x-0 bottom-0 -z-10 h-2/3 bg-gradient-to-t from-[#050505] via-[#050505]/75 to-transparent" />
         <div className="mx-auto grid min-h-[calc(100svh-8rem)] max-w-[92rem] items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
           <div className="relative z-10 py-12 lg:py-20">
-            <p className="text-xs font-black uppercase tracking-[0.5em] text-revolution-red sm:text-sm">BACOLI · TRAINING · COMBAT · WELLNESS</p>
+            <p className="text-xs font-black uppercase tracking-[0.5em] text-revolution-red sm:text-sm">TRAINING • WELLNESS • COMBAT SPORT</p>
             <h1 id="hero-title" className="mt-6 font-display text-[3.5rem] font-black uppercase leading-[0.84] tracking-[-0.055em] sm:text-[5.8rem] lg:text-[7.3rem] xl:text-[8.5rem]">
-              Revolution <span className="block text-transparent [-webkit-text-stroke:1.5px_#fff] sm:[-webkit-text-stroke:2px_#fff]">Gym</span>
+              REVOLUTION <span className="block text-transparent [-webkit-text-stroke:1.5px_#fff] sm:[-webkit-text-stroke:2px_#fff]">GYM</span>
             </h1>
-            <p className="mt-8 max-w-3xl text-xl font-semibold leading-9 text-zinc-100 sm:text-2xl sm:leading-10">A Bacoli, un centro completo dove sala pesi, combat, HYROX, wellness e personal training convivono in un’unica struttura pensata per allenamento vero, continuità e risultati concreti.</p>
+            <p className="mt-8 max-w-3xl text-xl font-semibold leading-9 text-zinc-100 sm:text-2xl sm:leading-10">A Bacoli tutto sotto lo stesso tetto: pesi, combat, HYROX, wellness e personal training. Una struttura pensata per chi vuole allenarsi sul serio, con continuità e risultati concreti.</p>
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-              <Button href={whatsappUrl}>Prenota una prova</Button>
-              <Button href="#scegli" variant="secondary">Scopri le aree</Button>
+              <Button href={whatsappUrl}>PRENOTA UNA LEZIONE</Button>
+              <Button href="#scegli" variant="secondary">SCOPRI LE AREE</Button>
             </div>
           </div>
 
@@ -272,13 +269,13 @@ PIÙ MODI DI ALLENARTI BENE.</h2>
           </div>
           <div>
             <p className="text-xs font-black uppercase tracking-[0.45em] text-revolution-red">04 / Personal Training</p>
-            <h2 id="personal-title" className="mt-5 font-display text-5xl font-black uppercase leading-[0.9] tracking-[-0.06em] sm:text-7xl lg:text-8xl">Personal Training su misura.</h2>
-            <p className="mt-7 max-w-3xl whitespace-pre-line text-xl leading-9 text-zinc-200 sm:text-2xl sm:leading-10">Percorsi individuali costruiti su obiettivi reali: dimagrimento, ricomposizione corporea, performance, ritorno all’allenamento e supporto tecnico costante.
+            <h2 id="personal-title" className="mt-5 font-display text-5xl font-black uppercase leading-[0.9] tracking-[-0.06em] sm:text-7xl lg:text-8xl">PERSONAL TRAINING SU MISURA</h2>
+            <p className="mt-7 max-w-3xl whitespace-pre-line text-xl leading-9 text-zinc-200 sm:text-2xl sm:leading-10">Percorsi individuali costruiti su obiettivi reali: dimagrimento, ricomposizione corporea, forza, performance e ritorno all’allenamento.
 
-Un lavoro uno a uno pensato per chi vuole essere seguito con più attenzione, metodo e precisione.</p>
+Un lavoro uno a uno, con metodo, controllo tecnico e continuità.</p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <Button href={whatsappUrl}>Prenota una consulenza</Button>
-              <Button href="#contatti" variant="secondary">Parla con il team</Button>
+              <Button href={whatsappUrl}>PRENOTA UNA LEZIONE</Button>
+              <Button href="#contatti" variant="secondary">Contattaci</Button>
             </div>
           </div>
         </div>
@@ -313,16 +310,18 @@ Un lavoro uno a uno pensato per chi vuole essere seguito con più attenzione, me
           <div>
             <p className="text-xs font-black uppercase tracking-[0.45em] text-revolution-red">07 / Contatti · Prenota</p>
             <h2 id="contact-title" className="mt-5 font-display text-5xl font-black uppercase leading-none tracking-[-0.06em] sm:text-7xl lg:text-8xl">ENTRA IN REVOLUTION</h2>
-            <p className="mt-7 max-w-3xl text-xl leading-9 text-zinc-200">Prenota una prova, vieni a visitare il centro a Bacoli e scegli il percorso più adatto al tuo obiettivo.</p>
+            <p className="mt-7 max-w-3xl text-xl leading-9 text-zinc-200">Prenota una lezione , vieni a visitare il centro a Bacoli e scegli il percorso più adatto al tuo obiettivo.</p>
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               <a className="rounded-[1.5rem] border border-white/10 bg-white/[0.06] p-5 transition hover:border-revolution-red/60" href="https://www.google.com/maps/search/?api=1&query=Via%20Miseno%2091%2C%20Bacoli%2080070" target="_blank" rel="noopener noreferrer"><p className="text-xs font-black uppercase tracking-[0.28em] text-revolution-red">Indirizzo</p><p className="mt-3 text-lg font-bold leading-7">Revolution Gym<br />Via Miseno 91, Bacoli</p></a>
               <a className="rounded-[1.5rem] border border-white/10 bg-white/[0.06] p-5 transition hover:border-revolution-red/60" href="tel:+393382332258"><p className="text-xs font-black uppercase tracking-[0.28em] text-revolution-red">Telefono / WhatsApp</p><p className="mt-3 text-lg font-bold">338 233 2258</p></a>
+              <a className="rounded-[1.5rem] border border-white/10 bg-white/[0.06] p-5 transition hover:border-revolution-red/60" href="tel:+390815236034"><p className="text-xs font-black uppercase tracking-[0.28em] text-revolution-red">Telefono fisso</p><p className="mt-3 text-lg font-bold">081 523 6034</p></a>
+              <a className="rounded-[1.5rem] border border-white/10 bg-white/[0.06] p-5 transition hover:border-revolution-red/60" href="mailto:info@revolutiongymbacoli.it"><p className="text-xs font-black uppercase tracking-[0.28em] text-revolution-red">Email</p><p className="mt-3 text-lg font-bold break-words">info@revolutiongymbacoli.it</p></a>
               <a className="rounded-[1.5rem] border border-white/10 bg-white/[0.06] p-5 transition hover:border-revolution-red/60" href="https://www.instagram.com/revolutiongym/" target="_blank" rel="noopener noreferrer"><p className="text-xs font-black uppercase tracking-[0.28em] text-revolution-red">Instagram</p><p className="mt-3 text-lg font-bold">@revolutiongym</p></a>
-              <div className="rounded-[1.5rem] border border-white/10 bg-white/[0.06] p-5"><p className="text-xs font-black uppercase tracking-[0.28em] text-revolution-red">Orari</p><p className="mt-3 text-lg font-bold leading-7">Lunedì–Venerdì: 06:30 – 22:30<br />Sabato: 09:00 – 18:00<br />Domenica: chiuso</p></div>
+              <div className="rounded-[1.5rem] border border-white/10 bg-white/[0.06] p-5"><p className="text-xs font-black uppercase tracking-[0.28em] text-revolution-red">Orari</p><p className="mt-3 text-lg font-bold leading-7">Lunedì–Venerdì: 06:30 – 22:30<br />Sabato: 09:00 – 20:00<br />Domenica: chiuso</p></div>
             </div>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Button href={whatsappUrl}>Scrivici su WhatsApp</Button>
-              <Button href={contactUrl} variant="secondary">Prenota una prova</Button>
+              <Button href={whatsappUrl} variant="secondary">PRENOTA UNA LEZIONE</Button>
             </div>
           </div>
           <div className="min-h-[28rem] overflow-hidden rounded-[2.25rem] border border-white/10 bg-zinc-950 shadow-2xl shadow-black/60 lg:min-h-full">

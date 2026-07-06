@@ -3,7 +3,7 @@ import type { CSSProperties } from "react";
 import { Header } from "@/components/Header";
 
 const whatsappTrialUrl =
-  "https://wa.me/393382332258?text=Ciao%2C%20vorrei%20prenotare%20una%20prova%20HYROX%20alla%20Revolution%20Gym%20Bacoli.";
+  "https://wa.me/393382332258?text=Ciao%2C%20vorrei%20prenotare%20una%20prova%20alla%20Revolution%20Gym";
 
 const hyroxImages = [
   "/images/hyrox-01.jpg",
