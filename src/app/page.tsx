@@ -4,12 +4,12 @@ import { Header } from "@/components/Header";
 const whatsappUrl =
   "https://wa.me/393382332258?text=Ciao%2C%20vorrei%20prenotare%20una%20prova%20alla%20Revolution%20Gym";
 const images = {
-  hero: "/images/hero/ring-notte.jpg",
-  heroRing: "/images/hero/ring-notte.jpg",
+  hero: "/images/hero-ring.jpg",
+  heroRing: "/images/hero-ring.jpg",
   sala: "/images/bodybuilding-01.jpg",
   salaWide: "/images/68754fd6-ac1f-4327-9b0b-a8dc89163045.jpeg",
   salaDetail: "/images/a081ff89-30d7-4a4d-b624-6418d48dd399.jpeg",
-  hyrox: "/images/hyrox/hyrox-area.jpg",
+  hyrox: "/images/hyrox-02.jpg",
   hyroxWide: "/images/hyrox-01.jpg",
   combat: "/images/IMG_4869.jpeg",
   combatWide: "/images/combat-01.jpg",
