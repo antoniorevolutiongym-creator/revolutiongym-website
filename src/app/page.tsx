@@ -6,16 +6,16 @@ const whatsappUrl =
 const images = {
   hero: "/images/hero/ring-notte.jpg",
   heroRing: "/images/hero/ring-notte.jpg",
-  sala: "/images/68754fd6-ac1f-4327-9b0b-a8dc89163045.jpeg",
+  sala: "/images/bodybuilding-01.jpg",
   salaWide: "/images/68754fd6-ac1f-4327-9b0b-a8dc89163045.jpeg",
   salaDetail: "/images/a081ff89-30d7-4a4d-b624-6418d48dd399.jpeg",
   hyrox: "/images/hyrox/hyrox-area.jpg",
-  hyroxWide: "/images/hyrox/hyrox-area.jpg",
+  hyroxWide: "/images/hyrox-01.jpg",
   combat: "/images/IMG_4869.jpeg",
-  combatWide: "/images/IMG_4876.jpeg",
+  combatWide: "/images/combat-01.jpg",
   wellness: "/images/IMG_4876.jpeg",
-  wellnessWide: "/images/IMG_4876.jpeg",
-  personal: "/images/68754fd6-ac1f-4327-9b0b-a8dc89163045.jpeg",
+  wellnessWide: "/images/wellness-01.jpg",
+  personal: "/images/bodybuilding-02.jpg",
 };
 
 const paths = [
@@ -314,10 +314,11 @@ Un lavoro uno a uno, con metodo, controllo tecnico e continuità.</p>
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               <a className="rounded-[1.5rem] border border-white/10 bg-white/[0.06] p-5 transition hover:border-revolution-red/60" href="https://www.google.com/maps/search/?api=1&query=Via%20Miseno%2091%2C%20Bacoli%2080070" target="_blank" rel="noopener noreferrer"><p className="text-xs font-black uppercase tracking-[0.28em] text-revolution-red">Indirizzo</p><p className="mt-3 text-lg font-bold leading-7">Revolution Gym<br />Via Miseno 91, Bacoli</p></a>
               <a className="rounded-[1.5rem] border border-white/10 bg-white/[0.06] p-5 transition hover:border-revolution-red/60" href="tel:+393382332258"><p className="text-xs font-black uppercase tracking-[0.28em] text-revolution-red">Telefono / WhatsApp</p><p className="mt-3 text-lg font-bold">338 233 2258</p></a>
-              <a className="rounded-[1.5rem] border border-white/10 bg-white/[0.06] p-5 transition hover:border-revolution-red/60" href="tel:+390815236034"><p className="text-xs font-black uppercase tracking-[0.28em] text-revolution-red">Telefono fisso</p><p className="mt-3 text-lg font-bold">081 523 6034</p></a>
+              <a className="rounded-[1.5rem] border border-white/10 bg-white/[0.06] p-5 transition hover:border-revolution-red/60" href="tel:+390815235944"><p className="text-xs font-black uppercase tracking-[0.28em] text-revolution-red">Telefono fisso</p><p className="mt-3 text-lg font-bold">081 523 5944</p></a>
               <a className="rounded-[1.5rem] border border-white/10 bg-white/[0.06] p-5 transition hover:border-revolution-red/60" href="mailto:info@revolutiongymbacoli.it"><p className="text-xs font-black uppercase tracking-[0.28em] text-revolution-red">Email</p><p className="mt-3 text-lg font-bold break-words">info@revolutiongymbacoli.it</p></a>
-              <a className="rounded-[1.5rem] border border-white/10 bg-white/[0.06] p-5 transition hover:border-revolution-red/60" href="https://www.instagram.com/revolutiongym/" target="_blank" rel="noopener noreferrer"><p className="text-xs font-black uppercase tracking-[0.28em] text-revolution-red">Instagram</p><p className="mt-3 text-lg font-bold">@revolutiongym</p></a>
-              <div className="rounded-[1.5rem] border border-white/10 bg-white/[0.06] p-5"><p className="text-xs font-black uppercase tracking-[0.28em] text-revolution-red">Orari</p><p className="mt-3 text-lg font-bold leading-7">Lunedì–Venerdì: 06:30 – 22:30<br />Sabato: 09:00 – 20:00<br />Domenica: chiuso</p></div>
+              <a className="rounded-[1.5rem] border border-white/10 bg-white/[0.06] p-5 transition hover:border-revolution-red/60" href="https://www.instagram.com/r.evolution.gym/" target="_blank" rel="noopener noreferrer"><p className="text-xs font-black uppercase tracking-[0.28em] text-revolution-red">Instagram</p><p className="mt-3 text-lg font-bold">@r.evolution.gym</p></a>
+              <a className="rounded-[1.5rem] border border-white/10 bg-white/[0.06] p-5 transition hover:border-revolution-red/60" href="https://www.tiktok.com/@r.evolutiongym" target="_blank" rel="noopener noreferrer"><p className="text-xs font-black uppercase tracking-[0.28em] text-revolution-red">TikTok</p><p className="mt-3 text-lg font-bold">@r.evolutiongym</p></a>
+              <div className="rounded-[1.5rem] border border-white/10 bg-white/[0.06] p-5"><p className="text-xs font-black uppercase tracking-[0.28em] text-revolution-red">Orari</p><p className="mt-3 text-lg font-bold leading-7">Lunedì–Venerdì: 07:00 – 22:00<br />Sabato: 09:00 – 20:00<br />Domenica: 09:00 – 13:00</p></div>
             </div>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Button href={whatsappUrl}>Scrivici su WhatsApp</Button>
