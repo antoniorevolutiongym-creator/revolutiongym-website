@@ -14,7 +14,7 @@ const images = {
   combat: "/images/IMG_4869.jpeg",
   combatWide: "/images/combat-01.jpg",
   wellness: "/images/wellness-01.jpg",
-  wellnessWide: "/images/IMG_4878.jpeg",
+  wellnessWide: "/images/wellness-03.jpg",
   personal: "/images/bodybuilding-02.jpg",
 };
 
