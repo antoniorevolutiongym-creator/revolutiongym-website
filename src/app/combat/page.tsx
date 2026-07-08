@@ -23,7 +23,7 @@ const disciplines = [
     id: "boxe",
     eyebrow: "Boxe / Noble art",
     title: "Boxe",
-    image: "/images/combat-02.jpg",
+    image: "/images/boxe-01.jpg",
     imageAlt: "Sparring di boxe sul ring della Revolution Gym Bacoli",
     copy: "Colpi, gambe, difesa e ritmo: la boxe alla Revolution Gym unisce tecnica pulita e condizionamento reale, sul ring regolamentare e ai sacchi Fairtex. Un lavoro progressivo adatto a chi inizia e a chi vuole salire di livello.",
     points: ["Fondamentali e difesa", "Lavoro al sacco e ai colpitori", "Ring regolamentare", "Condizionamento completo"],
