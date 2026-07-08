@@ -10,7 +10,7 @@ const disciplines = [
     id: "riequilibrio-posturale",
     eyebrow: "Postura / Movimento consapevole",
     title: "Riequilibrio Posturale",
-    image: "/images/IMG_4874.jpeg",
+    image: "/images/wellness-04.jpg",
     imageAlt: "Lezione di riequilibrio posturale alla Revolution Gym Bacoli",
     copy: "Un lavoro mirato su postura, mobilità e controllo del corpo: esercizi progressivi per riequilibrare le tensioni, migliorare la qualità del movimento e prevenire i dolori da vita sedentaria. Il punto di partenza ideale per chi torna ad allenarsi.",
     points: ["Postura e mobilità", "Prevenzione dei dolori", "Progressioni individuali"],
@@ -20,7 +20,7 @@ const disciplines = [
     id: "pilates",
     eyebrow: "Pilates / Core e controllo",
     title: "Pilates",
-    image: "/images/IMG_4878.jpeg",
+    image: "/images/wellness-03.jpg",
     imageAlt: "Corso di Pilates matwork alla Revolution Gym Bacoli",
     copy: "Pilates matwork con piccoli attrezzi in una sala corsi dedicata: core, stabilità, allungamento e controllo del respiro. Classi seguite passo passo, adatte a ogni livello, con decine di persone che ogni settimana ne fanno un appuntamento fisso.",
     points: ["Matwork e piccoli attrezzi", "Core e stabilità", "Tutti i livelli"],
@@ -57,7 +57,7 @@ export default function WellnessPage() {
 
       <section className="relative flex min-h-[80svh] items-center overflow-hidden bg-black pt-24" aria-labelledby="wellness-hero-title">
         <div className="absolute inset-0">
-          <Image src="/images/IMG_4876.jpeg" alt="Sala corsi wellness della Revolution Gym Bacoli" fill sizes="100vw" className="premium-media-image object-cover object-center brightness-110 contrast-110" priority />
+          <Image src="/images/wellness-02.jpg" alt="Sala corsi wellness della Revolution Gym Bacoli" fill sizes="100vw" className="premium-media-image object-cover object-center brightness-110 contrast-110" priority />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_24%_28%,rgba(215,38,38,0.3),transparent_30rem),linear-gradient(90deg,rgba(0,0,0,0.94),rgba(0,0,0,0.6)_48%,rgba(0,0,0,0.3))]" />
         </div>
         <div className="relative z-10 mx-auto w-full max-w-7xl px-6 py-24 lg:px-8">
