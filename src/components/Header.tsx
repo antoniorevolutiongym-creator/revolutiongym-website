@@ -11,8 +11,8 @@ const navItems = [
   { label: "Home", href: "/" },
   { label: "HYROX", href: "/hyrox" },
   { label: "Sala Pesi", href: "/#sala-pesi" },
-  { label: "Combat", href: "/#combat" },
-  { label: "Wellness", href: "/#wellness" },
+  { label: "Combat", href: "/combat" },
+  { label: "Wellness", href: "/wellness" },
   { label: "Personal Training", href: "/#personal-training" },
   { label: "Contatti", href: "/#contatti" },
 ];
