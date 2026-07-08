@@ -6,15 +6,15 @@ const whatsappUrl =
 const images = {
   hero: "/images/hero-ring.jpg",
   heroRing: "/images/hero-ring.jpg",
-  sala: "/images/bodybuilding-01.jpg",
-  salaWide: "/images/68754fd6-ac1f-4327-9b0b-a8dc89163045.jpeg",
+  sala: "/images/68754fd6-ac1f-4327-9b0b-a8dc89163045.jpeg",
+  salaWide: "/images/bodybuilding-01.jpg",
   salaDetail: "/images/a081ff89-30d7-4a4d-b624-6418d48dd399.jpeg",
-  hyrox: "/images/hyrox-02.jpg",
-  hyroxWide: "/images/hyrox-01.jpg",
+  hyrox: "/images/hyrox-01.jpg",
+  hyroxWide: "/images/hyrox-area.jpg",
   combat: "/images/IMG_4869.jpeg",
   combatWide: "/images/combat-01.jpg",
-  wellness: "/images/IMG_4876.jpeg",
-  wellnessWide: "/images/wellness-01.jpg",
+  wellness: "/images/wellness-01.jpg",
+  wellnessWide: "/images/IMG_4878.jpeg",
   personal: "/images/bodybuilding-02.jpg",
 };
 
@@ -164,12 +164,29 @@ function EditorialSection({ section, index }: { section: (typeof editorialSectio
             <p className="mt-7 max-w-3xl whitespace-pre-line text-base leading-8 text-zinc-300 sm:text-lg sm:leading-9">{section.copy}</p>
           </div>
           <div className="mt-10 grid gap-4">
-            {section.cards.map((card, cardIndex) => (
-              <div key={card} className="grid grid-cols-[4rem_1fr] items-center gap-4 rounded-[1.5rem] border border-white/10 bg-black/35 p-4">
-                <span className="font-display text-4xl font-black text-revolution-red">0{cardIndex + 1}</span>
-                <p className="text-sm font-semibold leading-6 text-zinc-200 sm:text-base">{card}</p>
-              </div>
-            ))}
+            {section.cards.map((card, cardIndex) => {
+              const cardLinks: Record<string, string> = {
+                "SCOPRI LA SALA COMBAT": "/combat",
+                "SCOPRI WELLNESS": "/wellness",
+                "Sessioni HYROX dedicate": "/hyrox",
+              };
+              const cardHref = cardLinks[card];
+              const inner = (
+                <>
+                  <span className="font-display text-4xl font-black text-revolution-red">0{cardIndex + 1}</span>
+                  <p className="text-sm font-semibold leading-6 text-zinc-200 sm:text-base">{card}{cardHref ? " →" : ""}</p>
+                </>
+              );
+              return cardHref ? (
+                <a key={card} href={cardHref} className="grid grid-cols-[4rem_1fr] items-center gap-4 rounded-[1.5rem] border border-white/10 bg-black/35 p-4 transition hover:border-revolution-red/70 hover:bg-black/55">
+                  {inner}
+                </a>
+              ) : (
+                <div key={card} className="grid grid-cols-[4rem_1fr] items-center gap-4 rounded-[1.5rem] border border-white/10 bg-black/35 p-4">
+                  {inner}
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
