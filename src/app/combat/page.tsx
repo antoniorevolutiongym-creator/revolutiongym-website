@@ -104,4 +104,5 @@ export default function CombatPage() {
       </section>
     </main>
   );
+  foto combat + testo CTA
 }
