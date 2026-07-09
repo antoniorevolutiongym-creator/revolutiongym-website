@@ -16,7 +16,7 @@ const disciplines = [
     points: ["Tecnica dal giorno uno", "Sparring controllato", "Percorso agonistico", "Corso Junior dedicato"],
     schedule: [
       { label: "Adulti", slots: ["Lunedì · Mercoledì · Venerdì", "20:00 – 21:30"] },
-      { label: "Junior (bambini e ragazzi)", slots: ["Lunedì 17:45 – 18:45", "Mercoledì e Venerdì 17:45 – 19:00"] },
+      { label: "Junior (bambini e ragazzi)", slots: ["Lunedì Mercoledì e Venerdì 17:45 – 18:45"] },
     ],
   },
   {
@@ -25,7 +25,7 @@ const disciplines = [
     title: "Boxe",
     image: "/images/combat-sparring-ring-01.jpg",
     imageAlt: "Sparring di boxe sul ring della Revolution Gym Bacoli",
-    copy: "Colpi, gambe, difesa e ritmo: la boxe alla Revolution Gym unisce tecnica pulita e condizionamento reale, sul ring regolamentare e ai sacchi Fairtex. Un lavoro progressivo adatto a chi inizia e a chi vuole salire di livello.",
+    copy: "Colpi di braccia,velocità di gambe, difesa e ritmo: la boxe alla Revolution Gym unisce tecnica pulita e condizionamento reale, sul ring regolamentare e ai sacchi Fairtex. Un lavoro progressivo adatto a chi inizia e a chi vuole salire di livello.",
     points: ["Fondamentali e difesa", "Lavoro al sacco e ai colpitori", "Ring regolamentare", "Condizionamento completo"],
     schedule: [
       { label: "Adulti", slots: ["Martedì · Giovedì 20:30 – 21:30", "Sabato 16:00 – 17:00"] },
