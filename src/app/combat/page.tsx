@@ -23,7 +23,7 @@ const disciplines = [
     id: "boxe",
     eyebrow: "Boxe / Noble art",
     title: "Boxe",
-    image: "/images/boxe-01.jpg",
+    image: "/images/combat-sparring-ring-01.jpg",
     imageAlt: "Sparring di boxe sul ring della Revolution Gym Bacoli",
     copy: "Colpi, gambe, difesa e ritmo: la boxe alla Revolution Gym unisce tecnica pulita e condizionamento reale, sul ring regolamentare e ai sacchi Fairtex. Un lavoro progressivo adatto a chi inizia e a chi vuole salire di livello.",
     points: ["Fondamentali e difesa", "Lavoro al sacco e ai colpitori", "Ring regolamentare", "Condizionamento completo"],
@@ -96,8 +96,8 @@ export default function CombatPage() {
       <section id="whatsapp-cta" className="bg-revolution-red px-6 py-20 text-white">
         <div className="mx-auto flex max-w-7xl flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
           <div>
-            <p className="text-xs font-black uppercase tracking-[0.42em] text-white/75">Prova gratuita</p>
-            <h2 className="mt-4 font-display text-4xl font-black uppercase leading-none tracking-[-0.04em] sm:text-6xl">Sali sul ring. La prima lezione la scegli tu.</h2>
+            <p className="text-xs font-black uppercase tracking-[0.42em] text-white/75">Prenota una lezione</p>
+            <h2 className="mt-4 font-display text-4xl font-black uppercase leading-none tracking-[-0.04em] sm:text-6xl">Sali sul ring. Prenota la tua prima lezione.</h2>
           </div>
           <a href={whatsappTrialUrl} target="_blank" rel="noopener noreferrer" className="w-fit rounded-full bg-white px-8 py-5 text-sm font-black uppercase tracking-[0.25em] text-black transition duration-500 hover:-translate-y-1 hover:bg-black hover:text-white">Scrivici su WhatsApp</a>
         </div>
